@@ -1,5 +1,8 @@
 # LDJam55
 
+## Resources:
+- https://www.dafont.com/fr/khscala.font
+
 ## Build
 
 ```sh

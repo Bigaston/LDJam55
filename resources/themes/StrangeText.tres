@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c6lcdjj02k82c"]
+
+[ext_resource type="FontFile" uid="uid://s77avuh0frp4" path="res://resources/fonts/KHScala.otf" id="1_h18c6"]
+
+[resource]
+line_spacing = 15.0
+font = ExtResource("1_h18c6")
+font_size = 20
+font_color = Color(0, 0, 0, 1)

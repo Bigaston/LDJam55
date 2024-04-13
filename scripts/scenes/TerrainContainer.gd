@@ -25,6 +25,9 @@ func _ready():
 	spawn_couloir(3)
 
 func _process(delta: float) -> void:
+	if !player:
+		return
+		
 	if player.position.z <= terrain_array[terrain_array.size()-1].position.z + 5:
 		spawn_couloir(1)
 		dispawn_couloir(1)

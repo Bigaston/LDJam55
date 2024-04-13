@@ -8,6 +8,11 @@ extends Control
 @export var speed_multiplier: float = 10
 @export var move_multiplier: float = 10
 
+@export_subgroup("Audio")
+@export var book_close: AudioStreamPlayer
+@export var book_open: AudioStreamPlayer
+@export var book_flip: AudioStreamPlayer
+
 signal spell_used(spell)
 
 var player_speed: float = 0
@@ -44,20 +49,24 @@ func _process(delta: float) -> void:
 	opened_book.position.x = initial_opened_book_position.x + sin(bobbing_progress) * move_multiplier
 	opened_book.position.y = initial_opened_book_position.y + cos(bobbing_progress * 1.2) * move_multiplier
 
-	if Input.is_action_just_pressed("book_right"):
-		if current_page < spells.size() - 1:
-			current_page += 1
-			
-			open_page(current_page)
-	
-	if Input.is_action_just_pressed("book_left"):
-		if current_page > 0:
-			current_page -= 1
-			
-			open_page(current_page)
-			
-	if Input.is_action_just_pressed("use_spell"):
-		if is_book_open:
+	if is_book_open:
+		if Input.is_action_just_pressed("book_right"):
+			if current_page < spells.size() - 1:
+				current_page += 1
+				
+				open_page(current_page)
+				
+				book_flip.play()
+		
+		if Input.is_action_just_pressed("book_left"):
+			if current_page > 0:
+				current_page -= 1
+				
+				open_page(current_page)
+				
+				book_flip.play()
+				
+		if Input.is_action_just_pressed("use_spell"):
 			spell_used.emit(spells[current_page])
 
 func open_book():
@@ -65,26 +74,28 @@ func open_book():
 		is_book_open = true
 		closed_book.visible = false
 		opened_book.visible = true
+		
+		book_open.play()
 	
 func close_book():
 	if is_book_open:
 		is_book_open = false
 		closed_book.visible = true
 		opened_book.visible = false
+		
+		book_close.play()
 	
 func open_page(page_index: int):
 	var spell = spells[page_index]
 	
 	if spell is BasicSpell:
+		$OpenedBook/BasicSpell.set_spell(spell)
+		
 		$OpenedBook/FinalSpell.visible = false
 		$OpenedBook/BasicSpell.visible = true
 		
-		$OpenedBook/BasicSpell/SpellName.text = spell.name
-		$OpenedBook/BasicSpell/SpellPreview.texture = spell.spell_image
-		
 	if spell is FinalSpell:
+		$OpenedBook/FinalSpell.set_spell(spell)
+		
 		$OpenedBook/BasicSpell.visible = false
-		
 		$OpenedBook/FinalSpell.visible = true
-		
-		$OpenedBook/FinalSpell/SpellName.text = spell.name

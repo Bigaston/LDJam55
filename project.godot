@@ -22,9 +22,19 @@ AudioManager="*res://scripts/AudioManager.gd"
 Global="*res://scripts/autoload/global.gd"
 CustomTypes="*res://scripts/autoload/custom_types.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
+"res://addons/": "gray",
 "res://objects/": "yellow",
 "res://resources/": "orange",
 "res://scenes/": "blue",
