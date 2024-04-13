@@ -1,0 +1,193 @@
+[gd_scene load_steps=14 format=3 uid="uid://b6o3mvyol3hbo"]
+
+[ext_resource type="Script" path="res://objects/ui/BasicSpell.gd" id="1_6sajc"]
+[ext_resource type="Resource" uid="uid://006fwh1qrrer" path="res://resources/content/PartResourceLinker.tres" id="2_0den8"]
+[ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="2_42dhm"]
+[ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_sylef"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_stsm2"]
+font = ExtResource("2_42dhm")
+font_size = 32
+
+[sub_resource type="Gradient" id="Gradient_mir0b"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eryo0"]
+gradient = SubResource("Gradient_mir0b")
+
+[sub_resource type="Gradient" id="Gradient_b7p25"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lmy5a"]
+gradient = SubResource("Gradient_b7p25")
+
+[sub_resource type="Gradient" id="Gradient_8o0aa"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_myton"]
+gradient = SubResource("Gradient_8o0aa")
+
+[sub_resource type="Gradient" id="Gradient_82ad8"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kj6gc"]
+gradient = SubResource("Gradient_82ad8")
+
+[node name="BasicSpell" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6sajc")
+part_linker = ExtResource("2_0den8")
+monster_linker = ExtResource("3_sylef")
+
+[node name="SpellName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -382.0
+offset_top = -551.0
+offset_right = -93.0
+offset_bottom = -519.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SUPER BASIC NAME"
+label_settings = SubResource("LabelSettings_stsm2")
+
+[node name="SpellPreview" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.0
+offset_top = -492.0
+offset_right = -26.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_eryo0")
+
+[node name="PictoPart" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = -268.0
+offset_right = -247.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_lmy5a")
+expand_mode = 1
+
+[node name="PictoFamily" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -266.0
+offset_right = -28.0
+offset_bottom = -186.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_lmy5a")
+expand_mode = 1
+
+[node name="PictoCaution" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = -496.0
+offset_right = 127.0
+offset_bottom = -429.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_myton")
+expand_mode = 1
+
+[node name="Condition" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ConditionPart" type="TextureRect" parent="Condition"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = -368.0
+offset_right = 137.0
+offset_bottom = -312.0
+texture = SubResource("GradientTexture1D_kj6gc")
+expand_mode = 1
+
+[node name="ConditionFamily" type="TextureRect" parent="Condition"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = -368.0
+offset_right = 202.0
+offset_bottom = -312.0
+texture = SubResource("GradientTexture1D_kj6gc")
+expand_mode = 1
+
+[node name="PictoArrow" type="TextureRect" parent="Condition"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = -368.0
+offset_right = 273.0
+offset_bottom = -312.0
+texture = SubResource("GradientTexture1D_kj6gc")
+expand_mode = 1
+
+[node name="BadResultPart" type="TextureRect" parent="Condition"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = -368.0
+offset_right = 340.0
+offset_bottom = -312.0
+texture = SubResource("GradientTexture1D_kj6gc")
+expand_mode = 1
+
+[node name="BadResultFamily" type="TextureRect" parent="Condition"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = -368.0
+offset_right = 405.0
+offset_bottom = -312.0
+texture = SubResource("GradientTexture1D_kj6gc")
+expand_mode = 1
+
+[node name="RightText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -324.0
+offset_right = 357.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "IOQUS HDQP9OISHDPQIOSUUDHNQPSODIHNQLMXKLWCFSQDQSDQLIUSDBQMOSKJNDLQJHVXWM%POSDVIQSUPDQSIDHQISODHUIQISUDHUQSIUDUIHQSUIDHQUIHSDUIHQSUIHDUIHQSUIDHIQUSDIUQISDUIHQSKDKQSKJDBQJKSJKDJKBQSKJKJSQKJDJKBSQKJBKBJDJKBQJKSDJKBKJQSKJBDBKJQSKJDKBJQSDOQSIUDBQOISUDYQOISUIDQBSKJDBQKSJBDQKSDBQS?DNQSODIQHSODIQSDOQISDJHQOSBIDQSODIQOISDUBQO"
+autowrap_mode = 1
