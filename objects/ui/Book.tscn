@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dijrqujuat5md"]
+[gd_scene load_steps=10 format=3 uid="uid://dijrqujuat5md"]
 
 [ext_resource type="Script" path="res://objects/ui/Book.gd" id="1_07p7n"]
 [ext_resource type="Resource" uid="uid://q4cwk244at8e" path="res://resources/content/SpellBook.tres" id="2_al7fj"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://ckhb0rcx8hdgt" path="res://objects/ui/FinalSpell.tscn" id="3_amhml"]
 [ext_resource type="Texture2D" uid="uid://dtenbjpv75nrw" path="res://resources/textures/book/Book_openHand.png" id="4_ismcc"]
 [ext_resource type="PackedScene" uid="uid://b6o3mvyol3hbo" path="res://objects/ui/BasicSpell.tscn" id="4_oxe52"]
+[ext_resource type="AudioStream" uid="uid://8holnj101r73" path="res://resources/audio/audio streams/UI_Book_Close.tres" id="7_runcb"]
+[ext_resource type="AudioStream" uid="uid://bg2v7qy23cvne" path="res://resources/audio/audio streams/UI_Book_Open.tres" id="8_o7opd"]
+[ext_resource type="AudioStream" uid="uid://c25mg77jaocut" path="res://resources/audio/audio streams/UI_Book_Flip.tres" id="9_qtde5"]
 
-[node name="Book" type="Control" node_paths=PackedStringArray("closed_book", "opened_book")]
+[node name="Book" type="Control" node_paths=PackedStringArray("closed_book", "opened_book", "book_close", "book_open", "book_flip")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,9 +23,11 @@ spells_resource = ExtResource("2_al7fj")
 closed_book = NodePath("ClosedBook")
 opened_book = NodePath("OpenedBook")
 speed_multiplier = 20.0
+book_close = NodePath("Audio/BookClose")
+book_open = NodePath("Audio/BookOpen")
+book_flip = NodePath("Audio/BookFlip")
 
 [node name="ClosedBook" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -54,6 +59,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="OpenedBook" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -91,3 +97,17 @@ layout_mode = 1
 [node name="BasicSpell" parent="OpenedBook" instance=ExtResource("4_oxe52")]
 visible = false
 layout_mode = 1
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="BookClose" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("7_runcb")
+bus = &"SFX"
+
+[node name="BookOpen" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("8_o7opd")
+bus = &"SFX"
+
+[node name="BookFlip" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("9_qtde5")
+bus = &"SFX"

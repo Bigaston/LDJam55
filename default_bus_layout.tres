@@ -1,14 +1,9 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://do2dsh3n3t6jf"]
-
-[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_wyn80"]
-resource_name = "Reverb"
+[gd_resource type="AudioBusLayout" format=3 uid="uid://w6momqq0rft6"]
 
 [resource]
-bus/1/name = &"REV_Hall"
+bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
 bus/1/volume_db = 0.0
 bus/1/send = &"Master"
-bus/1/effect/0/effect = SubResource("AudioEffectReverb_wyn80")
-bus/1/effect/0/enabled = true

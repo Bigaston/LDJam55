@@ -8,6 +8,11 @@ extends Control
 @export var speed_multiplier: float = 10
 @export var move_multiplier: float = 10
 
+@export_subgroup("Audio")
+@export var book_close: AudioStreamPlayer
+@export var book_open: AudioStreamPlayer
+@export var book_flip: AudioStreamPlayer
+
 signal spell_used(spell)
 
 var player_speed: float = 0
@@ -50,12 +55,16 @@ func _process(delta: float) -> void:
 				current_page += 1
 				
 				open_page(current_page)
+				
+				book_flip.play()
 		
 		if Input.is_action_just_pressed("book_left"):
 			if current_page > 0:
 				current_page -= 1
 				
 				open_page(current_page)
+				
+				book_flip.play()				
 				
 		if Input.is_action_just_pressed("use_spell"):
 			spell_used.emit(spells[current_page])
@@ -65,12 +74,16 @@ func open_book():
 		is_book_open = true
 		closed_book.visible = false
 		opened_book.visible = true
+		
+		book_open.play()
 	
 func close_book():
 	if is_book_open:
 		is_book_open = false
 		closed_book.visible = true
 		opened_book.visible = false
+		
+		book_close.play()
 	
 func open_page(page_index: int):
 	var spell = spells[page_index]
