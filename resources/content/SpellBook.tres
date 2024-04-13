@@ -1,0 +1,281 @@
+[gd_resource type="Resource" script_class="SpellBook" load_steps=49 format=3 uid="uid://q4cwk244at8e"]
+
+[ext_resource type="Script" path="res://scripts/custom_resources/PartSpecification.gd" id="1_1vwyi"]
+[ext_resource type="Script" path="res://scripts/custom_resources/BasicSpell.gd" id="1_gmhc6"]
+[ext_resource type="Script" path="res://scripts/custom_resources/SpellBook.gd" id="1_p66a6"]
+[ext_resource type="Script" path="res://scripts/custom_resources/FinalSpell.gd" id="2_e5clk"]
+
+[sub_resource type="Resource" id="Resource_wytob"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_l74pr"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_l4jua"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_eyb56"]
+script = ExtResource("1_gmhc6")
+name = "Vides deformitatem huius faciei"
+condition = SubResource("Resource_wytob")
+result_true = SubResource("Resource_l4jua")
+result_false = SubResource("Resource_l74pr")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_ry06u"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_cgn0c"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_w2mtk"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_lulax"]
+script = ExtResource("1_gmhc6")
+name = "venustus et elegans pullum"
+condition = SubResource("Resource_ry06u")
+result_true = SubResource("Resource_w2mtk")
+result_false = SubResource("Resource_cgn0c")
+right_page_text = "ploup"
+
+[sub_resource type="Resource" id="Resource_5a0tu"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_reyvw"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_h7t8e"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_anqlv"]
+script = ExtResource("1_gmhc6")
+name = "Ipse parum sed non realiter"
+condition = SubResource("Resource_5a0tu")
+result_true = SubResource("Resource_h7t8e")
+result_false = SubResource("Resource_reyvw")
+right_page_text = "ploup"
+
+[sub_resource type="Resource" id="Resource_sn5rs"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_jflel"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_38nnw"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_yyiwm"]
+script = ExtResource("1_gmhc6")
+name = "Brachium perspicuum apparuit ex nusquam"
+condition = SubResource("Resource_sn5rs")
+result_true = SubResource("Resource_38nnw")
+result_false = SubResource("Resource_jflel")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_e6tr8"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_hsnku"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_6oopa"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_on0s6"]
+script = ExtResource("1_gmhc6")
+name = "Haec arma tam molles esse debent"
+condition = SubResource("Resource_e6tr8")
+result_true = SubResource("Resource_6oopa")
+result_false = SubResource("Resource_hsnku")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_bebej"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_j3tfo"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_akmrd"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_k63v4"]
+script = ExtResource("1_gmhc6")
+name = "Sunt pieces procidens"
+condition = SubResource("Resource_bebej")
+result_true = SubResource("Resource_akmrd")
+result_false = SubResource("Resource_j3tfo")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_an76q"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_d7q0t"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_f57c3"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_xe4tl"]
+script = ExtResource("1_gmhc6")
+name = "Marathona cum his femoribus currere posset"
+condition = SubResource("Resource_an76q")
+result_true = SubResource("Resource_f57c3")
+result_false = SubResource("Resource_d7q0t")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_mosmw"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_vf17q"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_1c58g"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_mobtx"]
+script = ExtResource("1_gmhc6")
+name = "Crura tam mollis quam sericum"
+condition = SubResource("Resource_mosmw")
+result_true = SubResource("Resource_1c58g")
+result_false = SubResource("Resource_vf17q")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_vimx8"]
+script = ExtResource("1_1vwyi")
+body_position = 3
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_6r1dl"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_psc31"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_w54s5"]
+script = ExtResource("1_gmhc6")
+name = "Crura isti terram non tangant"
+condition = SubResource("Resource_vimx8")
+result_true = SubResource("Resource_psc31")
+result_false = SubResource("Resource_6r1dl")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_7tqs4"]
+script = ExtResource("1_1vwyi")
+body_position = 1
+monster_family = 3
+
+[sub_resource type="Resource" id="Resource_ok2gj"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_280om"]
+script = ExtResource("1_1vwyi")
+body_position = 2
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_jhlkw"]
+script = ExtResource("1_gmhc6")
+name = "Haec crura sunt repulsiva"
+condition = SubResource("Resource_7tqs4")
+result_true = SubResource("Resource_280om")
+result_false = SubResource("Resource_ok2gj")
+right_page_text = "Ploup"
+
+[sub_resource type="Resource" id="Resource_k67ok"]
+script = ExtResource("2_e5clk")
+name = "Ferrum bene tractabis"
+head_family = 0
+arm_family = 1
+torso_family = 3
+leg_family = 2
+left_page_text = "Ploup"
+right_page_text = "Prout"
+
+[sub_resource type="Resource" id="Resource_4ouku"]
+script = ExtResource("2_e5clk")
+name = "Hydrate qui circa te"
+head_family = 2
+arm_family = 3
+torso_family = 0
+leg_family = 1
+left_page_text = "Ploup"
+right_page_text = "Prout"
+
+[sub_resource type="Resource" id="Resource_ps81y"]
+script = ExtResource("2_e5clk")
+name = "Tu pascis vicinis tuis"
+head_family = 3
+arm_family = 2
+torso_family = 1
+leg_family = 0
+left_page_text = "Ploup"
+right_page_text = "Prout"
+
+[sub_resource type="Resource" id="Resource_6pbiv"]
+script = ExtResource("2_e5clk")
+name = "Latrare sed non mordere"
+head_family = 1
+arm_family = 0
+torso_family = 2
+leg_family = 3
+left_page_text = "Ploup"
+right_page_text = "Prout"
+
+[resource]
+script = ExtResource("1_p66a6")
+basic_spell = Array[ExtResource("1_gmhc6")]([SubResource("Resource_eyb56"), SubResource("Resource_lulax"), SubResource("Resource_anqlv"), SubResource("Resource_yyiwm"), SubResource("Resource_on0s6"), SubResource("Resource_k63v4"), SubResource("Resource_xe4tl"), SubResource("Resource_mobtx"), SubResource("Resource_w54s5"), SubResource("Resource_jhlkw")])
+final_spell = Array[ExtResource("2_e5clk")]([SubResource("Resource_k67ok"), SubResource("Resource_4ouku"), SubResource("Resource_ps81y"), SubResource("Resource_6pbiv")])
