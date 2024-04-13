@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SpellBook" load_steps=2 format=3 uid="uid://q4cwk244at8e"]
+
+[ext_resource type="Script" path="res://scripts/custom_resources/SpellBook.gd" id="1_p66a6"]
+
+[resource]
+script = ExtResource("1_p66a6")
+basic_spell = Array[Resource("res://scripts/custom_resources/BasicSpell.gd")]([])
+final_spell = Array[Resource("res://scripts/custom_resources/FinalSpell.gd")]([])
