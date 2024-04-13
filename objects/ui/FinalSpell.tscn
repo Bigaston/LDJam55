@@ -1,17 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckhb0rcx8hdgt"]
+[gd_scene load_steps=9 format=3 uid="uid://ckhb0rcx8hdgt"]
 
-[ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="1_qhj7u"]
 [ext_resource type="Script" path="res://objects/ui/FinalSpell.gd" id="1_r1mo4"]
 [ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="2_pjofg"]
 [ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_rg5nk"]
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="3_uvudd"]
+[ext_resource type="LabelSettings" uid="uid://c5mjcdfidgkgs" path="res://resources/themes/SpellTitle.tres" id="3_x8e0w"]
 [ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="4_dwl1m"]
 [ext_resource type="LabelSettings" uid="uid://c6lcdjj02k82c" path="res://resources/themes/StrangeText.tres" id="4_i1fof"]
 [ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="5_ce6kb"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_stsm2"]
-font = ExtResource("1_qhj7u")
-font_size = 32
 
 [node name="FinalSpell" type="Control"]
 layout_mode = 3
@@ -42,7 +38,7 @@ offset_bottom = -519.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "SUPER FINAL NAME"
-label_settings = SubResource("LabelSettings_stsm2")
+label_settings = ExtResource("3_x8e0w")
 
 [node name="LeftText" type="Label" parent="."]
 visible = false
