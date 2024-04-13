@@ -1,6 +1,9 @@
 extends Resource
 class_name FinalSpell
 
+@export var name: String
+
+@export_category("Partie")
 @export var head_family: CustomTypes.MonsterFamily
 @export var arm_family: CustomTypes.MonsterFamily
 @export var torso_family: CustomTypes.MonsterFamily

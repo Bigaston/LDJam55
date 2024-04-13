@@ -1,6 +1,7 @@
 extends Resource
 class_name BasicSpell
 
+@export var name: String
 @export var condition: PartSpecification
 
 @export_category("Result")
