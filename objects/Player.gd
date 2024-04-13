@@ -1,12 +1,13 @@
 extends CharacterBody3D
 
 @export var speed: float = 5.0
+@export var book: Control
+@export var open_book_threeshold = -50
 
 @export_category("Sensitivity")
 @export var vertical_sensitivity = 0.01
 @export var horizontal_sensitivity = 0.01
 
-@export var book: Control
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -42,3 +43,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 	book.player_speed = velocity.length()
+
+func _process(_delta):
+	if camera.rotation_degrees.x <= open_book_threeshold:
+		book.open_book()
+	else:
+		book.close_book()
