@@ -6,6 +6,8 @@ extends CharacterBody3D
 @export var vertical_sensitivity = 0.01
 @export var horizontal_sensitivity = 0.01
 
+@export var book: Control
+
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var neck := $Neck
@@ -38,3 +40,5 @@ func _physics_process(delta):
 	velocity *= speed
 
 	move_and_slide()
+
+	book.player_speed = velocity.length()
