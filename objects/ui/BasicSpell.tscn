@@ -30,11 +30,17 @@ gradient = SubResource("Gradient_8o0aa")
 gradient = SubResource("Gradient_82ad8")
 
 [node name="BasicSpell" type="Control"]
-visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("1_6sajc")
 part_linker = ExtResource("2_0den8")
 monster_linker = ExtResource("3_sylef")

@@ -12,7 +12,6 @@ font_size = 32
 gradient = SubResource("Gradient_fxu0m")
 
 [node name="FinalSpell" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5

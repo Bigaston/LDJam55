@@ -87,3 +87,4 @@ layout_mode = 1
 script = ExtResource("4_t3a2g")
 
 [node name="BasicSpell" parent="OpenedBook" instance=ExtResource("4_oxe52")]
+layout_mode = 1
