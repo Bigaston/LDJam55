@@ -21,6 +21,7 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 script = ExtResource("1_r1mo4")
 monster_linker = ExtResource("3_rg5nk")
 
@@ -31,14 +32,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -382.0
-offset_top = -551.0
-offset_right = -148.0
-offset_bottom = -519.0
+offset_left = -379.0
+offset_top = -601.0
+offset_right = -18.0
+offset_bottom = -529.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "SUPER FINAL NAME"
 label_settings = ExtResource("3_x8e0w")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="LeftText" type="Label" parent="."]
 visible = false
@@ -65,16 +68,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 53.0
-offset_top = -449.0
-offset_right = 345.0
-offset_bottom = -96.0
+offset_left = 33.0
+offset_top = -591.0
+offset_right = 390.0
+offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "po I oiqushbdqouisbdlqkjsdPOPOIUHQSDPOQIUHSDQSDLIUQSHDPMOKLNQPIOXCNPOI>WPMOUIDHQPOIHNKPQD
 QMOSDIHNQSD
 QMOLDSINQMSOIDQMSLDKNNQL/?KXNCMWOIHXPIOAMLKNNDQSMLKNDQMSOKDJPOQIFUJKLJNALKJN	ALIUBPSIQDOINCXW>MLKHPDOIAB SQLKJDHQ/SDQDML>WXCBLKUQYSDDPQOJSBDPuiohOQIUSDHQOPSHDQKLXWUICHPOW>XIHXBWOLIUSHPQIODHQNPSOICHW>XNLKJH>POISQHYDOPIUHPO"
 label_settings = ExtResource("4_i1fof")
+horizontal_alignment = 2
 autowrap_mode = 1
 
 [node name="MonsterPreview" type="Control" parent="."]
@@ -85,9 +89,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -375.0
-offset_top = -509.0
+offset_top = -534.0
 offset_right = -19.0
-offset_bottom = -91.0
+offset_bottom = -76.0
 grow_horizontal = 2
 grow_vertical = 0
 
