@@ -1,8 +1,44 @@
-[gd_resource type="Resource" script_class="SpellBook" load_steps=2 format=3 uid="uid://q4cwk244at8e"]
+[gd_resource type="Resource" script_class="SpellBook" load_steps=10 format=3 uid="uid://q4cwk244at8e"]
 
+[ext_resource type="Script" path="res://scripts/custom_resources/PartSpecification.gd" id="1_1vwyi"]
+[ext_resource type="Script" path="res://scripts/custom_resources/BasicSpell.gd" id="1_gmhc6"]
 [ext_resource type="Script" path="res://scripts/custom_resources/SpellBook.gd" id="1_p66a6"]
+[ext_resource type="Script" path="res://scripts/custom_resources/FinalSpell.gd" id="2_e5clk"]
+
+[sub_resource type="Resource" id="Resource_wytob"]
+script = ExtResource("1_1vwyi")
+body_position = 0
+monster_family = 0
+
+[sub_resource type="Resource" id="Resource_l74pr"]
+script = ExtResource("1_1vwyi")
+body_position = 0
+monster_family = 2
+
+[sub_resource type="Resource" id="Resource_l4jua"]
+script = ExtResource("1_1vwyi")
+body_position = 0
+monster_family = 1
+
+[sub_resource type="Resource" id="Resource_eyb56"]
+script = ExtResource("1_gmhc6")
+name = "Prout Au Max"
+condition = SubResource("Resource_wytob")
+result_true = SubResource("Resource_l4jua")
+result_false = SubResource("Resource_l74pr")
+right_page_text = "SA MER C'EST UNE BANSHEE"
+
+[sub_resource type="Resource" id="Resource_87vmx"]
+script = ExtResource("2_e5clk")
+name = "OUAIS BANSHE"
+head_family = 0
+arm_family = 0
+torso_family = 0
+leg_family = 0
+left_page_text = "Ouais"
+right_page_text = ""
 
 [resource]
 script = ExtResource("1_p66a6")
-basic_spell = Array[Resource("res://scripts/custom_resources/BasicSpell.gd")]([])
-final_spell = Array[Resource("res://scripts/custom_resources/FinalSpell.gd")]([])
+basic_spell = Array[ExtResource("1_gmhc6")]([SubResource("Resource_eyb56")])
+final_spell = Array[ExtResource("2_e5clk")]([SubResource("Resource_87vmx")])

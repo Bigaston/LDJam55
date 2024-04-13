@@ -1,6 +1,6 @@
 extends Control
 
-@export var spells: SpellBook
+@export var spells_resource: SpellBook
 @export var closed_book: Control
 @export var opened_book: Control
 
@@ -18,11 +18,20 @@ var initial_opened_book_position: Vector2
 var is_book_open = false
 
 var current_page = 0
+var spells: Array[Resource] = []
 
 func _ready():
 	initial_closed_book_position = $ClosedBook.position
 	initial_opened_book_position = $OpenedBook.position
 	close_book()
+	
+	for final_spell in spells_resource.final_spell:
+		spells.push_back(final_spell)
+	
+	for basic_spell in spells_resource.basic_spell:
+		spells.push_back(basic_spell)
+		
+	open_page(0)
 
 func _process(delta: float) -> void:
 	bobbing_progress += delta * player_speed
@@ -32,6 +41,18 @@ func _process(delta: float) -> void:
 	
 	opened_book.position.x = initial_opened_book_position.x + sin(bobbing_progress) * move_multiplier
 	opened_book.position.y = initial_opened_book_position.y + cos(bobbing_progress * 1.2) * move_multiplier
+
+	if Input.is_action_just_pressed("book_right"):
+		if current_page < spells.size() - 1:
+			current_page += 1
+			
+			open_page(current_page)
+	
+	if Input.is_action_just_pressed("book_left"):
+		if current_page > 0:
+			current_page -= 1
+			
+			open_page(current_page)
 
 func open_book():
 	if !is_book_open:
@@ -44,3 +65,20 @@ func close_book():
 		is_book_open = false
 		closed_book.visible = true
 		opened_book.visible = false
+	
+func open_page(page_index: int):
+	var spell = spells[page_index]
+	
+	if spell is BasicSpell:
+		$OpenedBook/FinalSpell.visible = false
+		$OpenedBook/BasicSpell.visible = true
+		
+		$OpenedBook/BasicSpell/SpellName.text = spell.name
+		$OpenedBook/BasicSpell/SpellPreview.texture = spell.spell_image
+		
+	if spell is FinalSpell:
+		$OpenedBook/BasicSpell.visible = false
+		
+		$OpenedBook/FinalSpell.visible = true
+		
+		$OpenedBook/FinalSpell/SpellName.text = spell.name
