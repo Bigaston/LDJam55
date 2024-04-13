@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dijrqujuat5md"]
+[gd_scene load_steps=8 format=3 uid="uid://dijrqujuat5md"]
 
 [ext_resource type="Script" path="res://objects/ui/Book.gd" id="1_07p7n"]
 [ext_resource type="Resource" uid="uid://q4cwk244at8e" path="res://resources/content/SpellBook.tres" id="2_al7fj"]
 [ext_resource type="PackedScene" uid="uid://ckhb0rcx8hdgt" path="res://objects/ui/FinalSpell.tscn" id="3_amhml"]
 [ext_resource type="PackedScene" uid="uid://b6o3mvyol3hbo" path="res://objects/ui/BasicSpell.tscn" id="4_oxe52"]
-[ext_resource type="Script" path="res://objects/ui/FinalSpell.gd" id="4_t3a2g"]
 
 [sub_resource type="Gradient" id="Gradient_ry0sm"]
 
@@ -84,7 +83,6 @@ texture = SubResource("PlaceholderTexture2D_0o704")
 
 [node name="FinalSpell" parent="OpenedBook" instance=ExtResource("3_amhml")]
 layout_mode = 1
-script = ExtResource("4_t3a2g")
 
 [node name="BasicSpell" parent="OpenedBook" instance=ExtResource("4_oxe52")]
 layout_mode = 1

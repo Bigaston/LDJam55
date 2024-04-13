@@ -82,8 +82,7 @@ func open_page(page_index: int):
 		$OpenedBook/BasicSpell.visible = true
 		
 	if spell is FinalSpell:
+		$OpenedBook/FinalSpell.set_spell(spell)
+		
 		$OpenedBook/BasicSpell.visible = false
-		
 		$OpenedBook/FinalSpell.visible = true
-		
-		$OpenedBook/FinalSpell/SpellName.text = spell.name

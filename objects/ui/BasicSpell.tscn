@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6o3mvyol3hbo"]
+[gd_scene load_steps=15 format=3 uid="uid://b6o3mvyol3hbo"]
 
 [ext_resource type="Script" path="res://objects/ui/BasicSpell.gd" id="1_6sajc"]
 [ext_resource type="Resource" uid="uid://006fwh1qrrer" path="res://resources/content/PartResourceLinker.tres" id="2_0den8"]
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="2_42dhm"]
 [ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_sylef"]
+[ext_resource type="LabelSettings" uid="uid://c6lcdjj02k82c" path="res://resources/themes/StrangeText.tres" id="5_beanb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_stsm2"]
 font = ExtResource("2_42dhm")
@@ -196,4 +197,5 @@ offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "IOQUS HDQP9OISHDPQIOSUUDHNQPSODIHNQLMXKLWCFSQDQSDQLIUSDBQMOSKJNDLQJHVXWM%POSDVIQSUPDQSIDHQISODHUIQISUDHUQSIUDUIHQSUIDHQUIHSDUIHQSUIHDUIHQSUIDHIQUSDIUQISDUIHQSKDKQSKJDBQJKSJKDJKBQSKJKJSQKJDJKBSQKJBKBJDJKBQJKSDJKBKJQSKJBDBKJQSKJDKBJQSDOQSIUDBQOISUDYQOISUIDQBSKJDBQKSJBDQKSDBQS?DNQSODIQHSODIQSDOQISDJHQOSBIDQSODIQOISDUBQO"
+label_settings = ExtResource("5_beanb")
 autowrap_mode = 1
