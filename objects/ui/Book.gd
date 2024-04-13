@@ -76,11 +76,10 @@ func open_page(page_index: int):
 	var spell = spells[page_index]
 	
 	if spell is BasicSpell:
+		$OpenedBook/BasicSpell.set_spell(spell)
+		
 		$OpenedBook/FinalSpell.visible = false
 		$OpenedBook/BasicSpell.visible = true
-		
-		$OpenedBook/BasicSpell/SpellName.text = spell.name
-		$OpenedBook/BasicSpell/SpellPreview.texture = spell.spell_image
 		
 	if spell is FinalSpell:
 		$OpenedBook/BasicSpell.visible = false

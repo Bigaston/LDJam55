@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dijrqujuat5md"]
+[gd_scene load_steps=19 format=3 uid="uid://dijrqujuat5md"]
 
 [ext_resource type="Script" path="res://objects/ui/Book.gd" id="1_07p7n"]
 [ext_resource type="Resource" uid="uid://q4cwk244at8e" path="res://resources/content/SpellBook.tres" id="2_al7fj"]
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="3_fml0h"]
+[ext_resource type="Script" path="res://scripts/scenes/BasicSpell.gd" id="4_v5lj0"]
 
 [sub_resource type="Gradient" id="Gradient_ry0sm"]
 
@@ -193,6 +194,7 @@ visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("4_v5lj0")
 
 [node name="SpellName" type="Label" parent="OpenedBook/BasicSpell"]
 layout_mode = 1
