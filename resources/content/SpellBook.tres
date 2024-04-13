@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="SpellBook" load_steps=10 format=3 uid="uid://q4cwk244at8e"]
 
-[ext_resource type="Script" path="res://scripts/custom_resources/PartSpecification.gd" id="1_1vwyi"]
-[ext_resource type="Script" path="res://scripts/custom_resources/BasicSpell.gd" id="1_gmhc6"]
-[ext_resource type="Script" path="res://scripts/custom_resources/SpellBook.gd" id="1_p66a6"]
-[ext_resource type="Script" path="res://scripts/custom_resources/FinalSpell.gd" id="2_e5clk"]
+[ext_resource type="Script" path="res://scripts/custom_resources/spells/PartSpecification.gd" id="1_1vwyi"]
+[ext_resource type="Script" path="res://scripts/custom_resources/spells/BasicSpell.gd" id="1_gmhc6"]
+[ext_resource type="Script" path="res://scripts/custom_resources/spells/SpellBook.gd" id="1_p66a6"]
+[ext_resource type="Script" path="res://scripts/custom_resources/spells/FinalSpell.gd" id="2_e5clk"]
 
 [sub_resource type="Resource" id="Resource_wytob"]
 script = ExtResource("1_1vwyi")

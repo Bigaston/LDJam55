@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=23 format=3 uid="uid://b76s8hrfrycs1"]
+
+[ext_resource type="Script" path="res://scripts/custom_resources/monsters/MonsterResourceLinker.gd" id="1_5p0ke"]
+[ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="1_qr3nv"]
+[ext_resource type="Script" path="res://scripts/custom_resources/monsters/FamilyLinker.gd" id="1_y7r5o"]
+[ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="2_jatcs"]
+[ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="3_g00it"]
+[ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="5_k31vr"]
+[ext_resource type="Texture2D" uid="uid://v8xjmt6e0msa" path="res://resources/textures/monsters/placeholders/ZombieArm_slim.png" id="6_0kxfe"]
+[ext_resource type="Texture2D" uid="uid://bkllakv2cxvo1" path="res://resources/textures/monsters/placeholders/ZombieHead_slim.png" id="7_rd6e7"]
+[ext_resource type="Texture2D" uid="uid://dvwnm5jdlv7ru" path="res://resources/textures/monsters/placeholders/ZombieLegs_slim.png" id="8_nj203"]
+[ext_resource type="Texture2D" uid="uid://bl6d4usy3hqby" path="res://resources/textures/monsters/placeholders/ZombieTorso_slim.png" id="9_gx6hd"]
+[ext_resource type="Texture2D" uid="uid://cthx66qthch57" path="res://resources/textures/monsters/placeholders/SpecterArm_tentacle.png" id="10_8yhyr"]
+[ext_resource type="Texture2D" uid="uid://cwipnq42x7wij" path="res://resources/textures/monsters/placeholders/SpecterHead_tentacle.png" id="11_b17cf"]
+[ext_resource type="Texture2D" uid="uid://dt6n0im5mjyr8" path="res://resources/textures/monsters/placeholders/SpecterLegs_tentacle.png" id="12_dlp14"]
+[ext_resource type="Texture2D" uid="uid://dro0yeabfxi6a" path="res://resources/textures/monsters/placeholders/SpecterTorso_tentacle.png" id="13_5grgm"]
+[ext_resource type="Texture2D" uid="uid://cqm70k81qch5m" path="res://resources/textures/monsters/placeholders/OgreArm_fat.png" id="14_j5wjg"]
+[ext_resource type="Texture2D" uid="uid://drwtpixpbgi63" path="res://resources/textures/monsters/placeholders/OgreHead_fat.png" id="15_w0k8j"]
+[ext_resource type="Texture2D" uid="uid://d1o3m65x42l66" path="res://resources/textures/monsters/placeholders/OgreLegs_fat.png" id="16_gxdvo"]
+[ext_resource type="Texture2D" uid="uid://ddhavlo4l32jj" path="res://resources/textures/monsters/placeholders/OgreTorso_fat.png" id="17_nd0na"]
+
+[sub_resource type="Resource" id="Resource_u2exw"]
+script = ExtResource("1_y7r5o")
+family = 0
+heads = Array[Texture2D]([ExtResource("2_jatcs")])
+torso = Array[Texture2D]([ExtResource("5_k31vr")])
+arms = Array[Texture2D]([ExtResource("1_qr3nv")])
+legs = Array[Texture2D]([ExtResource("3_g00it")])
+
+[sub_resource type="Resource" id="Resource_qwqee"]
+script = ExtResource("1_y7r5o")
+family = 1
+heads = Array[Texture2D]([ExtResource("7_rd6e7")])
+torso = Array[Texture2D]([ExtResource("9_gx6hd")])
+arms = Array[Texture2D]([ExtResource("6_0kxfe")])
+legs = Array[Texture2D]([ExtResource("8_nj203")])
+
+[sub_resource type="Resource" id="Resource_lw8mj"]
+script = ExtResource("1_y7r5o")
+family = 2
+heads = Array[Texture2D]([ExtResource("11_b17cf")])
+torso = Array[Texture2D]([ExtResource("13_5grgm")])
+arms = Array[Texture2D]([ExtResource("10_8yhyr")])
+legs = Array[Texture2D]([ExtResource("12_dlp14")])
+
+[sub_resource type="Resource" id="Resource_ytqt8"]
+script = ExtResource("1_y7r5o")
+family = 3
+heads = Array[Texture2D]([ExtResource("15_w0k8j")])
+torso = Array[Texture2D]([ExtResource("17_nd0na")])
+arms = Array[Texture2D]([ExtResource("14_j5wjg")])
+legs = Array[Texture2D]([ExtResource("16_gxdvo")])
+
+[resource]
+script = ExtResource("1_5p0ke")
+families = Array[ExtResource("1_y7r5o")]([SubResource("Resource_u2exw"), SubResource("Resource_qwqee"), SubResource("Resource_lw8mj"), SubResource("Resource_ytqt8")])

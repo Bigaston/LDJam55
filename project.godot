@@ -21,6 +21,11 @@ config/icon="res://icon.svg"
 Global="*res://scripts/autoload/global.gd"
 CustomTypes="*res://scripts/autoload/custom_types.gd"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [file_customization]
 
 folder_colors={
