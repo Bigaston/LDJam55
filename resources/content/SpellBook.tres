@@ -26,7 +26,7 @@ name = "Vides deformitatem huius faciei"
 condition = SubResource("Resource_wytob")
 result_true = SubResource("Resource_l4jua")
 result_false = SubResource("Resource_l74pr")
-right_page_text = "Mais, vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais resumer ma vie aujourd hui avec vous, je dirais que c’est d’abord des rencontres, des gens qui m ont tendu la main, peut etre à un moment ou je ne pouvais pas  ou j’etais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinee…"
+right_page_text = "Mais, vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. "
 
 [sub_resource type="Resource" id="Resource_ry06u"]
 script = ExtResource("1_1vwyi")
@@ -49,7 +49,7 @@ name = "venustus et elegans pullum"
 condition = SubResource("Resource_ry06u")
 result_true = SubResource("Resource_w2mtk")
 result_false = SubResource("Resource_cgn0c")
-right_page_text = "ploup"
+right_page_text = "Moi, si je devais resumer ma vie aujourd hui avec vous, je dirais que c’est d’abord des rencontres, "
 
 [sub_resource type="Resource" id="Resource_5a0tu"]
 script = ExtResource("1_1vwyi")
@@ -72,7 +72,7 @@ name = "Ipse parum sed non realiter"
 condition = SubResource("Resource_5a0tu")
 result_true = SubResource("Resource_h7t8e")
 result_false = SubResource("Resource_reyvw")
-right_page_text = "ploup"
+right_page_text = "des gens qui m ont tendu la main, peut etre à un moment ou je ne pouvais pas  ou j’etais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinee… "
 
 [sub_resource type="Resource" id="Resource_sn5rs"]
 script = ExtResource("1_1vwyi")

@@ -44,20 +44,20 @@ func _process(delta: float) -> void:
 	opened_book.position.x = initial_opened_book_position.x + sin(bobbing_progress) * move_multiplier
 	opened_book.position.y = initial_opened_book_position.y + cos(bobbing_progress * 1.2) * move_multiplier
 
-	if Input.is_action_just_pressed("book_right"):
-		if current_page < spells.size() - 1:
-			current_page += 1
-			
-			open_page(current_page)
-	
-	if Input.is_action_just_pressed("book_left"):
-		if current_page > 0:
-			current_page -= 1
-			
-			open_page(current_page)
-			
-	if Input.is_action_just_pressed("use_spell"):
-		if is_book_open:
+	if is_book_open:
+		if Input.is_action_just_pressed("book_right"):
+			if current_page < spells.size() - 1:
+				current_page += 1
+				
+				open_page(current_page)
+		
+		if Input.is_action_just_pressed("book_left"):
+			if current_page > 0:
+				current_page -= 1
+				
+				open_page(current_page)
+				
+		if Input.is_action_just_pressed("use_spell"):
 			spell_used.emit(spells[current_page])
 
 func open_book():
