@@ -18,10 +18,9 @@ shape = SubResource("CapsuleShape3D_bd5pr")
 [node name="Neck" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.968366, 0.249535, 0, -0.249535, 0.968366, 0, 0.5, 0)
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Neck/Camera3D"]
 current = true
 
 [node name="Book" parent="." instance=ExtResource("2_ph60a")]
-mouse_filter = 2
