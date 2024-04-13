@@ -22,7 +22,7 @@ func dispawn_couloir(nb_to_dispawn: int):
 		node.queue_free()
 
 func _ready():
-	spawn_couloir(2)
+	spawn_couloir(3)
 
 func _process(delta: float) -> void:
 	if player.position.z <= terrain_array[terrain_array.size()-1].position.z + 5:
