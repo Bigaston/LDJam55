@@ -1,5 +1,6 @@
 extends Control
 
+@export var spells: SpellBook
 @export var closed_book: Control
 @export var opened_book: Control
 
@@ -15,6 +16,8 @@ var initial_closed_book_position: Vector2
 var initial_opened_book_position: Vector2
 
 var is_book_open = false
+
+var current_page = 0
 
 func _ready():
 	initial_closed_book_position = $ClosedBook.position
