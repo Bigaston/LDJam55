@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://objects/ui/Book.gd" id="1_07p7n"]
 [ext_resource type="Resource" uid="uid://q4cwk244at8e" path="res://resources/content/SpellBook.tres" id="2_al7fj"]
+[ext_resource type="Texture2D" uid="uid://cu28jb165u172" path="res://resources/textures/book/Book_closedHand.png" id="3_0jxpp"]
 [ext_resource type="PackedScene" uid="uid://ckhb0rcx8hdgt" path="res://objects/ui/FinalSpell.tscn" id="3_amhml"]
-[ext_resource type="Texture2D" uid="uid://c83yhs7ppmwsn" path="res://resources/textures/book/Book_closed.png" id="3_wp6mm"]
-[ext_resource type="Texture2D" uid="uid://dbtk6kweg1ltw" path="res://resources/textures/book/Book_open_empty.png" id="4_npbgq"]
+[ext_resource type="Texture2D" uid="uid://dtenbjpv75nrw" path="res://resources/textures/book/Book_openHand.png" id="4_ismcc"]
 [ext_resource type="PackedScene" uid="uid://b6o3mvyol3hbo" path="res://objects/ui/BasicSpell.tscn" id="4_oxe52"]
 
 [node name="Book" type="Control" node_paths=PackedStringArray("closed_book", "opened_book")]
@@ -14,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_07p7n")
 spells_resource = ExtResource("2_al7fj")
 closed_book = NodePath("ClosedBook")
@@ -21,6 +22,7 @@ opened_book = NodePath("OpenedBook")
 speed_multiplier = 20.0
 
 [node name="ClosedBook" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -31,6 +33,7 @@ offset_left = -40.0
 offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="ClosedBook"]
 layout_mode = 1
@@ -39,18 +42,18 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -561.0
-offset_top = -709.0
-offset_right = 173.0
-offset_bottom = 107.0
+offset_left = -555.0
+offset_top = -694.0
+offset_right = 179.0
+offset_bottom = 122.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("3_wp6mm")
+mouse_filter = 2
+texture = ExtResource("3_0jxpp")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="OpenedBook" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -71,12 +74,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -513.5
-offset_top = -715.0
-offset_right = 513.5
+offset_left = -640.0
+offset_top = -743.0
+offset_right = 681.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("4_npbgq")
+mouse_filter = 2
+texture = ExtResource("4_ismcc")
 expand_mode = 1
 stretch_mode = 5
 

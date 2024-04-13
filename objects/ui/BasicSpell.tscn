@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://b6o3mvyol3hbo"]
+[gd_scene load_steps=14 format=3 uid="uid://b6o3mvyol3hbo"]
 
 [ext_resource type="Script" path="res://objects/ui/BasicSpell.gd" id="1_6sajc"]
 [ext_resource type="Resource" uid="uid://006fwh1qrrer" path="res://resources/content/PartResourceLinker.tres" id="2_0den8"]
 [ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_sylef"]
 [ext_resource type="LabelSettings" uid="uid://c5mjcdfidgkgs" path="res://resources/themes/SpellTitle.tres" id="4_1husb"]
-[ext_resource type="Texture2D" uid="uid://dbtk6kweg1ltw" path="res://resources/textures/book/Book_open_empty.png" id="4_i0f21"]
 [ext_resource type="LabelSettings" uid="uid://c6lcdjj02k82c" path="res://resources/themes/StrangeText.tres" id="5_beanb"]
 
 [sub_resource type="Gradient" id="Gradient_mir0b"]
@@ -44,22 +43,6 @@ script = ExtResource("1_6sajc")
 part_linker = ExtResource("2_0den8")
 monster_linker = ExtResource("3_sylef")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -513.5
-offset_top = -715.0
-offset_right = 513.5
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("4_i0f21")
-expand_mode = 1
-stretch_mode = 5
-
 [node name="SpellPreview" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
@@ -83,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -370.0
-offset_top = -500.0
-offset_right = -247.0
-offset_bottom = -420.0
+offset_left = -324.0
+offset_top = -558.0
+offset_right = -201.0
+offset_bottom = -478.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("GradientTexture1D_lmy5a")
@@ -99,10 +82,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -157.0
-offset_top = -502.0
-offset_right = -34.0
-offset_bottom = -422.0
+offset_left = -126.0
+offset_top = -557.0
+offset_right = -3.0
+offset_bottom = -477.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("GradientTexture1D_lmy5a")
@@ -115,10 +98,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 47.0
-offset_top = -587.0
-offset_right = 119.0
-offset_bottom = -520.0
+offset_left = 48.0
+offset_top = -627.0
+offset_right = 120.0
+offset_bottom = -560.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("GradientTexture1D_myton")
@@ -139,46 +122,46 @@ grow_vertical = 0
 
 [node name="ConditionPart" type="TextureRect" parent="Condition"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = -450.0
-offset_right = 134.0
-offset_bottom = -394.0
+offset_left = 74.0
+offset_top = -501.0
+offset_right = 133.0
+offset_bottom = -445.0
 texture = SubResource("GradientTexture1D_kj6gc")
 expand_mode = 1
 
 [node name="ConditionFamily" type="TextureRect" parent="Condition"]
 layout_mode = 0
-offset_left = 140.0
-offset_top = -450.0
-offset_right = 199.0
-offset_bottom = -394.0
+offset_left = 139.0
+offset_top = -501.0
+offset_right = 198.0
+offset_bottom = -445.0
 texture = SubResource("GradientTexture1D_kj6gc")
 expand_mode = 1
 
 [node name="PictoArrow" type="TextureRect" parent="Condition"]
 layout_mode = 0
-offset_left = 211.0
-offset_top = -450.0
-offset_right = 270.0
-offset_bottom = -394.0
+offset_left = 210.0
+offset_top = -501.0
+offset_right = 269.0
+offset_bottom = -445.0
 texture = SubResource("GradientTexture1D_kj6gc")
 expand_mode = 1
 
 [node name="BadResultPart" type="TextureRect" parent="Condition"]
 layout_mode = 0
-offset_left = 278.0
-offset_top = -450.0
-offset_right = 337.0
-offset_bottom = -394.0
+offset_left = 277.0
+offset_top = -501.0
+offset_right = 336.0
+offset_bottom = -445.0
 texture = SubResource("GradientTexture1D_kj6gc")
 expand_mode = 1
 
 [node name="BadResultFamily" type="TextureRect" parent="Condition"]
 layout_mode = 0
-offset_left = 343.0
-offset_top = -450.0
-offset_right = 402.0
-offset_bottom = -394.0
+offset_left = 342.0
+offset_top = -501.0
+offset_right = 401.0
+offset_bottom = -445.0
 texture = SubResource("GradientTexture1D_kj6gc")
 expand_mode = 1
 
@@ -189,10 +172,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 51.0
-offset_top = -324.0
-offset_right = 379.0
-offset_bottom = -64.0
+offset_left = 48.0
+offset_top = -424.0
+offset_right = 376.0
+offset_bottom = -164.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "IOQUS HDQP9OISHDPQIOSUUDHNQPSODIHNQLMXKLWCFSQDQSDQLIUSDBQMOSKJN"
@@ -206,10 +189,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -379.0
-offset_top = -601.0
-offset_right = -18.0
-offset_bottom = -529.0
+offset_left = -325.0
+offset_top = -640.0
+offset_right = 9.0
+offset_bottom = -568.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "SUPER FINAL NAME"
