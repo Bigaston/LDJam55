@@ -7,3 +7,7 @@ class_name BasicSpell
 @export_category("Result")
 @export var result_true: PartSpecification
 @export var result_false: PartSpecification
+
+@export_category("Lore")
+@export var spell_image: Texture2D
+@export_multiline var right_page_text: String

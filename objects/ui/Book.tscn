@@ -1,16 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://dijrqujuat5md"]
+[gd_scene load_steps=10 format=3 uid="uid://dijrqujuat5md"]
 
 [ext_resource type="Script" path="res://objects/ui/Book.gd" id="1_07p7n"]
+[ext_resource type="Resource" uid="uid://q4cwk244at8e" path="res://resources/content/SpellBook.tres" id="2_al7fj"]
+[ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="3_fml0h"]
 
 [sub_resource type="Gradient" id="Gradient_ry0sm"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_85bbc"]
 gradient = SubResource("Gradient_ry0sm")
 
-[sub_resource type="Gradient" id="Gradient_vr4vn"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0o704"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_46vam"]
-gradient = SubResource("Gradient_vr4vn")
+[sub_resource type="LabelSettings" id="LabelSettings_stsm2"]
+font = ExtResource("3_fml0h")
+font_size = 32
+
+[sub_resource type="Gradient" id="Gradient_fxu0m"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bbfn1"]
+gradient = SubResource("Gradient_fxu0m")
 
 [node name="Book" type="Control" node_paths=PackedStringArray("closed_book", "opened_book")]
 layout_mode = 3
@@ -20,6 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_07p7n")
+spells = ExtResource("2_al7fj")
 closed_book = NodePath("ClosedBook")
 opened_book = NodePath("OpenedBook")
 speed_multiplier = 20.0
@@ -77,4 +86,82 @@ offset_top = -563.0
 offset_right = 397.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("GradientTexture2D_46vam")
+texture = SubResource("PlaceholderTexture2D_0o704")
+
+[node name="FinalSpell" type="Control" parent="OpenedBook"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="OpenedBook/FinalSpell"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -382.0
+offset_top = -551.0
+offset_right = -148.0
+offset_bottom = -519.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SUPER FINAL NAME"
+label_settings = SubResource("LabelSettings_stsm2")
+
+[node name="TextureRect" type="TextureRect" parent="OpenedBook/FinalSpell"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -375.0
+offset_top = -454.0
+offset_right = -184.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_bbfn1")
+
+[node name="Label2" type="Label" parent="OpenedBook/FinalSpell"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -451.0
+offset_right = 1.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "QSOPDIQHSDPIOUQHSDPOIQHSDPQOIUSHDQPOSIHDPQOISHDQPIOSDHQPSOIDHQPSODIHQSPDOIHQLISUDGQLISJBDLMQSIDUQPOSIDQKSJDPOQSIDIOQISHDBQSKLDLQKHJSDOIQSUDIOQXBNWCK.QJBNXLJSODIQSODKHNQSKLDJNPOQXCNOPIQXHOI>SWUYDQODNQPOIXHDKHJXHPQOIS"
+autowrap_mode = 1
+
+[node name="Label3" type="Label" parent="OpenedBook/FinalSpell"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -449.0
+offset_right = 345.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "po I oiqushbdqouisbdlqkjsdPOPOIUHQSDPOQIUHSDQSDLIUQSHDPMOKLNQPIOXCNPOI>WPMOUIDHQPOIHNKPQD
+QMOSDIHNQSD
+QMOLDSINQMSOIDQMSLDKNNQL/?KXNCMWOIHXPIOAMLKNNDQSMLKNDQMSOKDJPOQIFUJKLJNALKJN	ALIUBPSIQDOINCXW>MLKHPDOIAB SQLKJDHQ/SDQDML>WXCBLKUQYSDDPQOJSBDPuiohOQIUSDHQOPSHDQKLXWUICHPOW>XIHXBWOLIUSHPQIODHQNPSOICHW>XNLKJH>POISQHYDOPIUHPO"
+autowrap_mode = 1
