@@ -8,6 +8,8 @@ extends Control
 @export var speed_multiplier: float = 10
 @export var move_multiplier: float = 10
 
+signal spell_used(spell)
+
 var player_speed: float = 0
 
 var bobbing_progress = 0
@@ -53,6 +55,10 @@ func _process(delta: float) -> void:
 			current_page -= 1
 			
 			open_page(current_page)
+			
+	if Input.is_action_just_pressed("use_spell"):
+		if is_book_open:
+			spell_used.emit(spells[current_page])
 
 func open_book():
 	if !is_book_open:

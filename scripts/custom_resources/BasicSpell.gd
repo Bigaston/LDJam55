@@ -3,6 +3,7 @@ class_name BasicSpell
 
 @export var name: String
 @export var condition: PartSpecification
+@export var sound: AudioStream
 
 @export_category("Result")
 @export var result_true: PartSpecification

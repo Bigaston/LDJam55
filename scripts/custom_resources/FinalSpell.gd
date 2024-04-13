@@ -2,6 +2,7 @@ extends Resource
 class_name FinalSpell
 
 @export var name: String
+@export var sound: AudioStream
 
 @export_category("Partie")
 @export var head_family: CustomTypes.MonsterFamily
