@@ -127,5 +127,21 @@ mesh = SubResource("QuadMesh_3ucmu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_8pl3p")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84107, 3.30492, 0.988935)
+light_color = Color(1, 0, 0, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84107, 3.30492, 9.27951)
+light_color = Color(1, 0, 0, 1)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.77043, 3.30492, 9.27951)
+light_color = Color(1, 0, 0, 1)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.77043, 3.30492, 1.26726)
+light_color = Color(1, 0, 0, 1)
+
 [node name="Monster" parent="." instance=ExtResource("6_yuqhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99765, 4.25093)
