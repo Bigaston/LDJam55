@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4h17mh386uyt"
-path.s3tc="res://.godot/imported/texture_04.png-ea8630574c8a4d024313fed47d19d1ef.s3tc.ctex"
+uid="uid://dwe5bhkii4qgq"
+path.s3tc="res://.godot/imported/shadows.png-5f34f51fa411e664f793b88ccec0aad8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/textures/texture_04.png"
-dest_files=["res://.godot/imported/texture_04.png-ea8630574c8a4d024313fed47d19d1ef.s3tc.ctex"]
+source_file="res://resources/textures/placeholder/shadows.png"
+dest_files=["res://.godot/imported/shadows.png-5f34f51fa411e664f793b88ccec0aad8.s3tc.ctex"]
 
 [params]
 

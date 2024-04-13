@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dodkpy17ylwib"]
+
+[ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r14h0"]
+size = Vector3(4, 4, 1)
+
+[node name="Monster" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_r14h0")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299072, -1.59489, -0.0251083)
+size = Vector3(3.56372, 2.07666, 1.3705)
+texture_albedo = ExtResource("1_uh6yn")

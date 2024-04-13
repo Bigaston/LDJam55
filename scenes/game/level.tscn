@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=12 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
 [ext_resource type="PackedScene" uid="uid://ge5vudlmrbfh" path="res://objects/Player.tscn" id="1_p5c63"]
 [ext_resource type="Script" path="res://scripts/scenes/TerrainContainer.gd" id="3_jbmto"]
+[ext_resource type="Material" uid="uid://duba4yd4ge04h" path="res://resources/materials/proto_material.tres" id="5_ygx1m"]
+[ext_resource type="PackedScene" uid="uid://dodkpy17ylwib" path="res://objects/Monster.tscn" id="6_yuqhc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8anhs"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,6 +23,13 @@ fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 0.3
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_8d5ip"]
+material = ExtResource("5_ygx1m")
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f41b2"]
+size = Vector3(10, 1, 10)
+
 [node name="Level" type="Node3D"]
 script = ExtResource("1_81kyg")
 
@@ -28,9 +37,24 @@ script = ExtResource("1_81kyg")
 environment = SubResource("Environment_q02r5")
 
 [node name="Player" parent="." instance=ExtResource("1_p5c63")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23599, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23599, 2)
 
 [node name="TerrainContainer" type="Node3D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("3_jbmto")
 terrain_scene = ExtResource("1_p3bju")
 player = NodePath("../Player")
+
+[node name="StartRoom" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("PlaneMesh_8d5ip")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartRoom/Ground/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_f41b2")
+
+[node name="Monster" parent="." instance=ExtResource("6_yuqhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.99765, 4.25093)
