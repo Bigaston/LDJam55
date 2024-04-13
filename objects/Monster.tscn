@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dodkpy17ylwib"]
+[gd_scene load_steps=8 format=3 uid="uid://dodkpy17ylwib"]
 
+[ext_resource type="Script" path="res://objects/Monster.gd" id="1_43xes"]
 [ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
+[ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="3_vlwy5"]
+[ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="4_3b1ti"]
+[ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="5_3jajr"]
+[ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="6_7tvu6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r14h0"]
 size = Vector3(4, 4, 1)
 
 [node name="Monster" type="Node3D"]
+script = ExtResource("1_43xes")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -13,6 +19,29 @@ size = Vector3(4, 4, 1)
 shape = SubResource("BoxShape3D_r14h0")
 
 [node name="Decal" type="Decal" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299072, -1.59489, -0.0251083)
-size = Vector3(3.56372, 2.07666, 1.3705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299072, -2.29728, -0.0251083)
+size = Vector3(3.56372, 0.671875, 1.3705)
 texture_albedo = ExtResource("1_uh6yn")
+
+[node name="Body" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.248681, 0)
+
+[node name="Head" type="Sprite3D" parent="Body"]
+pixel_size = 0.0018
+billboard = 2
+texture = ExtResource("3_vlwy5")
+
+[node name="Torso" type="Sprite3D" parent="Body"]
+pixel_size = 0.0018
+billboard = 2
+texture = ExtResource("4_3b1ti")
+
+[node name="Arms" type="Sprite3D" parent="Body"]
+pixel_size = 0.0018
+billboard = 2
+texture = ExtResource("5_3jajr")
+
+[node name="Legs" type="Sprite3D" parent="Body"]
+pixel_size = 0.0018
+billboard = 2
+texture = ExtResource("6_7tvu6")
