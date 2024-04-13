@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dodkpy17ylwib"]
+[gd_scene load_steps=9 format=3 uid="uid://dodkpy17ylwib"]
 
 [ext_resource type="Script" path="res://objects/Monster.gd" id="1_43xes"]
 [ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
+[ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="2_hr87t"]
 [ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="3_vlwy5"]
 [ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="4_3b1ti"]
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="5_3jajr"]
@@ -12,6 +13,7 @@ size = Vector3(4, 4, 1)
 
 [node name="Monster" type="Node3D"]
 script = ExtResource("1_43xes")
+monster_linker = ExtResource("2_hr87t")
 
 [node name="Area3D" type="Area3D" parent="."]
 
