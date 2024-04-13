@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://dt1fjgh7f0prp"]
+
+[ext_resource type="AudioStream" uid="uid://ckh3mvdkn6ary" path="res://resources/audio/sources/H-O_01.wav" id="1_m58f5"]
+[ext_resource type="AudioStream" uid="uid://bsykslnddqfmq" path="res://resources/audio/sources/H-O_02.wav" id="2_2v5au"]
+[ext_resource type="AudioStream" uid="uid://cyg8w4755cpgh" path="res://resources/audio/sources/H-O_03.wav" id="3_irfds"]
+[ext_resource type="AudioStream" uid="uid://cvhy4lsxadeih" path="res://resources/audio/sources/H-O_04.wav" id="4_5q664"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_m58f5")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_2v5au")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_irfds")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_5q664")
+stream_3/weight = 1.0

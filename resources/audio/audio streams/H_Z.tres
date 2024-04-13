@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://bw31akkmxtqdl"]
+
+[ext_resource type="AudioStream" uid="uid://0uf6h38jdluf" path="res://resources/audio/sources/H-Z_01.wav" id="1_jbokh"]
+[ext_resource type="AudioStream" uid="uid://c7bmjvdec4hu1" path="res://resources/audio/sources/H-Z_02.wav" id="2_r20to"]
+[ext_resource type="AudioStream" uid="uid://b0oxltxmtik2r" path="res://resources/audio/sources/H-Z_03.wav" id="3_hnj8v"]
+[ext_resource type="AudioStream" uid="uid://cf17yajcjydsm" path="res://resources/audio/sources/H-Z_04.wav" id="4_k56gw"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_jbokh")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_r20to")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_hnj8v")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_k56gw")
+stream_3/weight = 1.0
