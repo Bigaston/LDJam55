@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dig1yvww3j8q6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jjsdw"]
+size = Vector2(4, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rf6yl"]
+size = Vector3(4, 1, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_shiqx"]
+size = Vector2(20, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_svn5j"]
+size = Vector3(20, 4, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_sdrxf"]
+size = Vector2(20, 4)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tolos"]
+size = Vector2(4, 20)
+
+[node name="Terrain" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_jjsdw")
+
+[node name="GroundCollision" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/GroundCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_rf6yl")
+
+[node name="WallLeft" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 2, 0)
+mesh = SubResource("QuadMesh_shiqx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WallLeft"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallLeft/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+shape = SubResource("BoxShape3D_svn5j")
+
+[node name="WallRight" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 2, 0)
+mesh = SubResource("QuadMesh_sdrxf")
+skeleton = NodePath("../WallLeft")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WallRight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallRight/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+shape = SubResource("BoxShape3D_svn5j")
+
+[node name="Ceil" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 0)
+mesh = SubResource("PlaneMesh_tolos")

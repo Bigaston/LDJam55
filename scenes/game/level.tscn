@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c68seuu055u1q"]
+
+[ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
+[ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
+[ext_resource type="PackedScene" uid="uid://ge5vudlmrbfh" path="res://objects/Player.tscn" id="1_p5c63"]
+[ext_resource type="Script" path="res://scripts/scenes/TerrainContainer.gd" id="3_jbmto"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_81kyg")
+
+[node name="Player" parent="." instance=ExtResource("1_p5c63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23599, -1)
+
+[node name="TerrainContainer" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("3_jbmto")
+terrain_scene = ExtResource("1_p3bju")
+player = NodePath("../Player")
