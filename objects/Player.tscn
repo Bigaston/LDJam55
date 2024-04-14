@@ -1,9 +1,91 @@
-[gd_scene load_steps=4 format=3 uid="uid://ge5vudlmrbfh"]
+[gd_scene load_steps=9 format=3 uid="uid://ge5vudlmrbfh"]
 
 [ext_resource type="Script" path="res://objects/Player.gd" id="1_ck6yg"]
 [ext_resource type="PackedScene" uid="uid://dijrqujuat5md" path="res://objects/ui/Book.tscn" id="2_ph60a"]
+[ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="3_onvmg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bd5pr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gos4k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5saf"]
+font = ExtResource("3_onvmg")
+font_size = 76
+font_color = Color(0.947406, 3.77826e-06, 1.73271e-06, 1)
+
+[sub_resource type="Animation" id="Animation_4atok"]
+resource_name = "Death"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndScreen/FadePanel:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Neck/Camera3D")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, 1, 1, 0, -0.5, -0.6)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Neck/Camera3D")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, -0.220027, -0.169071, 0.195031, 0.940726)
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EndScreen/YouAreDeadText:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("EndScreen/RichTextLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4, 4.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enable_restart"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m8dl8"]
+_data = {
+"Death": SubResource("Animation_4atok")
+}
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("book")]
 script = ExtResource("1_ck6yg")
@@ -30,5 +112,66 @@ opened_book = NodePath("OpenedBook")
 book_close = NodePath("Audio/BookClose")
 book_open = NodePath("Audio/BookOpen")
 book_flip = NodePath("Audio/BookFlip")
+
+[node name="EndScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FadePanel" type="Panel" parent="EndScreen"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gos4k")
+
+[node name="YouAreDeadText" type="Label" parent="EndScreen"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -11.5
+offset_right = 45.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU LOOSE !!!"
+label_settings = SubResource("LabelSettings_m5saf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.5
+offset_top = 44.5
+offset_right = 260.5
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_onvmg")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to restart"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m8dl8")
+}
 
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]

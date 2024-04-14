@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var current_scene: Node
 
@@ -8,11 +8,11 @@ var loaded_scene = ""
 signal scene_loaded()
 
 func _ready():
-	change_scene(preload("res://scenes/other/boot_screen.tscn").instantiate())
+	change_scene(preload("res://scenes/game/level.tscn").instantiate())
 
 func _process(_delta):
 	if loading:
-		if ResourceLoader.load_threaded_get_status(loaded_scene) == ResourceLoader.THREAD_LOAD_LOADED:
+		if ResourceLoader.load_threaded_get_status(loaded_scene) == ResourceLoader.THREAD_LOAD_LOADED:			
 			scene_loaded.emit()
 			loading = false
 			
@@ -23,11 +23,11 @@ func _process(_delta):
 			change_scene(new_packed_scene.instantiate())
 
 func change_scene(new_scene: Node):
-	add_child(new_scene)
-	
 	if current_scene != null:
 		remove_child(current_scene)
 		current_scene.queue_free()
+		
+	add_child(new_scene)
 		
 	current_scene = new_scene
 	

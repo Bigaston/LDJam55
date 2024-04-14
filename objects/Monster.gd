@@ -77,5 +77,6 @@ func use_final_spell(spell: FinalSpell):
 		random_part(part, true)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is CharacterBody3D:
-		print("TMOR")
+	if body is Player:
+		body.kill_player()
+		is_going = false

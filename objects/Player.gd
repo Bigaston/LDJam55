@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 @export var opened_book_speed: float = 3.0
 @export var speed: float = 5.0
@@ -15,6 +16,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3D
+
+var can_restart = false
 
 signal spell_used(spell)
 
@@ -71,6 +74,15 @@ func _process(_delta):
 		book.open_book()
 	else:
 		book.close_book()
+		
+	if Input.is_action_just_released("use_spell"):
+		get_node("/root/Main").change_scene_async("res://scenes/game/level.tscn")
 
 func _on_book_spell_used(spell: Variant) -> void:
 	spell_used.emit(spell)
+
+func kill_player():
+	$AnimationPlayer.play("Death")
+	
+func enable_restart():
+	can_restart = true
