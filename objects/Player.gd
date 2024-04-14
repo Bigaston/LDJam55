@@ -76,6 +76,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	book.player_speed = velocity.length()
+	$Sounds/AudioAnimation.speed_scale = velocity.length() / speed
 
 func _process(_delta):
 	if camera.rotation_degrees.x <= open_book_threeshold:
