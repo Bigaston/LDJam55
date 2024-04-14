@@ -87,6 +87,10 @@ func _process(_delta):
 		get_node("/root/Main").change_scene_async("res://scenes/game/level.tscn")
 
 func _on_book_spell_used(spell: Variant) -> void:
+	if spell is BasicSpell:
+		$Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
+		$Spell.play()
+	
 	spell_used.emit(spell)
 
 func kill_player():

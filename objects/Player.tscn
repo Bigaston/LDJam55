@@ -179,4 +179,7 @@ libraries = {
 "": SubResource("AnimationLibrary_m8dl8")
 }
 
+[node name="Spell" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]
