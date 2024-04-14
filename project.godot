@@ -14,7 +14,7 @@ config/name="LDJam55"
 config/tags=PackedStringArray("gamejam")
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
