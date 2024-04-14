@@ -1,9 +1,9 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://djs6ndf0deyf5"]
 
-[ext_resource type="AudioStream" uid="uid://dihmowww2usvt" path="res://resources/audio/sources/H-S_01.wav" id="1_okh27"]
-[ext_resource type="AudioStream" uid="uid://1nsr87jlgijl" path="res://resources/audio/sources/H-S_02.wav" id="2_0d5i7"]
-[ext_resource type="AudioStream" uid="uid://dpljjxkebfhc2" path="res://resources/audio/sources/H-S_03.wav" id="3_kknxt"]
-[ext_resource type="AudioStream" uid="uid://bmsehgrim0ywl" path="res://resources/audio/sources/H-S_04.wav" id="4_ne3h1"]
+[ext_resource type="AudioStream" uid="uid://dihmowww2usvt" path="res://resources/audio/sources/monster_limbs/head/H-S_01.wav" id="1_okh27"]
+[ext_resource type="AudioStream" uid="uid://1nsr87jlgijl" path="res://resources/audio/sources/monster_limbs/head/H-S_02.wav" id="2_0d5i7"]
+[ext_resource type="AudioStream" uid="uid://dpljjxkebfhc2" path="res://resources/audio/sources/monster_limbs/head/H-S_03.wav" id="3_kknxt"]
+[ext_resource type="AudioStream" uid="uid://bmsehgrim0ywl" path="res://resources/audio/sources/monster_limbs/head/H-S_04.wav" id="4_ne3h1"]
 
 [resource]
 streams_count = 4
