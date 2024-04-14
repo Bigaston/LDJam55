@@ -1,9 +1,9 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://c25mg77jaocut"]
 
-[ext_resource type="AudioStream" uid="uid://cf8rjvpsiyap" path="res://resources/audio/sources/UI-Book_PageTurn_01.wav" id="1_rckri"]
-[ext_resource type="AudioStream" uid="uid://d3167nj0r812i" path="res://resources/audio/sources/UI-Book_PageTurn_02.wav" id="2_1gfqm"]
-[ext_resource type="AudioStream" uid="uid://bmxb7trorvtra" path="res://resources/audio/sources/UI-Book_PageTurn_03.wav" id="3_50s7g"]
-[ext_resource type="AudioStream" uid="uid://0t4ukaqwr8qd" path="res://resources/audio/sources/UI-Book_PageTurn_04.wav" id="4_cnspb"]
+[ext_resource type="AudioStream" uid="uid://cf8rjvpsiyap" path="res://resources/audio/sources/ui/UI-Book_PageTurn_01.wav" id="1_rckri"]
+[ext_resource type="AudioStream" uid="uid://d3167nj0r812i" path="res://resources/audio/sources/ui/UI-Book_PageTurn_02.wav" id="2_1gfqm"]
+[ext_resource type="AudioStream" uid="uid://bmxb7trorvtra" path="res://resources/audio/sources/ui/UI-Book_PageTurn_03.wav" id="3_50s7g"]
+[ext_resource type="AudioStream" uid="uid://0t4ukaqwr8qd" path="res://resources/audio/sources/ui/UI-Book_PageTurn_04.wav" id="4_cnspb"]
 
 [resource]
 streams_count = 4
