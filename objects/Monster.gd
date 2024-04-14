@@ -61,9 +61,9 @@ func trigger_move():
 
 func use_basic_spell(spell: BasicSpell):
 	if parts[spell.condition.body_position] == spell.condition.monster_family:
-		set_body_part(spell.result_true.body_position, spell.result_true.monster_family, true)
-	else:
 		set_body_part(spell.result_false.body_position, spell.result_false.monster_family, true)
+	else:
+		set_body_part(spell.result_true.body_position, spell.result_true.monster_family, true)
 	
 func use_final_spell(spell: FinalSpell):
 	if (parts[CustomTypes.BodyPart.HEAD] == spell.head_family &&

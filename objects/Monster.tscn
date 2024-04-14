@@ -100,8 +100,8 @@ monster_linker = ExtResource("2_hr87t")
 shape = SubResource("BoxShape3D_r14h0")
 
 [node name="Decal" type="Decal" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299072, -2.29728, -0.0251083)
-size = Vector3(3.56372, 0.671875, 1.3705)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158654, -2.29728, 0.0595342)
+size = Vector3(2.35012, 0.671875, 1.13999)
 texture_albedo = ExtResource("1_uh6yn")
 
 [node name="Body" type="Node3D" parent="."]
