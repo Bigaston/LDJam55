@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ge5vudlmrbfh"]
+[gd_scene load_steps=11 format=3 uid="uid://ge5vudlmrbfh"]
 
 [ext_resource type="Script" path="res://objects/Player.gd" id="1_ck6yg"]
 [ext_resource type="PackedScene" uid="uid://dijrqujuat5md" path="res://objects/ui/Book.tscn" id="2_ph60a"]
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="3_onvmg"]
+[ext_resource type="AudioStream" uid="uid://c2q5c5mrl68au" path="res://resources/audio/audio streams/ui/UI_Death.tres" id="4_qoyl5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bd5pr"]
 
@@ -179,7 +180,13 @@ libraries = {
 "": SubResource("AnimationLibrary_m8dl8")
 }
 
-[node name="Spell" type="AudioStreamPlayer" parent="."]
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Spell" type="AudioStreamPlayer" parent="Sounds"]
+bus = &"SFX"
+
+[node name="Death" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_qoyl5")
 bus = &"SFX"
 
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]

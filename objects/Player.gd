@@ -88,12 +88,13 @@ func _process(_delta):
 
 func _on_book_spell_used(spell: Variant) -> void:
 	if spell is BasicSpell:
-		$Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
-		$Spell.play()
+		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
+		$Sounds/Spell.play()
 	
 	spell_used.emit(spell)
 
 func kill_player():
+	$Sounds/Death.play()
 	$AnimationPlayer.play("Death")
 	can_move = false
 	
