@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://c1r13d1tp03ir"]
+
+[ext_resource type="AudioStream" uid="uid://cqjy8yvv8j86w" path="res://resources/audio/sources/monster_limbs/legs/L_Z_Slide-001.wav" id="1_4moed"]
+[ext_resource type="AudioStream" uid="uid://bcl5fx3rx7rs0" path="res://resources/audio/sources/monster_limbs/legs/L_Z_Slide-002.wav" id="2_0il1u"]
+[ext_resource type="AudioStream" uid="uid://muripwe8f78m" path="res://resources/audio/sources/monster_limbs/legs/L_Z_Slide-003.wav" id="3_yk55j"]
+[ext_resource type="AudioStream" uid="uid://dyjrjtwan7e2r" path="res://resources/audio/sources/monster_limbs/legs/L_Z_Slide-004.wav" id="4_upf0u"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_4moed")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_0il1u")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_yk55j")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_upf0u")
+stream_3/weight = 1.0

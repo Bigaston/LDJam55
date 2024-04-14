@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="5_3jajr"]
 [ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="6_7tvu6"]
 [ext_resource type="Script" path="res://scripts/scenes/MonsterAudio.gd" id="8_f8e7c"]
-[ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/A_B.tres" id="8_pr2dn"]
+[ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/arms/A_B.tres" id="8_pr2dn"]
 [ext_resource type="Texture2D" uid="uid://duxwxd68fqrtr" path="res://resources/textures/particles/partic2.png" id="10_irgj8"]
 [ext_resource type="Script" path="res://scripts/scenes/MonsterParticles.gd" id="10_uwv6f"]
 

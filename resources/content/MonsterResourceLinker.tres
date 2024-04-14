@@ -4,40 +4,40 @@
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="1_qr3nv"]
 [ext_resource type="Script" path="res://scripts/custom_resources/monsters/FamilyLinker.gd" id="1_y7r5o"]
 [ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="2_jatcs"]
-[ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/A_B.tres" id="2_raebs"]
+[ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/arms/A_B.tres" id="2_mk22g"]
 [ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="3_g00it"]
-[ext_resource type="AudioStream" uid="uid://bc6av84vyseo1" path="res://resources/audio/audio streams/H_B.tres" id="3_iy347"]
+[ext_resource type="AudioStream" uid="uid://bc6av84vyseo1" path="res://resources/audio/audio streams/head/H_B.tres" id="3_j7os4"]
 [ext_resource type="Texture2D" uid="uid://dyhyjumh8uwmb" path="res://resources/ui/icons/harpie.png" id="5_jus8p"]
 [ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="5_k31vr"]
 [ext_resource type="Texture2D" uid="uid://v8xjmt6e0msa" path="res://resources/textures/monsters/placeholders/ZombieArm_slim.png" id="6_0kxfe"]
-[ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/L_B.tres" id="6_t51u1"]
+[ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/legs/L_B.tres" id="7_3q77k"]
 [ext_resource type="Texture2D" uid="uid://bkllakv2cxvo1" path="res://resources/textures/monsters/placeholders/ZombieHead_slim.png" id="7_rd6e7"]
 [ext_resource type="Texture2D" uid="uid://dvwnm5jdlv7ru" path="res://resources/textures/monsters/placeholders/ZombieLegs_slim.png" id="8_nj203"]
 [ext_resource type="Texture2D" uid="uid://bl6d4usy3hqby" path="res://resources/textures/monsters/placeholders/ZombieTorso_slim.png" id="9_gx6hd"]
-[ext_resource type="AudioStream" uid="uid://dxh40dtg6ydkl" path="res://resources/audio/audio streams/T_B.tres" id="9_hwbse"]
 [ext_resource type="Texture2D" uid="uid://cthx66qthch57" path="res://resources/textures/monsters/placeholders/SpecterArm_tentacle.png" id="10_8yhyr"]
+[ext_resource type="AudioStream" uid="uid://dxh40dtg6ydkl" path="res://resources/audio/audio streams/torso/T_B.tres" id="10_vd23y"]
 [ext_resource type="Texture2D" uid="uid://cwipnq42x7wij" path="res://resources/textures/monsters/placeholders/SpecterHead_tentacle.png" id="11_b17cf"]
-[ext_resource type="AudioStream" uid="uid://u2uq2q0wilg5" path="res://resources/audio/audio streams/A_Z.tres" id="11_vkdyo"]
-[ext_resource type="AudioStream" uid="uid://bw31akkmxtqdl" path="res://resources/audio/audio streams/H_Z.tres" id="12_b4l03"]
+[ext_resource type="AudioStream" uid="uid://u2uq2q0wilg5" path="res://resources/audio/audio streams/arms/A_Z.tres" id="12_5u3b1"]
 [ext_resource type="Texture2D" uid="uid://dt6n0im5mjyr8" path="res://resources/textures/monsters/placeholders/SpecterLegs_tentacle.png" id="12_dlp14"]
 [ext_resource type="Texture2D" uid="uid://dro0yeabfxi6a" path="res://resources/textures/monsters/placeholders/SpecterTorso_tentacle.png" id="13_5grgm"]
+[ext_resource type="AudioStream" uid="uid://bw31akkmxtqdl" path="res://resources/audio/audio streams/head/H_Z.tres" id="13_gvamk"]
 [ext_resource type="Texture2D" uid="uid://cqm70k81qch5m" path="res://resources/textures/monsters/placeholders/OgreArm_fat.png" id="14_j5wjg"]
-[ext_resource type="AudioStream" uid="uid://4342gvncoceh" path="res://resources/audio/audio streams/L_Z.tres" id="15_isfg0"]
 [ext_resource type="Texture2D" uid="uid://ds77safhmmgk8" path="res://resources/ui/icons/zombie.png" id="15_u0p8w"]
 [ext_resource type="Texture2D" uid="uid://drwtpixpbgi63" path="res://resources/textures/monsters/placeholders/OgreHead_fat.png" id="15_w0k8j"]
 [ext_resource type="Texture2D" uid="uid://d1o3m65x42l66" path="res://resources/textures/monsters/placeholders/OgreLegs_fat.png" id="16_gxdvo"]
-[ext_resource type="AudioStream" uid="uid://dfhew345lrbn" path="res://resources/audio/audio streams/T_Z.tres" id="17_lfcpq"]
 [ext_resource type="Texture2D" uid="uid://ddhavlo4l32jj" path="res://resources/textures/monsters/placeholders/OgreTorso_fat.png" id="17_nd0na"]
-[ext_resource type="AudioStream" uid="uid://c0x8ba50iol2x" path="res://resources/audio/audio streams/A_S.tres" id="19_5xvdv"]
-[ext_resource type="AudioStream" uid="uid://djs6ndf0deyf5" path="res://resources/audio/audio streams/H_S.tres" id="20_po0bk"]
-[ext_resource type="AudioStream" uid="uid://bgm4p8yckf1n3" path="res://resources/audio/audio streams/L_S.tres" id="23_ac6mj"]
+[ext_resource type="AudioStream" uid="uid://4342gvncoceh" path="res://resources/audio/audio streams/legs/L_Z-Shoes.tres" id="17_yschc"]
+[ext_resource type="AudioStream" uid="uid://dfhew345lrbn" path="res://resources/audio/audio streams/torso/T_Z.tres" id="19_bqfvo"]
+[ext_resource type="AudioStream" uid="uid://c0x8ba50iol2x" path="res://resources/audio/audio streams/arms/A_S.tres" id="21_l4uh2"]
+[ext_resource type="AudioStream" uid="uid://djs6ndf0deyf5" path="res://resources/audio/audio streams/head/H_S.tres" id="22_w4pro"]
 [ext_resource type="Texture2D" uid="uid://b1gmrgnfvhidv" path="res://resources/ui/icons/spectre.png" id="24_ehy1b"]
-[ext_resource type="AudioStream" uid="uid://cbqe0socna2bk" path="res://resources/audio/audio streams/T_S.tres" id="25_aph82"]
-[ext_resource type="AudioStream" uid="uid://dynvr2a18pwce" path="res://resources/audio/audio streams/A_O.tres" id="27_40ppo"]
-[ext_resource type="AudioStream" uid="uid://dt1fjgh7f0prp" path="res://resources/audio/audio streams/H_O.tres" id="28_3uylh"]
-[ext_resource type="AudioStream" uid="uid://h1ipvnj680ui" path="res://resources/audio/audio streams/L_O.tres" id="31_it0lx"]
-[ext_resource type="AudioStream" uid="uid://8hgo27h7rluy" path="res://resources/audio/audio streams/T_O.tres" id="33_u21ly"]
+[ext_resource type="AudioStream" uid="uid://bgm4p8yckf1n3" path="res://resources/audio/audio streams/legs/L_S.tres" id="26_w3hgy"]
+[ext_resource type="AudioStream" uid="uid://cbqe0socna2bk" path="res://resources/audio/audio streams/torso/T_S.tres" id="28_acrio"]
+[ext_resource type="AudioStream" uid="uid://dynvr2a18pwce" path="res://resources/audio/audio streams/arms/A_O.tres" id="30_qub5j"]
+[ext_resource type="AudioStream" uid="uid://dt1fjgh7f0prp" path="res://resources/audio/audio streams/head/H_O.tres" id="31_q2yhu"]
 [ext_resource type="Texture2D" uid="uid://ccw6nvk8mrqs4" path="res://resources/ui/icons/ogre.png" id="33_ue4p3"]
+[ext_resource type="AudioStream" uid="uid://h1ipvnj680ui" path="res://resources/audio/audio streams/legs/L_O.tres" id="35_xgorv"]
+[ext_resource type="AudioStream" uid="uid://8hgo27h7rluy" path="res://resources/audio/audio streams/torso/T_O.tres" id="37_ewi4e"]
 
 [sub_resource type="Resource" id="Resource_u2exw"]
 script = ExtResource("1_y7r5o")
@@ -47,10 +47,10 @@ heads = Array[Texture2D]([ExtResource("2_jatcs")])
 torso = Array[Texture2D]([ExtResource("5_k31vr")])
 arms = Array[Texture2D]([ExtResource("1_qr3nv")])
 legs = Array[Texture2D]([ExtResource("3_g00it")])
-head_audio = ExtResource("3_iy347")
-torso_audio = ExtResource("9_hwbse")
-arms_audio = ExtResource("2_raebs")
-legs_audio = ExtResource("6_t51u1")
+head_audio = ExtResource("3_j7os4")
+torso_audio = ExtResource("10_vd23y")
+arms_audio = ExtResource("2_mk22g")
+legs_audio = ExtResource("7_3q77k")
 
 [sub_resource type="Resource" id="Resource_qwqee"]
 script = ExtResource("1_y7r5o")
@@ -60,10 +60,10 @@ heads = Array[Texture2D]([ExtResource("7_rd6e7")])
 torso = Array[Texture2D]([ExtResource("9_gx6hd")])
 arms = Array[Texture2D]([ExtResource("6_0kxfe")])
 legs = Array[Texture2D]([ExtResource("8_nj203")])
-head_audio = ExtResource("12_b4l03")
-torso_audio = ExtResource("17_lfcpq")
-arms_audio = ExtResource("11_vkdyo")
-legs_audio = ExtResource("15_isfg0")
+head_audio = ExtResource("13_gvamk")
+torso_audio = ExtResource("19_bqfvo")
+arms_audio = ExtResource("12_5u3b1")
+legs_audio = ExtResource("17_yschc")
 
 [sub_resource type="Resource" id="Resource_lw8mj"]
 script = ExtResource("1_y7r5o")
@@ -73,10 +73,10 @@ heads = Array[Texture2D]([ExtResource("11_b17cf")])
 torso = Array[Texture2D]([ExtResource("13_5grgm")])
 arms = Array[Texture2D]([ExtResource("10_8yhyr")])
 legs = Array[Texture2D]([ExtResource("12_dlp14")])
-head_audio = ExtResource("20_po0bk")
-torso_audio = ExtResource("25_aph82")
-arms_audio = ExtResource("19_5xvdv")
-legs_audio = ExtResource("23_ac6mj")
+head_audio = ExtResource("22_w4pro")
+torso_audio = ExtResource("28_acrio")
+arms_audio = ExtResource("21_l4uh2")
+legs_audio = ExtResource("26_w3hgy")
 
 [sub_resource type="Resource" id="Resource_ytqt8"]
 script = ExtResource("1_y7r5o")
@@ -86,10 +86,10 @@ heads = Array[Texture2D]([ExtResource("15_w0k8j")])
 torso = Array[Texture2D]([ExtResource("17_nd0na")])
 arms = Array[Texture2D]([ExtResource("14_j5wjg")])
 legs = Array[Texture2D]([ExtResource("16_gxdvo")])
-head_audio = ExtResource("28_3uylh")
-torso_audio = ExtResource("33_u21ly")
-arms_audio = ExtResource("27_40ppo")
-legs_audio = ExtResource("31_it0lx")
+head_audio = ExtResource("31_q2yhu")
+torso_audio = ExtResource("37_ewi4e")
+arms_audio = ExtResource("30_qub5j")
+legs_audio = ExtResource("35_xgorv")
 
 [resource]
 script = ExtResource("1_5p0ke")
