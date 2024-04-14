@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ge5vudlmrbfh"]
+[gd_scene load_steps=16 format=3 uid="uid://ge5vudlmrbfh"]
 
 [ext_resource type="Script" path="res://objects/Player.gd" id="1_ck6yg"]
 [ext_resource type="PackedScene" uid="uid://dijrqujuat5md" path="res://objects/ui/Book.tscn" id="2_ph60a"]
@@ -16,6 +16,11 @@ bg_color = Color(0, 0, 0, 1)
 font = ExtResource("3_onvmg")
 font_size = 76
 font_color = Color(0.947406, 3.77826e-06, 1.73271e-06, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3tejy"]
+font = ExtResource("3_onvmg")
+font_size = 76
+font_color = Color(0, 0.612624, 0.165051, 1)
 
 [sub_resource type="Animation" id="Animation_4atok"]
 resource_name = "Death"
@@ -87,6 +92,71 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_xgsg5"]
 resource_name = "Win"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinScreen/FadePanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.8, 4.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WinScreen/YouWinText:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.8, 5.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WinScreen/RichTextLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5.8, 6.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enable_restart"
+}]
+}
+tracks/4/type = "rotation_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Neck/Camera3D")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0.3, 1, 0, 0, 0, 1, 1.1, 1, -0.123584, 1.79008e-15, -1.08041e-08, 0.992334, 1.5, 1, -0.0418233, 1.77791e-15, -3.65631e-09, 0.999125, 2.1, 1, -0.116211, 1.78847e-15, -1.01595e-08, 0.993225, 2.7, 1, -0.0418233, 1.77791e-15, -3.65631e-09, 0.999125, 3.2, 1, -0.116211, 1.78847e-15, -1.01595e-08, 0.993225)
+tracks/5/type = "position_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Neck/Camera3D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0.3, 1, 0, 0.5, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m8dl8"]
 _data = {
@@ -138,7 +208,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("book")]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_ck6yg")
 opened_book_speed = 2.0
 speed = 4.0
@@ -152,7 +222,7 @@ shape = SubResource("CapsuleShape3D_bd5pr")
 [node name="Neck" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 3.30872e-23, -2.06795e-24, -3.30872e-23, 1, 2.77556e-16, 2.06795e-24, -2.77556e-16, 1, 0, 0.5, 0)
 current = true
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Neck/Camera3D"]
@@ -219,6 +289,66 @@ theme_override_fonts/normal_font = ExtResource("3_onvmg")
 theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to restart"
+
+[node name="WinScreen" type="Control" parent="."]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FadePanel" type="Panel" parent="WinScreen"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gos4k")
+
+[node name="YouWinText" type="Label" parent="WinScreen"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -11.5
+offset_right = 45.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN !!!"
+label_settings = SubResource("LabelSettings_3tejy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WinScreen"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.0
+offset_top = 57.0
+offset_right = 386.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_onvmg")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to try to fight a new deamon[/center]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

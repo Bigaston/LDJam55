@@ -107,6 +107,12 @@ func enable_restart():
 	can_restart = true
 	
 func win_party(spell):
-	print(spell)
-
-
+	can_move = false
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "rotation_degrees", Vector3(0, 180, 0), 2).set_trans(Tween.TRANS_CUBIC)
+	tween.parallel().tween_property($Neck/Camera3D, "rotation_degrees", Vector3(0, 0, 0), 2).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_callback(func():
+		$AnimationPlayer.play("Win")
+	)
+	
