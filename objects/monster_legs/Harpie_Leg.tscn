@@ -1,6 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://bocaatiuyhe5j"]
+[gd_scene load_steps=5 format=3 uid="uid://bocaatiuyhe5j"]
 
 [ext_resource type="Texture2D" uid="uid://bfu7v8bh7o5dm" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle.png" id="1_r1y43"]
+[ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/L_B.tres" id="2_owuau"]
+
+[sub_resource type="Animation" id="Animation_40u23"]
+resource_name = "Walk"
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sounds/Legs")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a01ew"]
+_data = {
+"Walk": SubResource("Animation_40u23")
+}
 
 [node name="HarpieLeg" type="Sprite3D"]
 pixel_size = 0.0018
@@ -8,5 +35,13 @@ billboard = 2
 texture = ExtResource("1_r1y43")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a01ew")
+}
+autoplay = "Walk"
 
 [node name="Sounds" type="Node3D" parent="."]
+
+[node name="Legs" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("2_owuau")
+bus = &"SFX"
