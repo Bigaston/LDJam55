@@ -95,7 +95,7 @@ name = "Brachium perspicuum apparuit ex nusquam"
 condition = SubResource("Resource_sn5rs")
 result_true = SubResource("Resource_38nnw")
 result_false = SubResource("Resource_jflel")
-right_page_text = "Ploup"
+right_page_text = "Il parait que Godot, c'est bien. Je n ai pas encore d avis sur la question, parce que je travaille avec sous la pression du prog. "
 
 [sub_resource type="Resource" id="Resource_e6tr8"]
 script = ExtResource("1_1vwyi")
@@ -118,7 +118,7 @@ name = "Haec arma tam molles esse debent"
 condition = SubResource("Resource_e6tr8")
 result_true = SubResource("Resource_6oopa")
 result_false = SubResource("Resource_hsnku")
-right_page_text = "Ploup"
+right_page_text = "C est trop calme. J aime pas trop beaucoup ça. J prefere quand c est un peu trop plus moins calme."
 
 [sub_resource type="Resource" id="Resource_bebej"]
 script = ExtResource("1_1vwyi")
@@ -141,7 +141,8 @@ name = "Sunt pieces procidens"
 condition = SubResource("Resource_bebej")
 result_true = SubResource("Resource_akmrd")
 result_false = SubResource("Resource_j3tfo")
-right_page_text = "Ploup"
+right_page_text = "Une etude de 2010 a estime qu en se nourrissant, la bouche d une baleine bleue s ouvre si large et est si grande qu une autre baleine bleue pourrait nager dedans.
+C est fou quand on y pense. De vrais colosses."
 
 [sub_resource type="Resource" id="Resource_an76q"]
 script = ExtResource("1_1vwyi")
@@ -164,7 +165,8 @@ name = "Marathona cum his femoribus currere posset"
 condition = SubResource("Resource_an76q")
 result_true = SubResource("Resource_f57c3")
 result_false = SubResource("Resource_d7q0t")
-right_page_text = "Ploup"
+right_page_text = "Le support est tres important quand on commence un tableau en peinture a l huile. 
+En effet, il faut qu il soit bien prepare pour que la peinture ne coule pas et seche correctement."
 
 [sub_resource type="Resource" id="Resource_mosmw"]
 script = ExtResource("1_1vwyi")
@@ -187,7 +189,8 @@ name = "Crura tam mollis quam sericum"
 condition = SubResource("Resource_mosmw")
 result_true = SubResource("Resource_1c58g")
 result_false = SubResource("Resource_vf17q")
-right_page_text = "Ploup"
+right_page_text = "Pour preparer un support, il faut du gesso, un absorbant tel que du talc ou le blanc de Meudon, qui donne un cote brillant au support) dans des quantites similaires. 
+On peut rajouter une couleur a l acrylique."
 
 [sub_resource type="Resource" id="Resource_vimx8"]
 script = ExtResource("1_1vwyi")
@@ -210,7 +213,9 @@ name = "Crura isti terram non tangant"
 condition = SubResource("Resource_vimx8")
 result_true = SubResource("Resource_psc31")
 result_false = SubResource("Resource_6r1dl")
-right_page_text = "Ploup"
+right_page_text = "En tant que game designer, je souffre beaucoup sur ce projet.
+A chaque fois que je veux lancer le jeu pour voir si tout est ok, les sons me terrifient.
+A l'aide."
 
 [sub_resource type="Resource" id="Resource_7tqs4"]
 script = ExtResource("1_1vwyi")
@@ -233,7 +238,9 @@ name = "Haec crura sunt repulsiva"
 condition = SubResource("Resource_7tqs4")
 result_true = SubResource("Resource_280om")
 result_false = SubResource("Resource_ok2gj")
-right_page_text = "Ploup"
+right_page_text = "Les lynx sont des animaux mignons certes. 
+Mais il y a plus chou comme felin. Je suis decue qu on est pas pris un chat de Pallas comme mascotte.
+Ils sont trop rigolos avec leur petite bouille..."
 
 [sub_resource type="Resource" id="Resource_k67ok"]
 script = ExtResource("2_e5clk")
@@ -242,8 +249,10 @@ head_family = 0
 arm_family = 1
 torso_family = 3
 leg_family = 2
-left_page_text = "Ploup"
-right_page_text = "Prout"
+left_page_text = "Attention ! Ca brule, mais au moins ca repasse bien."
+right_page_text = "Attention ! Ca brule, mais au moins ca repasse bien.
+L invention du fer a resistance electrique est attribuee a Henry W. Seely de New York en 1882. La meme annee, un fer utilisant un arc de carbone a ete presente en France, mais il fut juge trop dangereux. 
+Le premier fer utilisant un thermostat est apparu dans les annees 1920."
 
 [sub_resource type="Resource" id="Resource_4ouku"]
 script = ExtResource("2_e5clk")
@@ -252,8 +261,10 @@ head_family = 2
 arm_family = 3
 torso_family = 0
 leg_family = 1
-left_page_text = "Ploup"
-right_page_text = "Prout"
+left_page_text = "C est la goutte d eau qui fait deborder la cruche !"
+right_page_text = "C est la goutte d eau qui fait deborder la cruche !
+Un objet si simple et si essentiel. La cruche participe au maintien de la vie, mais aussi au peril de vos ennemis.
+Un petit coup d'eau ou un petit coup derriere la tete, elle est votre meilleure amie."
 
 [sub_resource type="Resource" id="Resource_ps81y"]
 script = ExtResource("2_e5clk")
@@ -262,8 +273,9 @@ head_family = 3
 arm_family = 2
 torso_family = 1
 leg_family = 0
-left_page_text = "Ploup"
-right_page_text = "Prout"
+left_page_text = "Un des derniers representants du regne des dinosaures..."
+right_page_text = "Un des derniers representants du regne des dinosaures...
+Les premiers ossements de poulets decouverts en Chine datent de la fin du neolithique (il y a 5 ou 6 000 ans). Tout au long de l histoire de la Chine des ecrits ont mentionne les techniques d'elevage de poulets, la Chine est un des premiers pays a avoir mis au point l incubation artificielle."
 
 [sub_resource type="Resource" id="Resource_6pbiv"]
 script = ExtResource("2_e5clk")
@@ -272,8 +284,9 @@ head_family = 1
 arm_family = 0
 torso_family = 2
 leg_family = 3
-left_page_text = "Ploup"
-right_page_text = "Prout"
+left_page_text = "Parce que tout le monde a besoin de compagnie."
+right_page_text = "Parce que tout le monde a besoin de compagnie.
+Le caniche provoque des avis tres tranches. Adore de ses proprietaires mais deteste des autres, qu a t il donc fait pour meriter ca, lui qui n a pas demande a exister."
 
 [resource]
 script = ExtResource("1_p66a6")
