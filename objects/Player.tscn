@@ -10,7 +10,6 @@ script = ExtResource("1_ck6yg")
 opened_book_speed = 2.0
 speed = 4.0
 book = NodePath("Book")
-open_book_threeshold = -40
 vertical_sensitivity = 0.005
 horizontal_sensitivity = 0.005
 
@@ -25,6 +24,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="AudioListener3D" type="AudioListener3D" parent="Neck/Camera3D"]
 current = true
 
-[node name="Book" parent="." instance=ExtResource("2_ph60a")]
+[node name="Book" parent="." node_paths=PackedStringArray("closed_book", "opened_book", "book_close", "book_open", "book_flip") instance=ExtResource("2_ph60a")]
+closed_book = NodePath("ClosedBook")
+opened_book = NodePath("OpenedBook")
+book_close = NodePath("Audio/BookClose")
+book_open = NodePath("Audio/BookOpen")
+book_flip = NodePath("Audio/BookFlip")
 
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]

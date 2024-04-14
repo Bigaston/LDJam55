@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=33 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
@@ -9,6 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://dodkpy17ylwib" path="res://objects/Monster.tscn" id="6_royi3"]
 [ext_resource type="PackedScene" uid="uid://ge5vudlmrbfh" path="res://objects/Player.tscn" id="7_2wh5t"]
 [ext_resource type="Texture2D" uid="uid://cv6136nwumejg" path="res://resources/textures/particles/partic1.png" id="7_4nlya"]
+[ext_resource type="AudioStream" uid="uid://ceka4rdr3kj7x" path="res://resources/audio/sources/music/MUS_Drums.wav" id="10_0172s"]
+[ext_resource type="AudioStream" uid="uid://diwjscrs01tcm" path="res://resources/audio/sources/music/MUS_Piano_high.wav" id="11_cniij"]
+[ext_resource type="AudioStream" uid="uid://d4mn5medmngrr" path="res://resources/audio/sources/music/MUS_Piano_low.wav" id="12_vsunl"]
+[ext_resource type="AudioStream" uid="uid://cqjvry6k642kd" path="res://resources/audio/sources/music/MUS_Piano_Reverse.wav" id="13_aktpl"]
+[ext_resource type="AudioStream" uid="uid://cycrlf4ucs1r2" path="res://resources/audio/sources/ambiances/AMB_Monk.wav" id="14_3phl1"]
+[ext_resource type="AudioStream" uid="uid://dbu2ocmporckp" path="res://resources/audio/sources/ambiances/AMB_Tortured_Souls.wav" id="15_oyd5i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8anhs"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -183,6 +189,78 @@ tracks/5/keys = {
 "method": &"spawn_player"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Music:stream:stream_0/volume")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Music:stream:stream_1/volume")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-60.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Music:stream:stream_2/volume")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-60.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Music:stream:stream_3/volume")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Music:stream:stream_4/volume")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-60.0, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Music:stream:stream_5/volume")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(9.9, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_77tgd"]
 _data = {
@@ -206,6 +284,21 @@ billboard_mode = 2
 [sub_resource type="QuadMesh" id="QuadMesh_hv5uj"]
 material = SubResource("StandardMaterial3D_axwc4")
 size = Vector2(0.1, 0.1)
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_gll6d"]
+stream_count = 6
+stream_0/stream = ExtResource("14_3phl1")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("15_oyd5i")
+stream_1/volume = -60.0
+stream_2/stream = ExtResource("10_0172s")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("11_cniij")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("12_vsunl")
+stream_4/volume = -60.0
+stream_5/stream = ExtResource("13_aktpl")
+stream_5/volume = 0.0
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_81kyg")
@@ -311,10 +404,9 @@ monster_scene = ExtResource("6_royi3")
 monster_spawn = NodePath("../StartRoom/MonsterSpawn")
 player_scene = ExtResource("7_2wh5t")
 player_spawn = NodePath("../StartRoom/PlayerSpawn")
-skip_intro = true
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
-transform = Transform3D(-1, 2.20956e-07, 2.52553e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
+transform = Transform3D(-1, 2.20956e-07, 2.52554e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro"]
 libraries = {
@@ -338,9 +430,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -429.5
-offset_top = -110.0
+offset_top = -102.0
 offset_right = 429.5
-offset_bottom = -45.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("5_fp4o2")
@@ -362,6 +454,11 @@ amount = 1
 visibility_aabb = AABB(-0.584923, -0.433092, -0.673102, 1.16985, 0.866184, 1.3462)
 process_material = SubResource("ParticleProcessMaterial_flwut")
 draw_pass_1 = SubResource("QuadMesh_hv5uj")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamSynchronized_gll6d")
+autoplay = true
+bus = &"Music"
 
 [connection signal="monster_spawned" from="Intro" to="." method="_on_intro_monster_spawned"]
 [connection signal="player_spawned" from="Intro" to="." method="_on_intro_player_spawned"]

@@ -8,6 +8,8 @@ extends CharacterBody3D
 @export_category("Sensitivity")
 @export var vertical_sensitivity = 0.01
 @export var horizontal_sensitivity = 0.01
+@export var vertical_speed = 3
+@export var horizontal_speed = 3
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -30,6 +32,17 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
+	var cam_left_right = Input.get_axis("cam_right", "cam_left")
+	
+	if cam_left_right:
+		rotate_y(cam_left_right * delta * horizontal_speed)
+		
+	var cam_top_down = Input.get_axis("cam_down", "cam_up")
+	
+	if cam_top_down:
+		camera.rotate_x(cam_top_down * delta * vertical_speed)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -44,7 +57,10 @@ func _physics_process(delta):
 	if book.is_book_open:
 		velocity *= opened_book_speed
 	else:
-		velocity *= speed
+		if input_dir.y > 0:
+			velocity *= opened_book_speed
+		else:
+			velocity *= speed
 
 	move_and_slide()
 
