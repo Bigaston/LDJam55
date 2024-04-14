@@ -92,6 +92,7 @@ _data = {
 
 [node name="Monster" type="Node3D"]
 script = ExtResource("1_43xes")
+monster_speed = 3.0
 monster_linker = ExtResource("2_hr87t")
 
 [node name="Area3D" type="Area3D" parent="."]

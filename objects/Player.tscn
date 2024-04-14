@@ -8,8 +8,9 @@
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("book")]
 script = ExtResource("1_ck6yg")
 opened_book_speed = 2.0
-speed = 3.0
+speed = 4.0
 book = NodePath("Book")
+open_book_threeshold = -40
 vertical_sensitivity = 0.005
 horizontal_sensitivity = 0.005
 
