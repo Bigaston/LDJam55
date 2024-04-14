@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dodkpy17ylwib"]
+[gd_scene load_steps=20 format=3 uid="uid://dodkpy17ylwib"]
 
 [ext_resource type="Script" path="res://objects/Monster.gd" id="1_43xes"]
 [ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/arms/A_B.tres" id="8_pr2dn"]
 [ext_resource type="Texture2D" uid="uid://duxwxd68fqrtr" path="res://resources/textures/particles/partic2.png" id="10_irgj8"]
 [ext_resource type="Script" path="res://scripts/scenes/MonsterParticles.gd" id="10_uwv6f"]
+[ext_resource type="Texture2D" uid="uid://hj5qmjcaf3uv" path="res://resources/textures/final_spells/caniche.png" id="11_0yutx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r14h0"]
 size = Vector3(4, 4, 1)
@@ -197,7 +198,11 @@ visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
 process_material = SubResource("ParticleProcessMaterial_41xma")
 draw_pass_1 = SubResource("QuadMesh_kx2rx")
 
-[node name="FinalForm" type="Sprite3D" parent="."]
+[node name="FinalForme" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0356084, -1.09073, 0)
+visible = false
+pixel_size = 0.002
 billboard = 2
+texture = ExtResource("11_0yutx")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

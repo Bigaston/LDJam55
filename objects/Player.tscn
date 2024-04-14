@@ -248,4 +248,5 @@ libraries = {
 }
 autoplay = "Walk"
 
+[connection signal="force_win" from="Book" to="." method="_on_book_force_win"]
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]

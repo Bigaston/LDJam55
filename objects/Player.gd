@@ -21,6 +21,7 @@ var can_restart = false
 var can_move = true
 
 signal spell_used(spell)
+signal force_win(spell: FinalSpell)
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -94,6 +95,9 @@ func _on_book_spell_used(spell: Variant) -> void:
 	
 	spell_used.emit(spell)
 
+func _on_book_force_win(spell):
+	force_win.emit(spell)
+
 func kill_player():
 	$Sounds/Death.play()
 	$AnimationPlayer.play("Death")
@@ -101,3 +105,8 @@ func kill_player():
 	
 func enable_restart():
 	can_restart = true
+	
+func win_party(spell):
+	print(spell)
+
+

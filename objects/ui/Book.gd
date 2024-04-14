@@ -16,6 +16,7 @@ extends Control
 @export var book_flip: AudioStreamPlayer
 
 signal spell_used(spell)
+signal force_win(spell: FinalSpell)
 
 var player_speed: float = 0
 
@@ -76,7 +77,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("use_spell") && time_until_cast_available <= 0:
 		spell_used.emit(spells[current_page])
 		time_until_cast_available = cast_cooldown
-
+		
+	if Input.is_action_just_pressed("force_win") && OS.is_debug_build():
+		if spells[current_page]:
+			force_win.emit(spells[current_page])
+		
 func open_book():
 	if !is_book_open:
 		is_book_open = true
