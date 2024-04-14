@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@export var opened_book_speed: float = 3.0
 @export var speed: float = 5.0
 @export var book: Control
 @export var open_book_threeshold = -50
@@ -39,7 +40,11 @@ func _physics_process(delta):
 		velocity.z = 0.0
 		
 	velocity = velocity.normalized()
-	velocity *= speed
+	
+	if book.is_book_open:
+		velocity *= opened_book_speed
+	else:
+		velocity *= speed
 
 	move_and_slide()
 
@@ -50,7 +55,6 @@ func _process(_delta):
 		book.open_book()
 	else:
 		book.close_book()
-
 
 func _on_book_spell_used(spell: Variant) -> void:
 	spell_used.emit(spell)
