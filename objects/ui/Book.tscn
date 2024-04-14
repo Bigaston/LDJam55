@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ckhb0rcx8hdgt" path="res://objects/ui/FinalSpell.tscn" id="3_amhml"]
 [ext_resource type="Texture2D" uid="uid://dtenbjpv75nrw" path="res://resources/textures/book/Book_openHand.png" id="4_ismcc"]
 [ext_resource type="PackedScene" uid="uid://b6o3mvyol3hbo" path="res://objects/ui/BasicSpell.tscn" id="4_oxe52"]
-[ext_resource type="AudioStream" uid="uid://8holnj101r73" path="res://resources/audio/audio streams/UI_Book_Close.tres" id="7_runcb"]
-[ext_resource type="AudioStream" uid="uid://bg2v7qy23cvne" path="res://resources/audio/audio streams/UI_Book_Open.tres" id="8_o7opd"]
-[ext_resource type="AudioStream" uid="uid://c25mg77jaocut" path="res://resources/audio/audio streams/UI_Book_Flip.tres" id="9_qtde5"]
+[ext_resource type="AudioStream" uid="uid://8holnj101r73" path="res://resources/audio/audio streams/ui/UI_Book_Close.tres" id="7_runcb"]
+[ext_resource type="AudioStream" uid="uid://bg2v7qy23cvne" path="res://resources/audio/audio streams/ui/UI_Book_Open.tres" id="8_o7opd"]
+[ext_resource type="AudioStream" uid="uid://c25mg77jaocut" path="res://resources/audio/audio streams/ui/UI_Book_Flip.tres" id="9_qtde5"]
 
 [node name="Book" type="Control" node_paths=PackedStringArray("closed_book", "opened_book", "book_close", "book_open", "book_flip")]
 layout_mode = 3

@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://bgm4p8yckf1n3"]
+
+[ext_resource type="AudioStream" uid="uid://cmtux27d5mqk2" path="res://resources/audio/sources/monster_limbs/legs/L_S.wav" id="1_mm8ku"]
+
+[resource]
+streams_count = 1
+stream_0/stream = ExtResource("1_mm8ku")
+stream_0/weight = 1.0

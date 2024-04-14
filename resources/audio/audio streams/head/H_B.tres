@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://bc6av84vyseo1"]
+
+[ext_resource type="AudioStream" uid="uid://b3lmehm5ll461" path="res://resources/audio/sources/monster_limbs/head/H-B_01.wav" id="1_bkkc0"]
+[ext_resource type="AudioStream" uid="uid://ddvd115x4n768" path="res://resources/audio/sources/monster_limbs/head/H-B_02.wav" id="2_0h8wk"]
+[ext_resource type="AudioStream" uid="uid://j83c0ph2o7ps" path="res://resources/audio/sources/monster_limbs/head/H-B_03.wav" id="3_bwccf"]
+[ext_resource type="AudioStream" uid="uid://cpihoo81r4sb5" path="res://resources/audio/sources/monster_limbs/head/H-B_04.wav" id="4_adb5m"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_bkkc0")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_0h8wk")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_bwccf")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_adb5m")
+stream_3/weight = 1.0

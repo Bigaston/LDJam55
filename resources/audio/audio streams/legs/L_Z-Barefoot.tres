@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://fbjlwjrp5re3"]
+
+[ext_resource type="AudioStream" uid="uid://cac5vsunlvkoa" path="res://resources/audio/sources/monster_limbs/legs/L_Z_BareFoot-001.wav" id="1_3mkub"]
+[ext_resource type="AudioStream" uid="uid://ktqjl3rgormc" path="res://resources/audio/sources/monster_limbs/legs/L_Z_BareFoot-002.wav" id="2_j1iwp"]
+[ext_resource type="AudioStream" uid="uid://c7d0a3i7312gf" path="res://resources/audio/sources/monster_limbs/legs/L_Z_BareFoot-003.wav" id="3_ag5xv"]
+[ext_resource type="AudioStream" uid="uid://rq3tcjq61sak" path="res://resources/audio/sources/monster_limbs/legs/L_Z_BareFoot-004.wav" id="4_4bbut"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_3mkub")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_j1iwp")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_ag5xv")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_4bbut")
+stream_3/weight = 1.0
