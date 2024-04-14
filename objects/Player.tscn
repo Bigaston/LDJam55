@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ge5vudlmrbfh"]
+[gd_scene load_steps=15 format=3 uid="uid://ge5vudlmrbfh"]
 
 [ext_resource type="Script" path="res://objects/Player.gd" id="1_ck6yg"]
 [ext_resource type="PackedScene" uid="uid://dijrqujuat5md" path="res://objects/ui/Book.tscn" id="2_ph60a"]
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="3_onvmg"]
+[ext_resource type="AudioStream" uid="uid://c2q5c5mrl68au" path="res://resources/audio/audio streams/ui/UI_Death.tres" id="4_qoyl5"]
+[ext_resource type="AudioStream" uid="uid://wneyan55e4j" path="res://resources/audio/audio streams/legs/L_H-Shoes.tres" id="5_e11oq"]
+[ext_resource type="AudioStream" uid="uid://bpoedfp85y5f0" path="res://resources/audio/audio streams/legs/L_H-Robe.tres" id="6_lljcq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bd5pr"]
 
@@ -82,12 +85,60 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xgsg5"]
+resource_name = "Win"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m8dl8"]
 _data = {
-"Death": SubResource("Animation_4atok")
+"Death": SubResource("Animation_4atok"),
+"Win": SubResource("Animation_xgsg5")
+}
+
+[sub_resource type="Animation" id="Animation_yq1bu"]
+resource_name = "Walk"
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Footstep")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RobeFoley")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hrl2n"]
+_data = {
+"Walk": SubResource("Animation_yq1bu")
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("book")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 script = ExtResource("1_ck6yg")
 opened_book_speed = 2.0
 speed = 4.0
@@ -102,9 +153,9 @@ shape = SubResource("CapsuleShape3D_bd5pr")
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+current = true
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Neck/Camera3D"]
-current = true
 
 [node name="Book" parent="." node_paths=PackedStringArray("closed_book", "opened_book", "book_close", "book_open", "book_flip") instance=ExtResource("2_ph60a")]
 closed_book = NodePath("ClosedBook")
@@ -173,5 +224,28 @@ text = "Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to restart
 libraries = {
 "": SubResource("AnimationLibrary_m8dl8")
 }
+
+[node name="Sounds" type="Node3D" parent="."]
+
+[node name="Spell" type="AudioStreamPlayer" parent="Sounds"]
+bus = &"SFX"
+
+[node name="Death" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_qoyl5")
+bus = &"SFX"
+
+[node name="Footstep" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("5_e11oq")
+bus = &"SFX"
+
+[node name="RobeFoley" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("6_lljcq")
+bus = &"SFX"
+
+[node name="AudioAnimation" type="AnimationPlayer" parent="Sounds"]
+libraries = {
+"": SubResource("AnimationLibrary_hrl2n")
+}
+autoplay = "Walk"
 
 [connection signal="spell_used" from="Book" to="." method="_on_book_spell_used"]

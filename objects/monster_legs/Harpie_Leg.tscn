@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bocaatiuyhe5j"]
+[gd_scene load_steps=7 format=3 uid="uid://bocaatiuyhe5j"]
 
 [ext_resource type="Texture2D" uid="uid://bfu7v8bh7o5dm" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle.png" id="1_r1y43"]
-[ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/L_B.tres" id="2_owuau"]
+[ext_resource type="Script" path="res://objects/monster_legs/harpie_leg.gd" id="2_4jg80"]
+[ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/legs/L_B.tres" id="2_owuau"]
+[ext_resource type="AudioStream" uid="uid://bc8ie3pfxu4vo" path="res://resources/audio/audio streams/legs/L_B-Feather.tres" id="4_yc73r"]
 
 [sub_resource type="Animation" id="Animation_40u23"]
 resource_name = "Walk"
@@ -9,11 +11,28 @@ loop_mode = 1
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sounds/Legs")
+tracks/0/path = NodePath("Sounds/FootSteps")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sounds/Feather")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.225, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [0.0],
@@ -33,15 +52,21 @@ _data = {
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_r1y43")
+script = ExtResource("2_4jg80")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_a01ew")
 }
-autoplay = "Walk"
 
 [node name="Sounds" type="Node3D" parent="."]
 
-[node name="Legs" type="AudioStreamPlayer3D" parent="Sounds"]
+[node name="FootSteps" type="AudioStreamPlayer3D" parent="Sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.783402, 0)
 stream = ExtResource("2_owuau")
+bus = &"SFX"
+
+[node name="Feather" type="AudioStreamPlayer3D" parent="Sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+stream = ExtResource("4_yc73r")
 bus = &"SFX"

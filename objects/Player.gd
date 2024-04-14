@@ -24,6 +24,8 @@ signal spell_used(spell)
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	rotation_degrees.y = 0
 
 func _unhandled_input(event: InputEvent):
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -74,6 +76,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	book.player_speed = velocity.length()
+	$Sounds/AudioAnimation.speed_scale = velocity.length() / speed
 
 func _process(_delta):
 	if camera.rotation_degrees.x <= open_book_threeshold:
@@ -85,9 +88,14 @@ func _process(_delta):
 		get_node("/root/Main").change_scene_async("res://scenes/game/level.tscn")
 
 func _on_book_spell_used(spell: Variant) -> void:
+	if spell is BasicSpell:
+		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
+		$Sounds/Spell.play()
+	
 	spell_used.emit(spell)
 
 func kill_player():
+	$Sounds/Death.play()
 	$AnimationPlayer.play("Death")
 	can_move = false
 	

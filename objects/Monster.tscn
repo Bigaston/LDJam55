@@ -197,4 +197,7 @@ visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
 process_material = SubResource("ParticleProcessMaterial_41xma")
 draw_pass_1 = SubResource("QuadMesh_kx2rx")
 
+[node name="FinalForm" type="Sprite3D" parent="."]
+billboard = 2
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
