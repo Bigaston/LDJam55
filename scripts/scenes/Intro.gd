@@ -15,7 +15,7 @@ var monster: Node3D
 var player: CharacterBody3D
 
 func _ready():
-	if skip_intro:
+	if skip_intro && OS.is_debug_build():
 		($AnimationPlayer as AnimationPlayer).speed_scale = 1000
 		($AnimationPlayer as AnimationPlayer).play("StartGame", 1)
 
