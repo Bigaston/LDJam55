@@ -54,6 +54,7 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 		leg = monster_linker.get_family(family).legs_object.instantiate()
 		
 		leg.equip()
+		leg.set_monster_walking(is_going)
 		
 		$Body.add_child(leg)
 	else:

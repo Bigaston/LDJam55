@@ -1,14 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://duvaoc4qg18o4"]
+[gd_scene load_steps=7 format=3 uid="uid://duvaoc4qg18o4"]
 
 [ext_resource type="Texture2D" uid="uid://88wdqbbmmyv8" path="res://resources/textures/monsters/Spectre/SpecterLegs_tentacle.png" id="1_scj1l"]
-[ext_resource type="Script" path="res://objects/monster_legs/MonsterLegs.gd" id="2_nh2vo"]
+[ext_resource type="Script" path="res://objects/monster_legs/spectre_leg.gd" id="2_oybh4"]
+[ext_resource type="AudioStream" uid="uid://cmtux27d5mqk2" path="res://resources/audio/sources/monster_limbs/legs/L_S.wav" id="3_ayv16"]
+
+[sub_resource type="Animation" id="Animation_ts64b"]
+resource_name = "FadeIn"
+
+[sub_resource type="Animation" id="Animation_dlxq3"]
+resource_name = "FadeOut"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gpuej"]
+_data = {
+"FadeIn": SubResource("Animation_ts64b"),
+"FadeOut": SubResource("Animation_dlxq3")
+}
 
 [node name="SpectreLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_scj1l")
-script = ExtResource("2_nh2vo")
+script = ExtResource("2_oybh4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gpuej")
+}
 
 [node name="Sounds" type="Node3D" parent="."]
+
+[node name="Footstep" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("3_ayv16")
+autoplay = true

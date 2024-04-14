@@ -1,7 +1,7 @@
 extends MonsterLegs
-
 func equip():
 	pass
+	#$AnimationPlayer.play("Walk")
 	
 func unequip():
 	$AnimationPlayer.stop()
