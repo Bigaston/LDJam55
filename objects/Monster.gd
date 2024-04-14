@@ -37,12 +37,12 @@ func _process(delta: float) -> void:
 	if is_going:
 		position.z -= monster_speed * delta
 
-func random_part(part: CustomTypes.BodyPart):
+func random_part(part: CustomTypes.BodyPart, partiels: bool = false):
 	var family = CustomTypes.MonsterFamily.values()[ randi()%CustomTypes.MonsterFamily.size()]
 	
-	set_body_part(part, family)
+	set_body_part(part, family, partiels)
 
-func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily):
+func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily, particles: bool = false):
 	parts[part] = family
 
 	var linker = monster_linker.get_family(family)
@@ -50,6 +50,9 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 	
 	part_association[part].sprite.texture = texture
 	part_association[part].audio.stream = linker.get_audio(part)
+	
+	if particles:
+		$Particles.spawn_particle(part)
 
 func trigger_move():
 	get_tree().create_timer(time_before_start).timeout.connect(func():
@@ -58,9 +61,9 @@ func trigger_move():
 
 func use_basic_spell(spell: BasicSpell):
 	if parts[spell.condition.body_position] == spell.condition.monster_family:
-		set_body_part(spell.result_true.body_position, spell.result_true.monster_family)
+		set_body_part(spell.result_true.body_position, spell.result_true.monster_family, true)
 	else:
-		set_body_part(spell.result_false.body_position, spell.result_false.monster_family)
+		set_body_part(spell.result_false.body_position, spell.result_false.monster_family, true)
 	
 func use_final_spell(spell: FinalSpell):
 	if (parts[CustomTypes.BodyPart.HEAD] == spell.head_family &&
@@ -71,4 +74,4 @@ func use_final_spell(spell: FinalSpell):
 		print("ET C'EST GAGNE")
 	else:
 		var part = CustomTypes.BodyPart.values()[randi_range(1, 3)]
-		random_part(part)
+		random_part(part, true)

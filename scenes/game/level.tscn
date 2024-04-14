@@ -324,13 +324,11 @@ autoplay = "Idle_Animation"
 
 [node name="Control" type="Control" parent="Intro"]
 layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Intro/Control"]
 layout_mode = 1
@@ -340,9 +338,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -429.5
-offset_top = -102.0
+offset_top = -110.0
 offset_right = 429.5
-offset_bottom = -37.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("5_fp4o2")
@@ -355,6 +353,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0239636, 5)
 emitting = false
 amount = 10000
 visibility_aabb = AABB(-4, -3.94714, -4, 8, 7.89428, 8)
+process_material = SubResource("ParticleProcessMaterial_flwut")
+draw_pass_1 = SubResource("QuadMesh_hv5uj")
+
+[node name="FakeParticle" type="GPUParticles3D" parent="Intro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6092, -0.0239636, 5)
+amount = 1
+visibility_aabb = AABB(-0.584923, -0.433092, -0.673102, 1.16985, 0.866184, 1.3462)
 process_material = SubResource("ParticleProcessMaterial_flwut")
 draw_pass_1 = SubResource("QuadMesh_hv5uj")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dodkpy17ylwib"]
+[gd_scene load_steps=20 format=3 uid="uid://dodkpy17ylwib"]
 
 [ext_resource type="Script" path="res://objects/Monster.gd" id="1_43xes"]
 [ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
@@ -9,9 +9,60 @@
 [ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="6_7tvu6"]
 [ext_resource type="Script" path="res://scripts/scenes/MonsterAudio.gd" id="8_f8e7c"]
 [ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/A_B.tres" id="8_pr2dn"]
+[ext_resource type="Texture2D" uid="uid://duxwxd68fqrtr" path="res://resources/textures/particles/partic2.png" id="10_irgj8"]
+[ext_resource type="Script" path="res://scripts/scenes/MonsterParticles.gd" id="10_uwv6f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r14h0"]
 size = Vector3(4, 4, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_41xma"]
+emission_shape = 3
+emission_box_extents = Vector3(0.3, 0.6, 0.3)
+angle_min = -90.0
+angle_max = 90.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.0
+radial_accel_max = 4.0
+scale_min = 0.5
+scale_max = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umlcn"]
+transparency = 1
+albedo_color = Color(0.415686, 0.768627, 1, 1)
+albedo_texture = ExtResource("10_irgj8")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_kx2rx"]
+material = SubResource("StandardMaterial3D_umlcn")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l3502"]
+emission_shape = 3
+emission_box_extents = Vector3(0.3, 0.3, 0.3)
+angle_min = -90.0
+angle_max = 90.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.0
+radial_accel_max = 4.0
+scale_min = 0.5
+scale_max = 4.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2nicc"]
+emission_shape = 3
+emission_box_extents = Vector3(0.3, 0.6, 0.3)
+angle_min = -90.0
+angle_max = 90.0
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.0
+radial_accel_max = 4.0
+scale_min = 0.5
+scale_max = 4.0
 
 [sub_resource type="Animation" id="Animation_68p2j"]
 resource_name = "Walk"
@@ -94,7 +145,58 @@ stream = ExtResource("8_pr2dn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24489, 0)
 stream = ExtResource("8_pr2dn")
 
+[node name="Particles" type="Node3D" parent="."]
+script = ExtResource("10_uwv6f")
+
+[node name="SpellParticleArm" type="GPUParticles3D" parent="Particles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.766737, -0.111633, -0.482744)
+emitting = false
+amount = 1500
+lifetime = 0.5
+one_shot = true
+visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+process_material = SubResource("ParticleProcessMaterial_41xma")
+draw_pass_1 = SubResource("QuadMesh_kx2rx")
+
+[node name="SpellParticleArm2" type="GPUParticles3D" parent="Particles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63291, -0.0940481, -0.482744)
+emitting = false
+amount = 1500
+lifetime = 0.5
+one_shot = true
+visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+process_material = SubResource("ParticleProcessMaterial_41xma")
+draw_pass_1 = SubResource("QuadMesh_kx2rx")
+
+[node name="SpellParticleHead" type="GPUParticles3D" parent="Particles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0767838, 1.03244, -0.482744)
+emitting = false
+amount = 1500
+lifetime = 0.5
+one_shot = true
+visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+process_material = SubResource("ParticleProcessMaterial_l3502")
+draw_pass_1 = SubResource("QuadMesh_kx2rx")
+
+[node name="SpellParticleLegs" type="GPUParticles3D" parent="Particles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0767838, -0.991134, -0.482744)
+emitting = false
+amount = 1500
+lifetime = 0.5
+one_shot = true
+visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+process_material = SubResource("ParticleProcessMaterial_2nicc")
+draw_pass_1 = SubResource("QuadMesh_kx2rx")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_47tbk")
 }
+
+[node name="FakeParticle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22537, -5.04246, -0.482744)
+amount = 1
+lifetime = 0.5
+visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+process_material = SubResource("ParticleProcessMaterial_41xma")
+draw_pass_1 = SubResource("QuadMesh_kx2rx")
