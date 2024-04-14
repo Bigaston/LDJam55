@@ -22,6 +22,7 @@ script = ExtResource("1_07p7n")
 spells_resource = ExtResource("2_al7fj")
 closed_book = NodePath("ClosedBook")
 opened_book = NodePath("OpenedBook")
+cast_cooldown = 1.75
 speed_multiplier = 20.0
 book_close = NodePath("Audio/BookClose")
 book_open = NodePath("Audio/BookOpen")
