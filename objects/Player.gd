@@ -13,6 +13,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3D
 
+signal spell_used(spell)
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -48,3 +50,7 @@ func _process(_delta):
 		book.open_book()
 	else:
 		book.close_book()
+
+
+func _on_book_spell_used(spell: Variant) -> void:
+	spell_used.emit(spell)

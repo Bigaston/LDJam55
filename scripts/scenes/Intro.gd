@@ -8,6 +8,9 @@ extends Node3D
 
 @export var skip_intro: bool = false
 
+signal monster_spawned(monster: Node3D)
+signal player_spawned(player: CharacterBody3D)
+
 var monster: Node3D
 var player: CharacterBody3D
 
@@ -25,6 +28,8 @@ func spawn_monster():
 	
 	get_parent().add_child(monster)
 	monster.global_position = monster_spawn.global_position
+	
+	monster_spawned.emit(monster)
 
 func spawn_player():
 	player = player_scene.instantiate() as CharacterBody3D
@@ -34,5 +39,7 @@ func spawn_player():
 	player.global_rotation = player_spawn.global_rotation
 	
 	monster.trigger_move()
+	
+	player_spawned.emit(player)
 	
 	queue_free()

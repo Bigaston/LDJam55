@@ -314,7 +314,7 @@ player_spawn = NodePath("../StartRoom/PlayerSpawn")
 skip_intro = true
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
-transform = Transform3D(-1, -3.52828e-07, 2.51051e-06, 0, 0.990268, 0.139173, -2.53518e-06, 0.139173, -0.990268, 0, 1.5, 1.7)
+transform = Transform3D(-1, 2.20956e-07, 2.52553e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro"]
 libraries = {
@@ -355,3 +355,6 @@ amount = 10000
 visibility_aabb = AABB(-4, -3.94714, -4, 8, 7.89428, 8)
 process_material = SubResource("ParticleProcessMaterial_flwut")
 draw_pass_1 = SubResource("QuadMesh_hv5uj")
+
+[connection signal="monster_spawned" from="Intro" to="." method="_on_intro_monster_spawned"]
+[connection signal="player_spawned" from="Intro" to="." method="_on_intro_player_spawned"]
