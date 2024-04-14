@@ -44,7 +44,10 @@ func _physics_process(delta):
 	if book.is_book_open:
 		velocity *= opened_book_speed
 	else:
-		velocity *= speed
+		if input_dir.y > 0:
+			velocity *= opened_book_speed
+		else:
+			velocity *= speed
 
 	move_and_slide()
 
