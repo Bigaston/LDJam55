@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=43 format=3 uid="uid://b76s8hrfrycs1"]
+[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=43 format=3 uid="uid://cds7nlg0bl1vn"]
 
 [ext_resource type="Script" path="res://scripts/custom_resources/monsters/MonsterResourceLinker.gd" id="1_5p0ke"]
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="1_qr3nv"]

@@ -1,6 +1,6 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://bg2v7qy23cvne"]
 
-[ext_resource type="AudioStream" uid="uid://bm4hfui1jmmqi" path="res://resources/audio/sources/UI-Book_Open_01.wav" id="1_10goj"]
+[ext_resource type="AudioStream" uid="uid://bm4hfui1jmmqi" path="res://resources/audio/sources/ui/UI-Book_Open_01.wav" id="1_10goj"]
 
 [resource]
 streams_count = 1
