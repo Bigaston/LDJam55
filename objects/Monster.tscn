@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dodkpy17ylwib"]
+[gd_scene load_steps=19 format=3 uid="uid://dodkpy17ylwib"]
 
 [ext_resource type="Script" path="res://objects/Monster.gd" id="1_43xes"]
 [ext_resource type="Texture2D" uid="uid://dwe5bhkii4qgq" path="res://resources/textures/placeholder/shadows.png" id="1_uh6yn"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="3_vlwy5"]
 [ext_resource type="Texture2D" uid="uid://bopcnpvxnx27c" path="res://resources/textures/monsters/placeholders/BansheeTorso_muscle.png" id="4_3b1ti"]
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="5_3jajr"]
-[ext_resource type="Texture2D" uid="uid://c2ugmfvhnjdut" path="res://resources/textures/monsters/placeholders/BansheeLegs_muscle.png" id="6_7tvu6"]
 [ext_resource type="Script" path="res://scripts/scenes/MonsterAudio.gd" id="8_f8e7c"]
 [ext_resource type="AudioStream" uid="uid://cwg0ffekh7n07" path="res://resources/audio/audio streams/A_B.tres" id="8_pr2dn"]
 [ext_resource type="Texture2D" uid="uid://duxwxd68fqrtr" path="res://resources/textures/particles/partic2.png" id="10_irgj8"]
@@ -122,11 +121,6 @@ texture = ExtResource("4_3b1ti")
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("5_3jajr")
-
-[node name="Legs" type="Sprite3D" parent="Body"]
-pixel_size = 0.0018
-billboard = 2
-texture = ExtResource("6_7tvu6")
 
 [node name="Audio" type="Node3D" parent="."]
 script = ExtResource("8_f8e7c")

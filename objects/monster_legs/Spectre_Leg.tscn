@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://duvaoc4qg18o4"]
+
+[ext_resource type="Texture2D" uid="uid://88wdqbbmmyv8" path="res://resources/textures/monsters/Spectre/SpecterLegs_tentacle.png" id="1_scj1l"]
+
+[node name="SpectreLeg" type="Sprite3D"]
+pixel_size = 0.0018
+billboard = 2
+texture = ExtResource("1_scj1l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sounds" type="Node3D" parent="."]
