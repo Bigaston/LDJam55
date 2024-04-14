@@ -16,7 +16,7 @@ size = Vector3(4, 4, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_41xma"]
 emission_shape = 3
-emission_box_extents = Vector3(0.3, 0.6, 0.3)
+emission_box_extents = Vector3(0.25, 0.6, 0.25)
 angle_min = -90.0
 angle_max = 90.0
 direction = Vector3(0, 0, 0)
@@ -29,7 +29,7 @@ scale_max = 4.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umlcn"]
 transparency = 1
-albedo_color = Color(0.415686, 0.768627, 1, 1)
+albedo_color = Color(1, 0.894118, 0, 0.72549)
 albedo_texture = ExtResource("10_irgj8")
 billboard_mode = 2
 
@@ -38,8 +38,8 @@ material = SubResource("StandardMaterial3D_umlcn")
 size = Vector2(0.1, 0.1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l3502"]
-emission_shape = 3
-emission_box_extents = Vector3(0.3, 0.3, 0.3)
+emission_shape = 1
+emission_sphere_radius = 0.5
 angle_min = -90.0
 angle_max = 90.0
 direction = Vector3(0, 0, 0)
@@ -144,39 +144,40 @@ stream = ExtResource("8_pr2dn")
 script = ExtResource("10_uwv6f")
 
 [node name="SpellParticleArm" type="GPUParticles3D" parent="Particles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.766737, -0.111633, -0.482744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881396, 0, -0.483)
 emitting = false
-amount = 1500
-lifetime = 0.5
+amount = 200
+lifetime = 0.4
 one_shot = true
 visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
+trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_41xma")
 draw_pass_1 = SubResource("QuadMesh_kx2rx")
 
 [node name="SpellParticleArm2" type="GPUParticles3D" parent="Particles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63291, -0.0940481, -0.482744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.724517, 0, -0.483)
 emitting = false
-amount = 1500
-lifetime = 0.5
+amount = 200
+lifetime = 0.4
 one_shot = true
 visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
 process_material = SubResource("ParticleProcessMaterial_41xma")
 draw_pass_1 = SubResource("QuadMesh_kx2rx")
 
 [node name="SpellParticleHead" type="GPUParticles3D" parent="Particles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0767838, 1.03244, -0.482744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0462781, 1.03244, -0.482744)
 emitting = false
-amount = 1500
-lifetime = 0.5
+amount = 150
+lifetime = 0.4
 one_shot = true
 visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
 process_material = SubResource("ParticleProcessMaterial_l3502")
 draw_pass_1 = SubResource("QuadMesh_kx2rx")
 
 [node name="SpellParticleLegs" type="GPUParticles3D" parent="Particles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0767838, -0.991134, -0.482744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0462781, -1.09028, -0.482744)
 emitting = false
-amount = 1500
+amount = 400
 lifetime = 0.5
 one_shot = true
 visibility_aabb = AABB(-2.35532, -1.56163, -1.84168, 2.97359, 3.12326, 3.68335)
