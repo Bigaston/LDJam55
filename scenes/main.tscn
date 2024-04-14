@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://ccislvcdl4l25"]
+[gd_scene load_steps=2 format=3 uid="uid://ccislvcdl4l25"]
 
-[node name="Main" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_ts4ul"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ts4ul")

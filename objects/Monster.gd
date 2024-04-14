@@ -8,6 +8,8 @@ var is_going = false
 
 var parts: Dictionary = {}
 
+var leg: Node3D
+
 @onready var part_association: Dictionary = {
 	CustomTypes.BodyPart.HEAD: {
 		"sprite": $Body/Head,
@@ -44,12 +46,20 @@ func random_part(part: CustomTypes.BodyPart, partiels: bool = false):
 
 func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily, particles: bool = false):
 	parts[part] = family
-
-	var linker = monster_linker.get_family(family)
-	var texture = linker.get_random(part)
 	
-	part_association[part].sprite.texture = texture
-	part_association[part].audio.stream = linker.get_audio(part)
+	if part == CustomTypes.BodyPart.LEGS:
+		if leg != null:
+			leg.queue_free()
+			
+		leg = monster_linker.get_family(family).legs_object.instantiate()
+		
+		$Body.add_child(leg)
+	else:
+		var linker = monster_linker.get_family(family)
+		var texture = linker.get_random(part)
+	
+		part_association[part].sprite.texture = texture
+		part_association[part].audio.stream = linker.get_audio(part)
 	
 	if particles:
 		$Particles.spawn_particle(part)
@@ -77,5 +87,6 @@ func use_final_spell(spell: FinalSpell):
 		random_part(part, true)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is CharacterBody3D:
-		print("TMOR")
+	if body is Player:
+		body.kill_player()
+		is_going = false

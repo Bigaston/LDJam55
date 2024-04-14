@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckhb0rcx8hdgt"]
+[gd_scene load_steps=10 format=3 uid="uid://ckhb0rcx8hdgt"]
 
 [ext_resource type="Script" path="res://objects/ui/FinalSpell.gd" id="1_r1mo4"]
 [ext_resource type="Texture2D" uid="uid://j362a04ut3cx" path="res://resources/textures/monsters/placeholders/BansheeHead_muscle.png" id="2_pjofg"]
+[ext_resource type="Texture2D" uid="uid://dtenbjpv75nrw" path="res://resources/textures/book/Book_openHand.png" id="3_bwp8c"]
 [ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_rg5nk"]
 [ext_resource type="Texture2D" uid="uid://bxtsr11lhvl31" path="res://resources/textures/monsters/placeholders/BansheeArm_muscle.png" id="3_uvudd"]
 [ext_resource type="LabelSettings" uid="uid://c5mjcdfidgkgs" path="res://resources/themes/SpellTitle.tres" id="3_x8e0w"]
@@ -24,6 +25,26 @@ grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("1_r1mo4")
 monster_linker = ExtResource("3_rg5nk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+auto_translate_mode = 1
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -743.0
+offset_right = 681.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_bwp8c")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="SpellName" type="Label" parent="."]
 layout_mode = 1

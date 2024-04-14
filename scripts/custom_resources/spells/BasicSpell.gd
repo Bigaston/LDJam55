@@ -12,3 +12,5 @@ class_name BasicSpell
 @export_category("Lore")
 @export var spell_image: Texture2D
 @export_multiline var right_page_text: String
+@export_multiline var left_page_text_1: String
+@export_multiline var left_page_text_2: String
