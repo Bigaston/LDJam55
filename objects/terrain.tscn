@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dig1yvww3j8q6"]
+[gd_scene load_steps=10 format=3 uid="uid://dig1yvww3j8q6"]
 
 [ext_resource type="Material" uid="uid://duba4yd4ge04h" path="res://resources/materials/proto_material.tres" id="1_dcdxs"]
+[ext_resource type="Material" uid="uid://bim3fsnh4dmbq" path="res://resources/materials/ground_material.tres" id="1_o827a"]
+[ext_resource type="Material" uid="uid://bkri1w7v87df7" path="res://resources/materials/wall_material.tres" id="3_7vl5b"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jjsdw"]
 material = ExtResource("1_dcdxs")
@@ -27,6 +29,7 @@ size = Vector2(4, 20)
 [node name="Terrain" type="Node3D"]
 
 [node name="Ground" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_o827a")
 mesh = SubResource("PlaneMesh_jjsdw")
 
 [node name="GroundCollision" type="StaticBody3D" parent="Ground"]
@@ -37,6 +40,7 @@ shape = SubResource("BoxShape3D_rf6yl")
 
 [node name="WallLeft" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 2, 0)
+material_override = ExtResource("3_7vl5b")
 mesh = SubResource("QuadMesh_shiqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WallLeft"]
@@ -47,6 +51,7 @@ shape = SubResource("BoxShape3D_svn5j")
 
 [node name="WallRight" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 2, 0)
+material_override = ExtResource("3_7vl5b")
 mesh = SubResource("QuadMesh_sdrxf")
 skeleton = NodePath("../WallLeft")
 
@@ -58,6 +63,7 @@ shape = SubResource("BoxShape3D_svn5j")
 
 [node name="Ceil" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 0)
+material_override = ExtResource("3_7vl5b")
 mesh = SubResource("PlaneMesh_tolos")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
