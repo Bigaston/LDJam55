@@ -24,7 +24,6 @@ var leg: Node3D
 		"audio": $Audio/TorsoAudio
 	},
 	CustomTypes.BodyPart.LEGS: {
-		"sprite": $Body/Legs,
 		"audio": $Audio/LegsAudio
 	}
 }

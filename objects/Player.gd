@@ -81,7 +81,7 @@ func _process(_delta):
 	else:
 		book.close_book()
 		
-	if Input.is_action_just_released("use_spell"):
+	if Input.is_action_just_released("use_spell") && can_restart:
 		get_node("/root/Main").change_scene_async("res://scenes/game/level.tscn")
 
 func _on_book_spell_used(spell: Variant) -> void:
