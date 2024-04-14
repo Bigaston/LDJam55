@@ -4,6 +4,8 @@ extends Control
 @export var closed_book: Control
 @export var opened_book: Control
 
+@export var cast_cooldown: float = 3
+
 @export_category("Bobbing Multiplier")
 @export var speed_multiplier: float = 10
 @export var move_multiplier: float = 10
@@ -26,6 +28,8 @@ var is_book_open = false
 
 var current_page = 0
 var spells: Array[Resource] = []
+
+var time_until_cast_available = 0
 
 func _ready():
 	initial_closed_book_position = $ClosedBook.position
@@ -65,9 +69,13 @@ func _process(delta: float) -> void:
 				open_page(current_page)
 				
 				book_flip.play()
-				
-		if Input.is_action_just_pressed("use_spell"):
-			spell_used.emit(spells[current_page])
+	
+	if time_until_cast_available > 0:
+		time_until_cast_available -= delta
+		
+	if Input.is_action_just_pressed("use_spell") && time_until_cast_available <= 0:
+		spell_used.emit(spells[current_page])
+		time_until_cast_available = cast_cooldown
 
 func open_book():
 	if !is_book_open:
