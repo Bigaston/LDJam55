@@ -24,6 +24,8 @@ signal spell_used(spell)
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	rotation_degrees.y = 0
 
 func _unhandled_input(event: InputEvent):
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

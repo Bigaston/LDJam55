@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ge5vudlmrbfh"]
+[gd_scene load_steps=10 format=3 uid="uid://ge5vudlmrbfh"]
 
 [ext_resource type="Script" path="res://objects/Player.gd" id="1_ck6yg"]
 [ext_resource type="PackedScene" uid="uid://dijrqujuat5md" path="res://objects/ui/Book.tscn" id="2_ph60a"]
@@ -82,12 +82,17 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xgsg5"]
+resource_name = "Win"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m8dl8"]
 _data = {
-"Death": SubResource("Animation_4atok")
+"Death": SubResource("Animation_4atok"),
+"Win": SubResource("Animation_xgsg5")
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("book")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 script = ExtResource("1_ck6yg")
 opened_book_speed = 2.0
 speed = 4.0
@@ -101,7 +106,7 @@ shape = SubResource("CapsuleShape3D_bd5pr")
 [node name="Neck" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(0.965672, -0.175863, -0.191182, 0.214199, 0.955455, 0.203036, 0.14696, -0.237018, 0.960326, 0, 0, -0.3)
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Neck/Camera3D"]
 current = true
@@ -123,7 +128,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="FadePanel" type="Panel" parent="EndScreen"]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, -0.0208334)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

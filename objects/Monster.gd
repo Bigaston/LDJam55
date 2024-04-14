@@ -84,7 +84,7 @@ func use_final_spell(spell: FinalSpell):
 		parts[CustomTypes.BodyPart.ARM] == spell.arm_family &&
 		parts[CustomTypes.BodyPart.LEGS] == spell.leg_family):
 
-		print("ET C'EST GAGNE")
+		$FinalForm.texture = spell.result
 	else:
 		var part = CustomTypes.BodyPart.values()[randi_range(1, 3)]
 		random_part(part, true)
