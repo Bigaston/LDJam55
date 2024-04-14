@@ -66,8 +66,8 @@ func _process(delta: float) -> void:
 				
 				book_flip.play()
 				
-		if Input.is_action_just_pressed("use_spell"):
-			spell_used.emit(spells[current_page])
+	if Input.is_action_just_pressed("use_spell"):
+		spell_used.emit(spells[current_page])
 
 func open_book():
 	if !is_book_open:
