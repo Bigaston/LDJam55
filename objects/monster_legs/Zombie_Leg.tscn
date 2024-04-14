@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfw16smvpk8ip"]
+[gd_scene load_steps=3 format=3 uid="uid://dfw16smvpk8ip"]
 
 [ext_resource type="Texture2D" uid="uid://do3snl36egfjj" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim.png" id="1_xlhto"]
+[ext_resource type="Script" path="res://objects/monster_legs/MonsterLegs.gd" id="2_80wya"]
 
 [node name="ZombieLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_xlhto")
+script = ExtResource("2_80wya")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

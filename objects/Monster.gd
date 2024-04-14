@@ -48,9 +48,12 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 	
 	if part == CustomTypes.BodyPart.LEGS:
 		if leg != null:
+			leg.unequip()
 			leg.queue_free()
 			
 		leg = monster_linker.get_family(family).legs_object.instantiate()
+		
+		leg.equip()
 		
 		$Body.add_child(leg)
 	else:
@@ -66,6 +69,7 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 func trigger_move():
 	get_tree().create_timer(time_before_start).timeout.connect(func():
 		is_going = true
+		leg.set_monster_walking(true)
 	)
 
 func use_basic_spell(spell: BasicSpell):
@@ -89,3 +93,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
 		body.kill_player()
 		is_going = false
+		leg.set_monster_walking(false)

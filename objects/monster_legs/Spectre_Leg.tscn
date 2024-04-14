@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://duvaoc4qg18o4"]
+[gd_scene load_steps=3 format=3 uid="uid://duvaoc4qg18o4"]
 
 [ext_resource type="Texture2D" uid="uid://88wdqbbmmyv8" path="res://resources/textures/monsters/Spectre/SpecterLegs_tentacle.png" id="1_scj1l"]
+[ext_resource type="Script" path="res://objects/monster_legs/MonsterLegs.gd" id="2_nh2vo"]
 
 [node name="SpectreLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_scj1l")
+script = ExtResource("2_nh2vo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

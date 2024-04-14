@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceid8qug3xfxo"]
+[gd_scene load_steps=3 format=3 uid="uid://ceid8qug3xfxo"]
 
 [ext_resource type="Texture2D" uid="uid://ge11iitq0g8b" path="res://resources/textures/monsters/Ogre/OgreLegs_fat.png" id="1_30b1e"]
+[ext_resource type="Script" path="res://objects/monster_legs/MonsterLegs.gd" id="2_u7d2h"]
 
 [node name="OgreLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_30b1e")
+script = ExtResource("2_u7d2h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
