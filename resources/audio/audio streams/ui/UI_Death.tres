@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://c2q5c5mrl68au"]
+
+[ext_resource type="AudioStream" uid="uid://sgvx1gei5jp0" path="res://resources/audio/sources/ui/Death-001.wav" id="1_fqslp"]
+[ext_resource type="AudioStream" uid="uid://gjfvjeman2uk" path="res://resources/audio/sources/ui/Death-002.wav" id="2_btkuj"]
+[ext_resource type="AudioStream" uid="uid://dy6ged0jein6v" path="res://resources/audio/sources/ui/Death-003.wav" id="3_2h3lg"]
+[ext_resource type="AudioStream" uid="uid://ceq07nlsstvt7" path="res://resources/audio/sources/ui/Death-004.wav" id="4_53l3p"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_fqslp")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_btkuj")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_2h3lg")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_53l3p")
+stream_3/weight = 1.0

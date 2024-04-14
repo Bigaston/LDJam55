@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://bc8ie3pfxu4vo"]
+
+[ext_resource type="AudioStream" uid="uid://tjy0dc8ovf04" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-001.wav" id="1_0r3lh"]
+[ext_resource type="AudioStream" uid="uid://bkpn30bj5qcoq" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-002.wav" id="2_hwsyh"]
+[ext_resource type="AudioStream" uid="uid://dbh4vuilo5387" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-003.wav" id="3_fn3rf"]
+[ext_resource type="AudioStream" uid="uid://b72jwudye6o1s" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-004.wav" id="4_271kj"]
+[ext_resource type="AudioStream" uid="uid://bl6yhon6tqog8" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-005.wav" id="5_w2b60"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_0r3lh")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_hwsyh")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_fn3rf")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_271kj")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_w2b60")
+stream_4/weight = 1.0

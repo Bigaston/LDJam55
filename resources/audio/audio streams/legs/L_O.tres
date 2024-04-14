@@ -1,0 +1,29 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=9 format=3 uid="uid://h1ipvnj680ui"]
+
+[ext_resource type="AudioStream" uid="uid://cp7ksl3cok0o1" path="res://resources/audio/sources/monster_limbs/legs/L_O-001.wav" id="1_dqixb"]
+[ext_resource type="AudioStream" uid="uid://cyblka2rrsbjf" path="res://resources/audio/sources/monster_limbs/legs/L_O-002.wav" id="2_b3c5s"]
+[ext_resource type="AudioStream" uid="uid://dby7gh2aslfmk" path="res://resources/audio/sources/monster_limbs/legs/L_O-003.wav" id="3_ufcr7"]
+[ext_resource type="AudioStream" uid="uid://c0hrc8ksx8ysd" path="res://resources/audio/sources/monster_limbs/legs/L_O-004.wav" id="4_hihs2"]
+[ext_resource type="AudioStream" uid="uid://bm6qtj7550s10" path="res://resources/audio/sources/monster_limbs/legs/L_O-005.wav" id="5_n4ymc"]
+[ext_resource type="AudioStream" uid="uid://bcur1vj7qgskk" path="res://resources/audio/sources/monster_limbs/legs/L_O-006.wav" id="6_0830y"]
+[ext_resource type="AudioStream" uid="uid://cbs3scu4hism6" path="res://resources/audio/sources/monster_limbs/legs/L_O-007.wav" id="7_oajfy"]
+[ext_resource type="AudioStream" uid="uid://cajp5b2ogi5tf" path="res://resources/audio/sources/monster_limbs/legs/L_O-008.wav" id="8_77o2x"]
+
+[resource]
+streams_count = 8
+stream_0/stream = ExtResource("1_dqixb")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_b3c5s")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_ufcr7")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_hihs2")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_n4ymc")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("6_0830y")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("7_oajfy")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("8_77o2x")
+stream_7/weight = 1.0
