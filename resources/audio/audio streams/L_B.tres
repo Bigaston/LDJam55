@@ -1,20 +1,29 @@
-[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://csscnepbyflij"]
+[gd_resource type="AudioStreamRandomizer" load_steps=9 format=3 uid="uid://csscnepbyflij"]
 
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_wrhdx"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_ubilc"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_kl0nm"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_116wc"]
+[ext_resource type="AudioStream" uid="uid://cm4n4yfdm3thc" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-001.wav" id="1_jmlbx"]
+[ext_resource type="AudioStream" uid="uid://83mq8m3kiqeg" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-002.wav" id="2_gplpp"]
+[ext_resource type="AudioStream" uid="uid://desusd27ufd61" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-003.wav" id="3_d8f3h"]
+[ext_resource type="AudioStream" uid="uid://dwq4q5g4q3om8" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-004.wav" id="4_ex20s"]
+[ext_resource type="AudioStream" uid="uid://fo3kahc1ycnc" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-005.wav" id="5_83c2j"]
+[ext_resource type="AudioStream" uid="uid://bu3jfggh2hl0s" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-006.wav" id="6_m23pl"]
+[ext_resource type="AudioStream" uid="uid://bvwqdt1lcllpd" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-007.wav" id="7_xhbus"]
+[ext_resource type="AudioStream" uid="uid://dms4uo8xc7l62" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-008.wav" id="8_pfqvh"]
 
 [resource]
-streams_count = 4
-stream_0/stream = SubResource("AudioStreamWAV_wrhdx")
+streams_count = 8
+stream_0/stream = ExtResource("1_jmlbx")
 stream_0/weight = 1.0
-stream_1/stream = SubResource("AudioStreamWAV_ubilc")
+stream_1/stream = ExtResource("2_gplpp")
 stream_1/weight = 1.0
-stream_2/stream = SubResource("AudioStreamWAV_kl0nm")
+stream_2/stream = ExtResource("3_d8f3h")
 stream_2/weight = 1.0
-stream_3/stream = SubResource("AudioStreamWAV_116wc")
+stream_3/stream = ExtResource("4_ex20s")
 stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_83c2j")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("6_m23pl")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("7_xhbus")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("8_pfqvh")
+stream_7/weight = 1.0
