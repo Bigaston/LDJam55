@@ -6,8 +6,15 @@ extends Node3D
 @export var player_scene: PackedScene
 @export var player_spawn: Node3D
 
+@export var skip_intro: bool = false
+
 var monster: Node3D
 var player: CharacterBody3D
+
+func _ready():
+	if skip_intro:
+		($AnimationPlayer as AnimationPlayer).speed_scale = 1000
+		($AnimationPlayer as AnimationPlayer).play("StartGame", 1)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_released("use_spell"):
