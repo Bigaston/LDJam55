@@ -1,9 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=35 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
 [ext_resource type="Script" path="res://scripts/scenes/TerrainContainer.gd" id="3_jbmto"]
+[ext_resource type="Material" uid="uid://bim3fsnh4dmbq" path="res://resources/materials/ground_material.tres" id="4_ytkoa"]
 [ext_resource type="Script" path="res://scripts/scenes/Intro.gd" id="5_1ci52"]
+[ext_resource type="Material" uid="uid://bkri1w7v87df7" path="res://resources/materials/wall_material.tres" id="5_67wri"]
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="5_fp4o2"]
 [ext_resource type="Material" uid="uid://duba4yd4ge04h" path="res://resources/materials/proto_material.tres" id="5_ygx1m"]
 [ext_resource type="PackedScene" uid="uid://dodkpy17ylwib" path="res://objects/Monster.tscn" id="6_royi3"]
@@ -16,16 +18,18 @@
 [ext_resource type="AudioStream" uid="uid://cycrlf4ucs1r2" path="res://resources/audio/sources/ambiances/AMB_Monk.wav" id="14_3phl1"]
 [ext_resource type="AudioStream" uid="uid://dbu2ocmporckp" path="res://resources/audio/sources/ambiances/AMB_Tortured_Souls.wav" id="15_oyd5i"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8anhs"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1a5rv"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_4go48"]
-sky_material = SubResource("ProceduralSkyMaterial_8anhs")
+[sub_resource type="Sky" id="Sky_telae"]
+sky_material = SubResource("ProceduralSkyMaterial_1a5rv")
 
 [sub_resource type="Environment" id="Environment_q02r5"]
 background_mode = 2
-sky = SubResource("Sky_4go48")
+sky = SubResource("Sky_telae")
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
@@ -33,7 +37,7 @@ fog_light_color = Color(0, 0, 0, 1)
 fog_density = 0.3
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8d5ip"]
-material = ExtResource("5_ygx1m")
+material = ExtResource("4_ytkoa")
 size = Vector2(10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f41b2"]
@@ -324,6 +328,7 @@ shape = SubResource("BoxShape3D_f41b2")
 
 [node name="Wall" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 2, 5)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("QuadMesh_jtkfp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/Wall"]
@@ -334,6 +339,7 @@ shape = SubResource("BoxShape3D_rh32r")
 
 [node name="Wall2" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 2, 5)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("QuadMesh_jtkfp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/Wall2"]
@@ -344,6 +350,7 @@ shape = SubResource("BoxShape3D_rh32r")
 
 [node name="Wall3" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 10)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("QuadMesh_jtkfp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/Wall3"]
@@ -354,10 +361,12 @@ shape = SubResource("BoxShape3D_rh32r")
 
 [node name="Ceil" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 5)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("PlaneMesh_m7mri")
 
 [node name="MiniWall" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 2, 0)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("QuadMesh_3ucmu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/MiniWall"]
@@ -368,6 +377,7 @@ shape = SubResource("BoxShape3D_8pl3p")
 
 [node name="MiniWall2" type="MeshInstance3D" parent="StartRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2, 0)
+material_override = ExtResource("5_67wri")
 mesh = SubResource("QuadMesh_3ucmu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StartRoom/MiniWall2"]
@@ -404,6 +414,7 @@ monster_scene = ExtResource("6_royi3")
 monster_spawn = NodePath("../StartRoom/MonsterSpawn")
 player_scene = ExtResource("7_2wh5t")
 player_spawn = NodePath("../StartRoom/PlayerSpawn")
+skip_intro = true
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
 transform = Transform3D(-1, 2.20956e-07, 2.52554e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)

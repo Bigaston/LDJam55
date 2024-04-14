@@ -6,6 +6,8 @@ extends Control
 func set_spell(spell: BasicSpell):
 	$SpellName.text = spell.name
 	$RightText.text = spell.right_page_text
+	$LeftText.text = spell.left_page_text_1
+	$LeftText2.text = spell.left_page_text_2
 
 	$PictoPart.texture = part_linker.get_icon(spell.result_true.body_position).icon
 	$PictoFamily.texture = monster_linker.get_family(spell.result_true.monster_family).icon

@@ -1,31 +1,31 @@
 [gd_resource type="Resource" script_class="PartResourceLinker" load_steps=11 format=3 uid="uid://006fwh1qrrer"]
 
 [ext_resource type="Script" path="res://scripts/custom_resources/parts/PartIconLink.gd" id="1_7cevv"]
-[ext_resource type="Texture2D" uid="uid://do4j2nfcpnxoa" path="res://resources/ui/icons/torso.png" id="1_exdi5"]
+[ext_resource type="Texture2D" uid="uid://bwagwgc5kuqpi" path="res://resources/ui/icons/Picto_torso.png" id="1_mggih"]
 [ext_resource type="Script" path="res://scripts/custom_resources/parts/PartResourceLinker.gd" id="1_pny73"]
-[ext_resource type="Texture2D" uid="uid://csese6wlrj6j1" path="res://resources/ui/icons/arms.png" id="3_71vvj"]
-[ext_resource type="Texture2D" uid="uid://cadkoxexcoqcp" path="res://resources/ui/icons/legs.png" id="4_hieyy"]
-[ext_resource type="Texture2D" uid="uid://bld5v4rf0sghi" path="res://resources/ui/icons/head.png" id="5_f8ehw"]
+[ext_resource type="Texture2D" uid="uid://deact6ftou2cf" path="res://resources/ui/icons/Picto_arm.png" id="3_oping"]
+[ext_resource type="Texture2D" uid="uid://bdyqh8f30nkc2" path="res://resources/ui/icons/Picto_leg.png" id="4_6n84l"]
+[ext_resource type="Texture2D" uid="uid://ctr3mckvq0f8p" path="res://resources/ui/icons/Picto_head.png" id="5_xan8o"]
 
 [sub_resource type="Resource" id="Resource_5akxl"]
 script = ExtResource("1_7cevv")
 part = 0
-icon = ExtResource("1_exdi5")
+icon = ExtResource("1_mggih")
 
 [sub_resource type="Resource" id="Resource_hy75f"]
 script = ExtResource("1_7cevv")
 part = 1
-icon = ExtResource("3_71vvj")
+icon = ExtResource("3_oping")
 
 [sub_resource type="Resource" id="Resource_lb24i"]
 script = ExtResource("1_7cevv")
 part = 2
-icon = ExtResource("4_hieyy")
+icon = ExtResource("4_6n84l")
 
 [sub_resource type="Resource" id="Resource_o6coh"]
 script = ExtResource("1_7cevv")
 part = 3
-icon = ExtResource("5_f8ehw")
+icon = ExtResource("5_xan8o")
 
 [resource]
 script = ExtResource("1_pny73")

@@ -1,20 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6o3mvyol3hbo"]
+[gd_scene load_steps=16 format=3 uid="uid://b6o3mvyol3hbo"]
 
 [ext_resource type="Script" path="res://objects/ui/BasicSpell.gd" id="1_6sajc"]
 [ext_resource type="Resource" uid="uid://006fwh1qrrer" path="res://resources/content/PartResourceLinker.tres" id="2_0den8"]
 [ext_resource type="Resource" uid="uid://b76s8hrfrycs1" path="res://resources/content/MonsterResourceLinker.tres" id="3_sylef"]
 [ext_resource type="LabelSettings" uid="uid://c5mjcdfidgkgs" path="res://resources/themes/SpellTitle.tres" id="4_1husb"]
+[ext_resource type="Texture2D" uid="uid://dtenbjpv75nrw" path="res://resources/textures/book/Book_openHand.png" id="4_u2op6"]
+[ext_resource type="Texture2D" uid="uid://ctr3mckvq0f8p" path="res://resources/ui/icons/Picto_head.png" id="5_2no74"]
 [ext_resource type="LabelSettings" uid="uid://c6lcdjj02k82c" path="res://resources/themes/StrangeText.tres" id="5_beanb"]
+[ext_resource type="Texture2D" uid="uid://b0at6ae2npibm" path="res://resources/ui/icons/Picto_ogre.png" id="6_trwhb"]
+[ext_resource type="Texture2D" uid="uid://c322u0uxx5po1" path="res://resources/ui/icons/Picto_harpy.png" id="7_t4l7h"]
 
 [sub_resource type="Gradient" id="Gradient_mir0b"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_eryo0"]
 gradient = SubResource("Gradient_mir0b")
-
-[sub_resource type="Gradient" id="Gradient_b7p25"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_lmy5a"]
-gradient = SubResource("Gradient_b7p25")
 
 [sub_resource type="Gradient" id="Gradient_8o0aa"]
 
@@ -43,6 +42,25 @@ script = ExtResource("1_6sajc")
 part_linker = ExtResource("2_0den8")
 monster_linker = ExtResource("3_sylef")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -743.0
+offset_right = 681.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("4_u2op6")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="SpellPreview" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
@@ -66,14 +84,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -324.0
-offset_top = -558.0
-offset_right = -201.0
-offset_bottom = -478.0
+offset_left = -319.0
+offset_top = -575.0
+offset_right = -119.0
+offset_bottom = -375.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("GradientTexture1D_lmy5a")
+texture = ExtResource("5_2no74")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="PictoFamily" type="TextureRect" parent="."]
 layout_mode = 1
@@ -82,14 +101,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -557.0
-offset_right = -3.0
-offset_bottom = -477.0
+offset_left = -207.0
+offset_top = -358.0
+offset_right = 2.0
+offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("GradientTexture1D_lmy5a")
+texture = ExtResource("6_trwhb")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="PictoCaution" type="TextureRect" parent="."]
 layout_mode = 1
@@ -123,20 +143,22 @@ grow_vertical = 0
 [node name="ConditionPart" type="TextureRect" parent="Condition"]
 layout_mode = 0
 offset_left = 74.0
-offset_top = -501.0
-offset_right = 133.0
-offset_bottom = -445.0
-texture = SubResource("GradientTexture1D_kj6gc")
+offset_top = -500.0
+offset_right = 134.0
+offset_bottom = -440.0
+texture = ExtResource("5_2no74")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="ConditionFamily" type="TextureRect" parent="Condition"]
 layout_mode = 0
 offset_left = 139.0
-offset_top = -501.0
-offset_right = 198.0
-offset_bottom = -445.0
-texture = SubResource("GradientTexture1D_kj6gc")
+offset_top = -500.0
+offset_right = 199.0
+offset_bottom = -440.0
+texture = ExtResource("6_trwhb")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="PictoArrow" type="TextureRect" parent="Condition"]
 layout_mode = 0
@@ -150,20 +172,22 @@ expand_mode = 1
 [node name="BadResultPart" type="TextureRect" parent="Condition"]
 layout_mode = 0
 offset_left = 277.0
-offset_top = -501.0
-offset_right = 336.0
-offset_bottom = -445.0
-texture = SubResource("GradientTexture1D_kj6gc")
+offset_top = -500.0
+offset_right = 337.0
+offset_bottom = -440.0
+texture = ExtResource("5_2no74")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="BadResultFamily" type="TextureRect" parent="Condition"]
 layout_mode = 0
 offset_left = 342.0
-offset_top = -501.0
-offset_right = 401.0
-offset_bottom = -445.0
-texture = SubResource("GradientTexture1D_kj6gc")
+offset_top = -500.0
+offset_right = 402.0
+offset_bottom = -440.0
+texture = ExtResource("7_t4l7h")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="RightText" type="Label" parent="."]
 layout_mode = 1
@@ -173,13 +197,52 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 48.0
-offset_top = -424.0
+offset_top = -444.0
 offset_right = 376.0
 offset_bottom = -164.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "IOQUS HDQP9OISHDPQIOSUUDHNQPSODIHNQLMXKLWCFSQDQSDQLIUSDBQMOSKJN"
 label_settings = ExtResource("5_beanb")
+horizontal_alignment = 2
+autowrap_mode = 1
+
+[node name="LeftText" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -553.0
+offset_right = 3.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "IOQUS HDQP9OISHDQISUDHQSDQSDQSD"
+label_settings = ExtResource("5_beanb")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="LeftText2" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -350.0
+offset_right = -219.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "IOQUS HDQP9OISHDQISUDHQSDQSDQSD"
+label_settings = ExtResource("5_beanb")
+horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="SpellName" type="Label" parent="."]

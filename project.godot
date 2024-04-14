@@ -12,14 +12,13 @@ config_version=5
 
 config/name="LDJam55"
 config/tags=PackedStringArray("gamejam")
-run/main_scene="res://scenes/game/level.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
 AudioManager="*res://scripts/AudioManager.gd"
-Global="*res://scripts/autoload/global.gd"
 CustomTypes="*res://scripts/autoload/custom_types.gd"
 
 [display]

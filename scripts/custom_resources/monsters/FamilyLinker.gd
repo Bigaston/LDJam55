@@ -5,6 +5,8 @@ class_name FamilyLinker
 
 @export var icon: Texture2D
 
+@export var legs_object: PackedScene
+
 @export_subgroup("Parts")
 @export var heads: Array[Texture2D] = []
 @export var torso: Array[Texture2D] = []
