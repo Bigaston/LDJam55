@@ -11,11 +11,16 @@ extends Node3D
 var time_before_head = 0
 var time_before_torso = 0
 
+var is_finished = false
+
 func _ready():
 	time_before_head = randf_range(head_min_time, head_max_time)
 	time_before_torso = randf_range(torso_min_time, torso_max_time)
 
 func _process(delta: float) -> void:
+	if is_finished:
+		return
+		
 	time_before_head -= delta
 	time_before_torso -= delta
 	

@@ -4,11 +4,13 @@ extends Node3D
 @export var monster_linker: MonsterResourceLinker
 @export var time_before_start: float = 3
 
+signal win_party(spell: FinalSpell)
+
 var is_going = false
-
 var parts: Dictionary = {}
-
 var leg: Node3D
+
+var is_finished = false
 
 @onready var part_association: Dictionary = {
 	CustomTypes.BodyPart.HEAD: {
@@ -85,13 +87,33 @@ func use_final_spell(spell: FinalSpell):
 		parts[CustomTypes.BodyPart.ARM] == spell.arm_family &&
 		parts[CustomTypes.BodyPart.LEGS] == spell.leg_family):
 
-		$FinalForm.texture = spell.result
+		win_party.emit(spell)
+		
+		is_going = false
+		leg.set_monster_walking(false)
+		
+		$FinalForme.texture = spell.result
+		$FinalForme.visible = true
+		
+		$Body.visible = false
+		leg.unequip()
+		
+		is_finished = true
+		$Audio.is_finished = true
 	else:
 		var part = CustomTypes.BodyPart.values()[randi_range(1, 3)]
 		random_part(part, true)
+		
+func force_win(spell: FinalSpell):
+	set_body_part(CustomTypes.BodyPart.HEAD, spell.head_family, true)
+	set_body_part(CustomTypes.BodyPart.TORSO, spell.torso_family, true)
+	set_body_part(CustomTypes.BodyPart.ARM, spell.arm_family, true)
+	set_body_part(CustomTypes.BodyPart.LEGS, spell.leg_family, true)
+	
+	use_final_spell(spell)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is Player:
+	if body is Player && !is_finished:
 		body.kill_player()
 		is_going = false
 		leg.set_monster_walking(false)

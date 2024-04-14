@@ -21,6 +21,7 @@ var can_restart = false
 var can_move = true
 
 signal spell_used(spell)
+signal force_win(spell: FinalSpell)
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -91,8 +92,14 @@ func _on_book_spell_used(spell: Variant) -> void:
 	if spell is BasicSpell:
 		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
 		$Sounds/Spell.play()
+	elif spell is FinalSpell:
+		$Sounds/Spell.stream = spell.sound
+		$Sounds/Spell.play()
 	
 	spell_used.emit(spell)
+
+func _on_book_force_win(spell):
+	force_win.emit(spell)
 
 func kill_player():
 	$Sounds/Death.play()
@@ -101,3 +108,14 @@ func kill_player():
 	
 func enable_restart():
 	can_restart = true
+	
+func win_party(spell):
+	can_move = false
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "rotation_degrees", Vector3(0, 180, 0), 2).set_trans(Tween.TRANS_CUBIC)
+	tween.parallel().tween_property($Neck/Camera3D, "rotation_degrees", Vector3(0, 0, 0), 2).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_callback(func():
+		$AnimationPlayer.play("Win")
+	)
+	
