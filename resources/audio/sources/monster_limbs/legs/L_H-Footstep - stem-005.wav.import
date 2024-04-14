@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cp1aouw06ej8p"
+path="res://.godot/imported/L_H-Footstep - stem-005.wav-c155edab2f98c3cf20e65c423c4aa5e9.sample"
+
+[deps]
+
+source_file="res://resources/audio/sources/monster_limbs/legs/L_H-Footstep - stem-005.wav"
+dest_files=["res://.godot/imported/L_H-Footstep - stem-005.wav-c155edab2f98c3cf20e65c423c4aa5e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
