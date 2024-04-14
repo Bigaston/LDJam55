@@ -18,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var camera := $Neck/Camera3D
 
 var can_restart = false
+var can_move = true
 
 signal spell_used(spell)
 
@@ -27,11 +28,16 @@ func _ready():
 func _unhandled_input(event: InputEvent):
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
+			if !can_move:
+				return
 			rotate_y(-event.relative.x * horizontal_sensitivity)
 			camera.rotate_x(-event.relative.y * vertical_sensitivity)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 func _physics_process(delta):
+	if !can_move:
+		return
+		
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -83,6 +89,7 @@ func _on_book_spell_used(spell: Variant) -> void:
 
 func kill_player():
 	$AnimationPlayer.play("Death")
+	can_move = false
 	
 func enable_restart():
 	can_restart = true
