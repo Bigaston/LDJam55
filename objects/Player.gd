@@ -92,6 +92,9 @@ func _on_book_spell_used(spell: Variant) -> void:
 	if spell is BasicSpell:
 		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
 		$Sounds/Spell.play()
+	elif spell is FinalSpell:
+		$Sounds/Spell.stream = spell.sound
+		$Sounds/Spell.play()
 	
 	spell_used.emit(spell)
 
