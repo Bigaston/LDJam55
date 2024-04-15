@@ -24,8 +24,6 @@ signal spell_used(spell)
 signal force_win(spell: FinalSpell)
 
 func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
 	rotation_degrees.y = 0
 
 func _unhandled_input(event: InputEvent):
@@ -80,6 +78,8 @@ func _physics_process(delta):
 	$Sounds/AudioAnimation.speed_scale = velocity.length() / speed
 
 func _process(_delta):
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED	
+	
 	if camera.rotation_degrees.x <= open_book_threeshold:
 		book.open_book()
 	else:
