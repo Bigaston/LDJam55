@@ -67,21 +67,32 @@ material_override = ExtResource("3_7vl5b")
 mesh = SubResource("PlaneMesh_tolos")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54281, 3.39389, -5.88805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68863, 3.18074, -5.88805)
 light_color = Color(0.397395, 0.562328, 0.147003, 1)
 light_energy = 3.0
-omni_range = 2.0
+omni_range = 0.636
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.689, 3.18086, 5.888)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 3.0
+omni_range = 0.636
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5069, 3.29627, 5.79501)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 3.18086, 5.888)
 light_color = Color(0.397395, 0.562328, 0.147003, 1)
 light_energy = 3.0
-omni_range = 2.0
+omni_range = 0.636
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.689, 3.18086, -5.888)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 3.0
+omni_range = 0.636
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.87431, -0.0511045)
 light_color = Color(0.964562, 0.90375, 0.719814, 1)
 light_energy = 10.0
-spot_range = 5.43251
-spot_attenuation = 0.79
-spot_angle = 30.6949
+spot_range = 6.0
+spot_angle = 30.0
