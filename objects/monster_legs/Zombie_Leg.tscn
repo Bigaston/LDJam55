@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfw16smvpk8ip"]
+[gd_scene load_steps=11 format=3 uid="uid://dfw16smvpk8ip"]
 
 [ext_resource type="Texture2D" uid="uid://do3snl36egfjj" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim.png" id="1_xlhto"]
 [ext_resource type="Script" path="res://objects/monster_legs/zombie_leg.gd" id="2_mxhic"]
+[ext_resource type="Texture2D" uid="uid://l7mg0efws6v4" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim_LeftBack.png" id="3_68ub0"]
 [ext_resource type="AudioStream" uid="uid://fbjlwjrp5re3" path="res://resources/audio/audio streams/legs/L_Z-Barefoot.tres" id="3_envx4"]
 [ext_resource type="AudioStream" uid="uid://4342gvncoceh" path="res://resources/audio/audio streams/legs/L_Z-Shoes.tres" id="4_0exwb"]
+[ext_resource type="Texture2D" uid="uid://cyw7v834wl0yy" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim_RightUp.png" id="4_8oqu2"]
 [ext_resource type="AudioStream" uid="uid://c1r13d1tp03ir" path="res://resources/audio/audio streams/legs/L_Z-Slide.tres" id="5_vkjw0"]
 
 [sub_resource type="Animation" id="Animation_h6t3j"]
@@ -44,16 +46,44 @@ tracks/2/path = NodePath("Sounds/Slide")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [0.0],
 "method": &"play"
 }]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_68ub0"), ExtResource("4_8oqu2")]
+}
+
+[sub_resource type="Animation" id="Animation_lvnxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_xlhto")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ljhh1"]
 _data = {
+"RESET": SubResource("Animation_lvnxr"),
 "Walk": SubResource("Animation_h6t3j")
 }
 
@@ -62,6 +92,7 @@ pixel_size = 0.0018
 billboard = 2
 texture = ExtResource("1_xlhto")
 script = ExtResource("2_mxhic")
+basic_texture = ExtResource("1_xlhto")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,7 +1,9 @@
 extends MonsterLegs
 
+@export var basic_texture: Texture2D
+
 func equip():
-	pass
+	texture = basic_texture
 	#$AnimationPlayer.play("Walk")
 	
 func unequip():
@@ -12,3 +14,4 @@ func set_monster_walking(walking: bool):
 		$AnimationPlayer.play("Walk")
 	else:
 		$AnimationPlayer.stop()
+		texture = basic_texture
