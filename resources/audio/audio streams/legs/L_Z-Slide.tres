@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dyjrjtwan7e2r" path="res://resources/audio/sources/monster_limbs/legs/L_Z_Slide-004.wav" id="4_upf0u"]
 
 [resource]
+random_pitch = 4.0
 streams_count = 4
 stream_0/stream = ExtResource("1_4moed")
 stream_0/weight = 1.0

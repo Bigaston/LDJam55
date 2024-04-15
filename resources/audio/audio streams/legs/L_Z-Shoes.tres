@@ -1,20 +1,18 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://4342gvncoceh"]
 
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_wrhdx"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_ubilc"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_kl0nm"]
-
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_116wc"]
+[ext_resource type="AudioStream" uid="uid://bx5pkntr5c3fc" path="res://resources/audio/sources/monster_limbs/legs/L_Z_ShoesOn-001.wav" id="1_l4giu"]
+[ext_resource type="AudioStream" uid="uid://mvcw7tkpdqcf" path="res://resources/audio/sources/monster_limbs/legs/L_Z_ShoesOn-002.wav" id="2_0di0y"]
+[ext_resource type="AudioStream" uid="uid://bm7omg8sjyfql" path="res://resources/audio/sources/monster_limbs/legs/L_Z_ShoesOn-003.wav" id="3_s8w62"]
+[ext_resource type="AudioStream" uid="uid://n2mh03idruga" path="res://resources/audio/sources/monster_limbs/legs/L_Z_ShoesOn-004.wav" id="4_6174a"]
 
 [resource]
+random_pitch = 4.0
 streams_count = 4
-stream_0/stream = SubResource("AudioStreamWAV_wrhdx")
+stream_0/stream = ExtResource("1_l4giu")
 stream_0/weight = 1.0
-stream_1/stream = SubResource("AudioStreamWAV_ubilc")
+stream_1/stream = ExtResource("2_0di0y")
 stream_1/weight = 1.0
-stream_2/stream = SubResource("AudioStreamWAV_kl0nm")
+stream_2/stream = ExtResource("3_s8w62")
 stream_2/weight = 1.0
-stream_3/stream = SubResource("AudioStreamWAV_116wc")
+stream_3/stream = ExtResource("4_6174a")
 stream_3/weight = 1.0

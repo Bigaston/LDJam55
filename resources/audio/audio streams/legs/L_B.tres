@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dms4uo8xc7l62" path="res://resources/audio/sources/monster_limbs/legs/L_B-Claws-008.wav" id="8_pfqvh"]
 
 [resource]
+random_pitch = 4.0
 streams_count = 8
 stream_0/stream = ExtResource("1_jmlbx")
 stream_0/weight = 1.0
