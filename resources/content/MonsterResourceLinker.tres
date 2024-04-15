@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=76 format=3 uid="uid://b76s8hrfrycs1"]
+[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=83 format=3 uid="uid://b76s8hrfrycs1"]
 
 [ext_resource type="Texture2D" uid="uid://drl4hr75gu6gi" path="res://resources/textures/monsters/Harpie/BansheeArm_muscle_LeftUp.png" id="1_0p0rn"]
 [ext_resource type="Script" path="res://scripts/custom_resources/monsters/MonsterResourceLinker.gd" id="1_5p0ke"]
@@ -10,11 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://dfau72vqa1nvq" path="res://resources/textures/monsters/Harpie/BansheeHead_muscle.png" id="4_5y5mw"]
 [ext_resource type="Script" path="res://scripts/custom_resources/monsters/MonsterArm.gd" id="4_wrj20"]
 [ext_resource type="Texture2D" uid="uid://c322u0uxx5po1" path="res://resources/ui/icons/Picto_harpy.png" id="5_7edm8"]
+[ext_resource type="Texture2D" uid="uid://dmmpipgcdmn5q" path="res://resources/textures/monsters/Harpie/Harpy_arm_LeftUp_Thin.png" id="5_ifkrw"]
 [ext_resource type="Texture2D" uid="uid://bfu7v8bh7o5dm" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle.png" id="6_ae3ls"]
+[ext_resource type="Texture2D" uid="uid://bo3i0ckogwygx" path="res://resources/textures/monsters/Harpie/Harpy_arm_RightUp_Thin.png" id="6_kv0io"]
 [ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/legs/L_B.tres" id="6_t51u1"]
+[ext_resource type="Texture2D" uid="uid://bsllj7o78s0j4" path="res://resources/textures/monsters/Harpie/Harpy_arm_Thin.png" id="7_27v45"]
 [ext_resource type="PackedScene" uid="uid://bocaatiuyhe5j" path="res://objects/monster_legs/Harpie_Leg.tscn" id="8_x28if"]
 [ext_resource type="AudioStream" uid="uid://dxh40dtg6ydkl" path="res://resources/audio/audio streams/torso/T_B.tres" id="9_hwbse"]
 [ext_resource type="Texture2D" uid="uid://b5bvci1co7mro" path="res://resources/textures/monsters/Harpie/BansheeTorso_muscle.png" id="10_yq4ip"]
+[ext_resource type="Texture2D" uid="uid://c7s3p61pdiktx" path="res://resources/textures/monsters/Harpie/Harpy_head_Thin.png" id="11_8j75d"]
 [ext_resource type="Texture2D" uid="uid://cfji246rdhflh" path="res://resources/textures/monsters/Zombie/ZombieArm_slim.png" id="11_qdvdh"]
 [ext_resource type="AudioStream" uid="uid://u2uq2q0wilg5" path="res://resources/audio/audio streams/arms/A_Z.tres" id="11_vkdyo"]
 [ext_resource type="AudioStream" uid="uid://bw31akkmxtqdl" path="res://resources/audio/audio streams/head/H_Z.tres" id="12_b4l03"]
@@ -25,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dsa5ps4vptxcw" path="res://resources/textures/monsters/Zombie/ZombieArm_slim_RightUp.png" id="16_062ma"]
 [ext_resource type="Texture2D" uid="uid://do3snl36egfjj" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim.png" id="16_80sku"]
 [ext_resource type="AudioStream" uid="uid://dfhew345lrbn" path="res://resources/audio/audio streams/torso/T_Z.tres" id="17_lfcpq"]
+[ext_resource type="Texture2D" uid="uid://c6wceijmaxg5q" path="res://resources/textures/monsters/Harpie/Harpy_torso_Thin.png" id="18_43qb5"]
 [ext_resource type="Texture2D" uid="uid://dkug50erdigah" path="res://resources/textures/monsters/Zombie/Zombie_arm_LeftUp_Muscle.png" id="18_c0xgd"]
 [ext_resource type="Texture2D" uid="uid://ccpsn3ibp6l66" path="res://resources/textures/monsters/Zombie/ZombieTorso_slim.png" id="18_s5w7v"]
 [ext_resource type="AudioStream" uid="uid://c0x8ba50iol2x" path="res://resources/audio/audio streams/arms/A_S.tres" id="19_5xvdv"]
@@ -72,14 +77,25 @@ script = ExtResource("4_wrj20")
 arm = ExtResource("3_tpkxp")
 animated = SubResource("AnimatedTexture_m7qns")
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_acc2m"]
+frames = 2
+frame_0/texture = ExtResource("5_ifkrw")
+frame_1/texture = ExtResource("6_kv0io")
+frame_1/duration = 1.0
+
+[sub_resource type="Resource" id="Resource_tbkhq"]
+script = ExtResource("4_wrj20")
+arm = ExtResource("7_27v45")
+animated = SubResource("AnimatedTexture_acc2m")
+
 [sub_resource type="Resource" id="Resource_u2exw"]
 script = ExtResource("1_y7r5o")
 family = 0
 icon = ExtResource("5_7edm8")
 legs_object = ExtResource("8_x28if")
-heads = Array[Texture2D]([ExtResource("4_5y5mw")])
-torso = Array[Texture2D]([ExtResource("10_yq4ip")])
-arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_gga3c")])
+heads = Array[Texture2D]([ExtResource("4_5y5mw"), ExtResource("11_8j75d")])
+torso = Array[Texture2D]([ExtResource("10_yq4ip"), ExtResource("18_43qb5")])
+arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_gga3c"), SubResource("Resource_tbkhq")])
 legs = Array[Texture2D]([ExtResource("6_ae3ls")])
 head_audio = ExtResource("3_iy347")
 torso_audio = ExtResource("9_hwbse")
