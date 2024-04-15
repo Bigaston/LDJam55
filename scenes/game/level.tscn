@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=36 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dodkpy17ylwib" path="res://objects/Monster.tscn" id="6_royi3"]
 [ext_resource type="PackedScene" uid="uid://ge5vudlmrbfh" path="res://objects/Player.tscn" id="7_2wh5t"]
 [ext_resource type="Texture2D" uid="uid://cv6136nwumejg" path="res://resources/textures/particles/partic1.png" id="7_4nlya"]
+[ext_resource type="Texture2D" uid="uid://ersry5518ddm" path="res://resources/textures/decals/pentacle2.png" id="7_rcwp8"]
 [ext_resource type="AudioStream" uid="uid://ceka4rdr3kj7x" path="res://resources/audio/sources/music/MUS_Drums.wav" id="10_0172s"]
 [ext_resource type="AudioStream" uid="uid://diwjscrs01tcm" path="res://resources/audio/sources/music/MUS_Piano_high.wav" id="11_cniij"]
 [ext_resource type="AudioStream" uid="uid://d4mn5medmngrr" path="res://resources/audio/sources/music/MUS_Piano_low.wav" id="12_vsunl"]
@@ -407,6 +408,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
 
 [node name="PlayerSpawn" type="Node3D" parent="StartRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Decal" type="Decal" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.313338, 5.02163)
+size = Vector3(4, 2, 4)
+texture_albedo = ExtResource("7_rcwp8")
+modulate = Color(1, 0, 0, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 0.00893591, 0.99996, 0, -0.99996, 0.00893591, 0, 3.08947, 5.53396)
+light_color = Color(1, 0.614716, 0.729832, 1)
+light_energy = 16.0
+spot_range = 4.33266
 
 [node name="Intro" type="Node3D" parent="." node_paths=PackedStringArray("monster_spawn", "player_spawn")]
 script = ExtResource("5_1ci52")
