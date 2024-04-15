@@ -67,8 +67,8 @@ material_override = ExtResource("3_7vl5b")
 mesh = SubResource("PlaneMesh_tolos")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7027, 3.35917, 5.79501)
-light_color = Color(0.0864, 0.72, 0.18144, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7027, 3.34242, 5.79501)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
 light_energy = 3.062
 omni_range = 1.0
 omni_attenuation = 0.0
