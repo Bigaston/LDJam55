@@ -19,6 +19,7 @@ _data = {
 [node name="SpectreLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("1_scj1l")
 script = ExtResource("2_oybh4")
 

@@ -111,16 +111,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.248681, 0)
 [node name="Head" type="Sprite3D" parent="Body"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("3_vlwy5")
 
 [node name="Torso" type="Sprite3D" parent="Body"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("4_3b1ti")
 
 [node name="Arms" type="Sprite3D" parent="Body"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("5_3jajr")
 
 [node name="Audio" type="Node3D" parent="."]
