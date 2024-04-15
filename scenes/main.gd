@@ -8,7 +8,8 @@ var loaded_scene = ""
 signal scene_loaded()
 
 func _ready():
-	change_scene(preload("res://scenes/game/level.tscn").instantiate())
+	#change_scene(preload("res://scenes/game/level.tscn").instantiate())
+	change_scene(preload("res://scenes/other/boot_screen.tscn").instantiate())	
 
 func _process(_delta):
 	if loading:

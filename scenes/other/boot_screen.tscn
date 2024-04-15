@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxq8cetnduukv"]
+[gd_scene load_steps=11 format=3 uid="uid://dxq8cetnduukv"]
 
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="1_vrrit"]
 [ext_resource type="Script" path="res://scenes/other/boot_screen.gd" id="1_x3uu2"]
+[ext_resource type="Texture2D" uid="uid://c137r7ibtqh1r" path="res://resources/ui/boot/OgreHead_fat.png" id="3_awelh"]
+[ext_resource type="Texture2D" uid="uid://leripsfg10rs" path="res://resources/ui/boot/SpecterHead_tentacle.png" id="4_84grd"]
+[ext_resource type="Texture2D" uid="uid://dj5gfmvx5mxgv" path="res://resources/ui/boot/ZombieHead_slim.png" id="5_gk7iu"]
+[ext_resource type="Texture2D" uid="uid://dhddex3166bu3" path="res://resources/ui/boot/BansheeHead_muscle.png" id="6_n8p5s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjfue"]
 bg_color = Color(0, 0, 0, 1)
@@ -79,7 +83,123 @@ grow_vertical = 2
 text = "A Game By"
 label_settings = SubResource("LabelSettings_obial")
 
+[node name="LabelBigaston" type="Label" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = 180.0
+offset_right = -282.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bigaston"
+label_settings = SubResource("LabelSettings_obial")
+horizontal_alignment = 1
+
+[node name="LabelNoé" type="Label" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = 180.0
+offset_right = -24.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Darwyn"
+label_settings = SubResource("LabelSettings_obial")
+horizontal_alignment = 1
+
+[node name="LabelMifflue" type="Label" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = 180.0
+offset_right = 230.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mifflue"
+label_settings = SubResource("LabelSettings_obial")
+horizontal_alignment = 1
+
+[node name="LabelNyeut" type="Label" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 180.0
+offset_right = 474.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nyeut"
+label_settings = SubResource("LabelSettings_obial")
+horizontal_alignment = 1
+
+[node name="TextureBigaston" type="TextureRect" parent="BackgroundPanel/Control"]
+layout_mode = 0
+offset_left = -435.0
+offset_top = 40.0
+offset_right = -285.0
+offset_bottom = 190.0
+texture = ExtResource("3_awelh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureDarwyn" type="TextureRect" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = -177.0
+offset_top = 40.0
+offset_right = -27.0
+offset_bottom = 190.0
+texture = ExtResource("4_84grd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureMifflue" type="TextureRect" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 76.0
+offset_top = 40.0
+offset_right = 226.0
+offset_bottom = 190.0
+texture = ExtResource("5_gk7iu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureNyeut" type="TextureRect" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 317.0
+offset_top = 40.0
+offset_right = 467.0
+offset_bottom = 190.0
+texture = ExtResource("6_n8p5s")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="ForegroundPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

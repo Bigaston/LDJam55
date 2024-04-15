@@ -93,10 +93,16 @@ func _on_book_spell_used(spell: Variant) -> void:
 		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/ui/UI_Spell.tres")
 		$Sounds/Spell.play()
 	elif spell is FinalSpell:
-		$Sounds/Spell.stream = spell.sound
+		$Sounds/Spell.stream = preload("res://resources/audio/audio streams/end/End_spell.tres")
 		$Sounds/Spell.play()
-	
+		
 	spell_used.emit(spell)
+	
+#func launch_spell_sound(spell: FinalSpell):
+	#$Sounds/Spell.finished.disconnect(launch_spell_sound)
+	#
+	#$Sounds/Spell.stream = spell.sound
+	#$Sounds/Spell.play()
 
 func _on_book_force_win(spell):
 	force_win.emit(spell)
