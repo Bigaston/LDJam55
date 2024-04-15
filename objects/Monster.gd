@@ -109,6 +109,9 @@ func use_final_spell(spell: FinalSpell):
 		
 		is_finished = true
 		$Audio.is_finished = true
+		
+		$Audio/Transfo.stream = spell.sound
+		$Audio/Transfo.play()
 	else:
 		var part = CustomTypes.BodyPart.values()[randi_range(1, 3)]
 		random_part(part, true)
