@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://bm4hfui1jmmqi" path="res://resources/audio/sources/ui/UI-Book_Open_01.wav" id="1_10goj"]
 
 [resource]
+random_pitch = 2.0
 streams_count = 1
 stream_0/stream = ExtResource("1_10goj")
 stream_0/weight = 1.0

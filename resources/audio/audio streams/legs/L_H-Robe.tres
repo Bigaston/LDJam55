@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dhvv0ttaung7k" path="res://resources/audio/sources/monster_limbs/legs/L_H-Robe-007.wav" id="7_sxmvx"]
 
 [resource]
+random_pitch = 4.0
 streams_count = 7
 stream_0/stream = ExtResource("1_7e7vk")
 stream_0/weight = 1.0

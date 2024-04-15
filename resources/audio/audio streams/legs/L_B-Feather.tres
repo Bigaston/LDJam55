@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bl6yhon6tqog8" path="res://resources/audio/sources/monster_limbs/legs/L_B-Feathers-005.wav" id="5_w2b60"]
 
 [resource]
+random_pitch = 4.0
 streams_count = 5
 stream_0/stream = ExtResource("1_0r3lh")
 stream_0/weight = 1.0
