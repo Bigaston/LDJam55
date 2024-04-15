@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceid8qug3xfxo"]
+[gd_scene load_steps=8 format=3 uid="uid://ceid8qug3xfxo"]
 
 [ext_resource type="Script" path="res://objects/monster_legs/ogre_leg.gd" id="2_m7dyo"]
+[ext_resource type="Texture2D" uid="uid://ge11iitq0g8b" path="res://resources/textures/monsters/Ogre/OgreLegs_fat.png" id="3_ixfva"]
 [ext_resource type="Texture2D" uid="uid://bykbnjhtv0yl0" path="res://resources/textures/monsters/Ogre/OgreLegs_fat_RightUp.png" id="3_vrafi"]
 [ext_resource type="AudioStream" uid="uid://h1ipvnj680ui" path="res://resources/audio/audio streams/legs/L_O.tres" id="3_vt44d"]
 [ext_resource type="Texture2D" uid="uid://brvwg54vf7r7i" path="res://resources/textures/monsters/Ogre/OgreLegs_fat_LeftUp.png" id="3_y3cki"]
@@ -46,8 +47,10 @@ _data = {
 [node name="OgreLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("3_y3cki")
 script = ExtResource("2_m7dyo")
+basic_texture = ExtResource("3_ixfva")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

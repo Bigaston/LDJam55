@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=37 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://diwjscrs01tcm" path="res://resources/audio/sources/music/MUS_Piano_high.wav" id="11_cniij"]
 [ext_resource type="AudioStream" uid="uid://d4mn5medmngrr" path="res://resources/audio/sources/music/MUS_Piano_low.wav" id="12_vsunl"]
 [ext_resource type="AudioStream" uid="uid://cqjvry6k642kd" path="res://resources/audio/sources/music/MUS_Piano_Reverse.wav" id="13_aktpl"]
+[ext_resource type="AudioStream" uid="uid://di6qkfgsejb" path="res://resources/audio/sources/Summoning intro.wav" id="13_btclw"]
 [ext_resource type="AudioStream" uid="uid://cycrlf4ucs1r2" path="res://resources/audio/sources/ambiances/AMB_Monk.wav" id="14_3phl1"]
 [ext_resource type="AudioStream" uid="uid://dbu2ocmporckp" path="res://resources/audio/sources/ambiances/AMB_Tortured_Souls.wav" id="15_oyd5i"]
 
@@ -262,6 +263,32 @@ tracks/11/keys = {
 "update": 0,
 "values": [-60.0, 0.0]
 }
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("IntroSFX")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../StartRoom/SpotLight3D:light_energy")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2.3, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [10.0, 5.0, 10.0, 6.0, 10.0, 4.0, 10.0, 8.0, 2.0, 10.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_77tgd"]
 _data = {
@@ -415,7 +442,7 @@ player_scene = ExtResource("7_2wh5t")
 player_spawn = NodePath("../StartRoom/PlayerSpawn")
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
-transform = Transform3D(-1, -3.52828e-07, 2.51051e-06, 0, 0.990268, 0.139173, -2.53518e-06, 0.139173, -0.990268, 0, 1.5, 1.7)
+transform = Transform3D(-1, 2.20956e-07, 2.52554e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro"]
 libraries = {
@@ -464,6 +491,11 @@ visibility_aabb = AABB(-0.584923, -0.433092, -0.673102, 1.16985, 0.866184, 1.346
 process_material = SubResource("ParticleProcessMaterial_flwut")
 draw_pass_1 = SubResource("QuadMesh_hv5uj")
 
+[node name="IntroSFX" type="AudioStreamPlayer3D" parent="Intro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.231271, 5.06481)
+stream = ExtResource("13_btclw")
+bus = &"SFX"
+
 [node name="MusicAndAmbiance" type="Node" parent="."]
 
 [node name="Music" type="AudioStreamPlayer" parent="MusicAndAmbiance"]
@@ -474,7 +506,7 @@ bus = &"Music"
 [node name="Ambiance" type="AudioStreamPlayer" parent="MusicAndAmbiance"]
 stream = SubResource("AudioStreamSynchronized_75i6o")
 autoplay = true
-bus = &"AMB"
+bus = &"Music"
 
 [connection signal="monster_spawned" from="Intro" to="." method="_on_intro_monster_spawned"]
 [connection signal="player_spawned" from="Intro" to="." method="_on_intro_player_spawned"]

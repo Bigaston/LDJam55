@@ -90,6 +90,7 @@ _data = {
 [node name="ZombieLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("1_xlhto")
 script = ExtResource("2_mxhic")
 basic_texture = ExtResource("1_xlhto")
