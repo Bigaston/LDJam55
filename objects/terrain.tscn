@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dig1yvww3j8q6"]
+[gd_scene load_steps=11 format=3 uid="uid://dig1yvww3j8q6"]
 
 [ext_resource type="Material" uid="uid://duba4yd4ge04h" path="res://resources/materials/proto_material.tres" id="1_dcdxs"]
 [ext_resource type="Material" uid="uid://bim3fsnh4dmbq" path="res://resources/materials/ground_material.tres" id="1_o827a"]
@@ -25,6 +25,11 @@ size = Vector2(20, 4)
 [sub_resource type="PlaneMesh" id="PlaneMesh_tolos"]
 material = ExtResource("1_dcdxs")
 size = Vector2(4, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6piku"]
+albedo_color = Color(0.396078, 0.560784, 0.145098, 1)
+emission_enabled = true
+emission = Color(0.396078, 0.560784, 0.145098, 1)
 
 [node name="Terrain" type="Node3D"]
 
@@ -66,12 +71,58 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 
 material_override = ExtResource("3_7vl5b")
 mesh = SubResource("PlaneMesh_tolos")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28909, 2.81567, 8.01601)
-light_color = Color(0.784314, 0.247059, 0.25098, 1)
-omni_range = 4.25808
-
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52398, 2.81567, -3.31067)
-light_color = Color(0.784314, 0.247059, 0.25098, 1)
-omni_range = 4.25808
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91618, 2.98911, -5.88798)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 2.0
+omni_range = 1.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.916, 2.989, 5.88705)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 2.0
+omni_range = 1.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.916, 2.989, 5.858)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 2.0
+omni_range = 1.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.916, 2.98924, -5.89121)
+light_color = Color(0.397395, 0.562328, 0.147003, 1)
+light_energy = 2.0
+omni_range = 1.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.874, 0)
+light_color = Color(0.964562, 0.90375, 0.719814, 1)
+light_energy = 10.0
+light_specular = 5.943
+distance_fade_enabled = true
+spot_angle = 30.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99376, 2.989, -5.888)
+material_override = SubResource("StandardMaterial3D_6piku")
+gi_mode = 0
+size = Vector3(0.1, 0.15, 0.3)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.994, 2.989, 5.888)
+material_override = SubResource("StandardMaterial3D_6piku")
+gi_mode = 0
+size = Vector3(0.1, 0.15, 0.3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.994, 2.989, -5.888)
+material_override = SubResource("StandardMaterial3D_6piku")
+gi_mode = 0
+size = Vector3(0.1, 0.15, 0.3)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.994, 2.989, 5.888)
+material_override = SubResource("StandardMaterial3D_6piku")
+gi_mode = 0
+size = Vector3(0.1, 0.15, 0.3)
