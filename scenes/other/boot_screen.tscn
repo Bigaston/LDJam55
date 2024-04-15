@@ -1,10 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxq8cetnduukv"]
+[gd_scene load_steps=7 format=3 uid="uid://dxq8cetnduukv"]
 
 [ext_resource type="FontFile" uid="uid://cuy7ri4b1ts8c" path="res://resources/fonts/More 15.ttf" id="1_vrrit"]
 [ext_resource type="Script" path="res://scenes/other/boot_screen.gd" id="1_x3uu2"]
-[ext_resource type="Texture2D" uid="uid://o0i5yo1hwysb" path="res://resources/ui/boot/bigaston.png" id="3_qdeob"]
-[ext_resource type="Texture2D" uid="uid://b4tpq8ym4n0yn" path="res://resources/ui/boot/noe.jpg" id="4_jpq0l"]
-[ext_resource type="Texture2D" uid="uid://bqkunudaxycxt" path="res://resources/ui/boot/mifflue.jpg" id="5_t3k7c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjfue"]
 bg_color = Color(0, 0, 0, 1)
@@ -90,9 +87,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -526.0
+offset_left = -476.0
 offset_top = 180.0
-offset_right = -332.0
+offset_right = -282.0
 offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -108,9 +105,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -268.0
+offset_left = -218.0
 offset_top = 180.0
-offset_right = -74.0
+offset_right = -24.0
 offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -126,9 +123,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 114.0
+offset_left = 36.0
 offset_top = 180.0
-offset_right = 308.0
+offset_right = 230.0
 offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -144,9 +141,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 358.0
+offset_left = 280.0
 offset_top = 180.0
-offset_right = 552.0
+offset_right = 474.0
 offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -154,40 +151,47 @@ text = "Nyeut"
 label_settings = SubResource("LabelSettings_obial")
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="BackgroundPanel/Control"]
+[node name="TextureBigaston" type="TextureRect" parent="BackgroundPanel/Control"]
 layout_mode = 0
-offset_left = -485.0
-offset_top = 39.0
-offset_right = -335.0
-offset_bottom = 189.0
-texture = ExtResource("3_qdeob")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="BackgroundPanel/Control"]
-auto_translate_mode = 1
-layout_mode = 0
-offset_left = -227.0
+offset_left = -435.0
 offset_top = 40.0
-offset_right = -77.0
+offset_right = -285.0
 offset_bottom = 190.0
-texture = ExtResource("4_jpq0l")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="BackgroundPanel/Control"]
+[node name="TextureDarwyn" type="TextureRect" parent="BackgroundPanel/Control"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 154.0
-offset_top = 36.0
-offset_right = 304.0
-offset_bottom = 186.0
-texture = ExtResource("5_t3k7c")
+offset_left = -177.0
+offset_top = 40.0
+offset_right = -27.0
+offset_bottom = 190.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureMifflue" type="TextureRect" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 76.0
+offset_top = 40.0
+offset_right = 226.0
+offset_bottom = 190.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureNyeut" type="TextureRect" parent="BackgroundPanel/Control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 317.0
+offset_top = 40.0
+offset_right = 467.0
+offset_bottom = 190.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="ForegroundPanel" type="Panel" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
