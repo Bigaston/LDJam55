@@ -440,7 +440,6 @@ monster_scene = ExtResource("6_royi3")
 monster_spawn = NodePath("../StartRoom/MonsterSpawn")
 player_scene = ExtResource("7_2wh5t")
 player_spawn = NodePath("../StartRoom/PlayerSpawn")
-skip_intro = true
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
 transform = Transform3D(-1, 2.20956e-07, 2.52554e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
