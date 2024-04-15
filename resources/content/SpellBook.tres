@@ -1,13 +1,17 @@
-[gd_resource type="Resource" script_class="SpellBook" load_steps=53 format=3 uid="uid://q4cwk244at8e"]
+[gd_resource type="Resource" script_class="SpellBook" load_steps=57 format=3 uid="uid://q4cwk244at8e"]
 
 [ext_resource type="Script" path="res://scripts/custom_resources/spells/PartSpecification.gd" id="1_1vwyi"]
 [ext_resource type="Script" path="res://scripts/custom_resources/spells/BasicSpell.gd" id="1_gmhc6"]
 [ext_resource type="Script" path="res://scripts/custom_resources/spells/SpellBook.gd" id="1_p66a6"]
 [ext_resource type="Script" path="res://scripts/custom_resources/spells/FinalSpell.gd" id="2_e5clk"]
 [ext_resource type="Texture2D" uid="uid://c6paucwn5qti" path="res://resources/textures/final_spells/fer.png" id="3_uj84l"]
+[ext_resource type="AudioStream" uid="uid://bqh5xkekt0gif" path="res://resources/audio/sources/end/End_iron.wav" id="5_6nr0g"]
 [ext_resource type="Texture2D" uid="uid://ng2uoq8o7wnj" path="res://resources/textures/final_spells/Cruche.png" id="5_mf075"]
 [ext_resource type="Texture2D" uid="uid://c3h27gavuo8ko" path="res://resources/textures/final_spells/Poulet.png" id="6_eeaul"]
+[ext_resource type="AudioStream" uid="uid://cupar3i4muubn" path="res://resources/audio/sources/end/End_jar.wav" id="7_22o23"]
 [ext_resource type="Texture2D" uid="uid://hj5qmjcaf3uv" path="res://resources/textures/final_spells/caniche.png" id="7_shmyx"]
+[ext_resource type="AudioStream" uid="uid://dq8c8ixw0xd31" path="res://resources/audio/sources/end/End_chicken.wav" id="9_rtnm5"]
+[ext_resource type="AudioStream" uid="uid://b11ijy3wgfj27" path="res://resources/audio/sources/end/End_dog.wav" id="11_pokt6"]
 
 [sub_resource type="Resource" id="Resource_wytob"]
 script = ExtResource("1_1vwyi")
@@ -269,6 +273,7 @@ left_page_text_2 = "dernier texte ouais jai ecris que de la d"
 [sub_resource type="Resource" id="Resource_k67ok"]
 script = ExtResource("2_e5clk")
 name = "Ferrum bene tractabis"
+sound = ExtResource("5_6nr0g")
 result = ExtResource("3_uj84l")
 head_family = 0
 arm_family = 1
@@ -282,6 +287,7 @@ Le premier fer utilisant un thermostat est apparu dans les annees 1920."
 [sub_resource type="Resource" id="Resource_4ouku"]
 script = ExtResource("2_e5clk")
 name = "Hydrate qui circa te"
+sound = ExtResource("7_22o23")
 result = ExtResource("5_mf075")
 head_family = 2
 arm_family = 3
@@ -295,6 +301,7 @@ Un petit coup d'eau ou un petit coup derriere la tete, elle est votre meilleure 
 [sub_resource type="Resource" id="Resource_ps81y"]
 script = ExtResource("2_e5clk")
 name = "Tu pascis vicinis tuis"
+sound = ExtResource("9_rtnm5")
 result = ExtResource("6_eeaul")
 head_family = 3
 arm_family = 2
@@ -307,6 +314,7 @@ Les premiers ossements de poulets decouverts en Chine datent de la fin du neolit
 [sub_resource type="Resource" id="Resource_6pbiv"]
 script = ExtResource("2_e5clk")
 name = "Latrare sed non mordere"
+sound = ExtResource("11_pokt6")
 result = ExtResource("7_shmyx")
 head_family = 1
 arm_family = 0

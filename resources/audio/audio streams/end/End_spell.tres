@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://djuv77jh2i3b6"]
+
+[ext_resource type="AudioStream" uid="uid://3okjqtokdgew" path="res://resources/audio/sources/end/End_Spell-001.wav" id="1_4vemn"]
+[ext_resource type="AudioStream" uid="uid://c0x5lfa8ut23w" path="res://resources/audio/sources/end/End_Spell-002.wav" id="2_8kh4r"]
+[ext_resource type="AudioStream" uid="uid://byujdqageihxi" path="res://resources/audio/sources/end/End_Spell-003.wav" id="3_4sr18"]
+
+[resource]
+random_pitch = 2.0
+streams_count = 3
+stream_0/stream = ExtResource("1_4vemn")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_8kh4r")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_4sr18")
+stream_2/weight = 1.0
