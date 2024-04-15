@@ -65,6 +65,7 @@ _data = {
 [node name="HarpieLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
+shaded = true
 texture = ExtResource("1_f16tk")
 script = ExtResource("2_4jg80")
 basic_texture = ExtResource("1_r1y43")
