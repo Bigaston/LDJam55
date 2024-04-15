@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=64 format=3 uid="uid://b76s8hrfrycs1"]
+[gd_resource type="Resource" script_class="MonsterResourceLinker" load_steps=76 format=3 uid="uid://b76s8hrfrycs1"]
 
 [ext_resource type="Texture2D" uid="uid://drl4hr75gu6gi" path="res://resources/textures/monsters/Harpie/BansheeArm_muscle_LeftUp.png" id="1_0p0rn"]
 [ext_resource type="Script" path="res://scripts/custom_resources/monsters/MonsterResourceLinker.gd" id="1_5p0ke"]
@@ -25,14 +25,18 @@
 [ext_resource type="Texture2D" uid="uid://dsa5ps4vptxcw" path="res://resources/textures/monsters/Zombie/ZombieArm_slim_RightUp.png" id="16_062ma"]
 [ext_resource type="Texture2D" uid="uid://do3snl36egfjj" path="res://resources/textures/monsters/Zombie/ZombieLegs_slim.png" id="16_80sku"]
 [ext_resource type="AudioStream" uid="uid://dfhew345lrbn" path="res://resources/audio/audio streams/torso/T_Z.tres" id="17_lfcpq"]
+[ext_resource type="Texture2D" uid="uid://dkug50erdigah" path="res://resources/textures/monsters/Zombie/Zombie_arm_LeftUp_Muscle.png" id="18_c0xgd"]
 [ext_resource type="Texture2D" uid="uid://ccpsn3ibp6l66" path="res://resources/textures/monsters/Zombie/ZombieTorso_slim.png" id="18_s5w7v"]
 [ext_resource type="AudioStream" uid="uid://c0x8ba50iol2x" path="res://resources/audio/audio streams/arms/A_S.tres" id="19_5xvdv"]
 [ext_resource type="PackedScene" uid="uid://dfw16smvpk8ip" path="res://objects/monster_legs/Zombie_Leg.tscn" id="19_7ow40"]
+[ext_resource type="Texture2D" uid="uid://bcivawc2epddc" path="res://resources/textures/monsters/Zombie/Zombie_arm_RightUp_Muscle.png" id="19_f0x85"]
+[ext_resource type="Texture2D" uid="uid://l0jm2uhbyxi1" path="res://resources/textures/monsters/Zombie/Zombie_arm_Muscle.png" id="20_pmooe"]
 [ext_resource type="AudioStream" uid="uid://djs6ndf0deyf5" path="res://resources/audio/audio streams/head/H_S.tres" id="20_po0bk"]
 [ext_resource type="Texture2D" uid="uid://darfkrxlbkubh" path="res://resources/textures/monsters/Spectre/SpecterArm_tentacle.png" id="20_vge5j"]
 [ext_resource type="AudioStream" uid="uid://bgm4p8yckf1n3" path="res://resources/audio/audio streams/legs/L_S.tres" id="23_ac6mj"]
 [ext_resource type="Texture2D" uid="uid://b2mvce7t3mbjw" path="res://resources/textures/monsters/Spectre/SpecterHead_tentacle.png" id="23_gn6hx"]
 [ext_resource type="Texture2D" uid="uid://dd2eebvuc0rp0" path="res://resources/ui/icons/Picto_specter.png" id="24_13g4a"]
+[ext_resource type="Texture2D" uid="uid://b5g4ym1f0iowx" path="res://resources/textures/monsters/Zombie/Zombie_head_Muscle.png" id="24_cdf03"]
 [ext_resource type="Texture2D" uid="uid://88wdqbbmmyv8" path="res://resources/textures/monsters/Spectre/SpecterLegs_tentacle.png" id="25_8nf56"]
 [ext_resource type="AudioStream" uid="uid://cbqe0socna2bk" path="res://resources/audio/audio streams/torso/T_S.tres" id="25_aph82"]
 [ext_resource type="AudioStream" uid="uid://dynvr2a18pwce" path="res://resources/audio/audio streams/arms/A_O.tres" id="27_40ppo"]
@@ -42,15 +46,19 @@
 [ext_resource type="Texture2D" uid="uid://cmyycu52xfqrq" path="res://resources/textures/monsters/Spectre/SpecterArm_tentacleRightUp.png" id="28_eacii"]
 [ext_resource type="PackedScene" uid="uid://duvaoc4qg18o4" path="res://objects/monster_legs/Spectre_Leg.tscn" id="29_8kpb7"]
 [ext_resource type="Texture2D" uid="uid://yc2fah3ynvm5" path="res://resources/textures/monsters/Ogre/OgreArm_fat.png" id="29_evrsv"]
+[ext_resource type="Texture2D" uid="uid://5ohtsmfxem4j" path="res://resources/textures/monsters/Zombie/Zombie_torso_Muscle.png" id="30_ydais"]
 [ext_resource type="AudioStream" uid="uid://h1ipvnj680ui" path="res://resources/audio/audio streams/legs/L_O.tres" id="31_it0lx"]
 [ext_resource type="Texture2D" uid="uid://dejnptpjwogod" path="res://resources/textures/monsters/Ogre/OgreHead_fat.png" id="32_ylqch"]
 [ext_resource type="Texture2D" uid="uid://b0at6ae2npibm" path="res://resources/ui/icons/Picto_ogre.png" id="33_jpvm8"]
 [ext_resource type="AudioStream" uid="uid://8hgo27h7rluy" path="res://resources/audio/audio streams/torso/T_O.tres" id="33_u21ly"]
 [ext_resource type="Texture2D" uid="uid://ge11iitq0g8b" path="res://resources/textures/monsters/Ogre/OgreLegs_fat.png" id="34_pybbn"]
+[ext_resource type="Texture2D" uid="uid://ncuj702iddp3" path="res://resources/textures/monsters/Spectre/Specter_arm_Muscle.png" id="35_iuvji"]
 [ext_resource type="Texture2D" uid="uid://bj24nk3laxtvq" path="res://resources/textures/monsters/Ogre/OgreTorso_fat.png" id="36_uymca"]
 [ext_resource type="PackedScene" uid="uid://ceid8qug3xfxo" path="res://objects/monster_legs/Ogre_Leg.tscn" id="39_aochr"]
+[ext_resource type="Texture2D" uid="uid://b60trny5nrw5o" path="res://resources/textures/monsters/Spectre/Specter_head_Muscle.png" id="39_w612q"]
 [ext_resource type="Texture2D" uid="uid://c7hqfc5ia4ghs" path="res://resources/textures/monsters/Ogre/OgreArm_fat_LeftUp.png" id="39_y615b"]
 [ext_resource type="Texture2D" uid="uid://blaiq60w1fqdt" path="res://resources/textures/monsters/Ogre/OgreArm_fat_RightUp.png" id="40_wpbrb"]
+[ext_resource type="Texture2D" uid="uid://dk4ob63faixsq" path="res://resources/textures/monsters/Spectre/Specter_torso_Muscle.png" id="45_d6wl7"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_m7qns"]
 frames = 2
@@ -90,14 +98,26 @@ script = ExtResource("4_wrj20")
 arm = ExtResource("11_qdvdh")
 animated = SubResource("AnimatedTexture_8gqcu")
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ggre8"]
+frames = 2
+frame_0/texture = ExtResource("18_c0xgd")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("19_f0x85")
+frame_1/duration = 0.5
+
+[sub_resource type="Resource" id="Resource_segkw"]
+script = ExtResource("4_wrj20")
+arm = ExtResource("20_pmooe")
+animated = SubResource("AnimatedTexture_ggre8")
+
 [sub_resource type="Resource" id="Resource_qwqee"]
 script = ExtResource("1_y7r5o")
 family = 1
 icon = ExtResource("15_lup16")
 legs_object = ExtResource("19_7ow40")
-heads = Array[Texture2D]([ExtResource("14_a6nwh")])
-torso = Array[Texture2D]([ExtResource("18_s5w7v")])
-arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_4ddrk")])
+heads = Array[Texture2D]([ExtResource("14_a6nwh"), ExtResource("24_cdf03")])
+torso = Array[Texture2D]([ExtResource("18_s5w7v"), ExtResource("30_ydais")])
+arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_4ddrk"), SubResource("Resource_segkw")])
 legs = Array[Texture2D]([ExtResource("16_80sku")])
 head_audio = ExtResource("12_b4l03")
 torso_audio = ExtResource("17_lfcpq")
@@ -116,14 +136,22 @@ script = ExtResource("4_wrj20")
 arm = ExtResource("20_vge5j")
 animated = SubResource("AnimatedTexture_tcmue")
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_e2w57"]
+frame_0/texture = ExtResource("35_iuvji")
+
+[sub_resource type="Resource" id="Resource_o2ur4"]
+script = ExtResource("4_wrj20")
+arm = ExtResource("35_iuvji")
+animated = SubResource("AnimatedTexture_e2w57")
+
 [sub_resource type="Resource" id="Resource_lw8mj"]
 script = ExtResource("1_y7r5o")
 family = 2
 icon = ExtResource("24_13g4a")
 legs_object = ExtResource("29_8kpb7")
-heads = Array[Texture2D]([ExtResource("23_gn6hx")])
-torso = Array[Texture2D]([ExtResource("27_w8rhb")])
-arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_64dpb")])
+heads = Array[Texture2D]([ExtResource("23_gn6hx"), ExtResource("39_w612q")])
+torso = Array[Texture2D]([ExtResource("27_w8rhb"), ExtResource("45_d6wl7")])
+arms = Array[ExtResource("4_wrj20")]([SubResource("Resource_64dpb"), SubResource("Resource_o2ur4")])
 legs = Array[Texture2D]([ExtResource("25_8nf56")])
 head_audio = ExtResource("20_po0bk")
 torso_audio = ExtResource("25_aph82")
