@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds77safhmmgk8"
-path="res://.godot/imported/zombie.png-375b125dd52ba13537a5ac4b18e6eba6.ctex"
+uid="uid://qlyfmoal7ajw"
+path="res://.godot/imported/Picto_arrow2.png-c3642316006271c1bb948b0ac43aa883.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/ui/icons/zombie.png"
-dest_files=["res://.godot/imported/zombie.png-375b125dd52ba13537a5ac4b18e6eba6.ctex"]
+source_file="res://resources/ui/icons/Picto_arrow2.png"
+dest_files=["res://.godot/imported/Picto_arrow2.png-c3642316006271c1bb948b0ac43aa883.ctex"]
 
 [params]
 
