@@ -9,6 +9,7 @@ signal win_party(spell: FinalSpell)
 var is_going = false
 var parts: Dictionary = {}
 var leg: Node3D
+var arm: MonsterArm
 
 var is_finished = false
 
@@ -59,6 +60,13 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 		leg.set_monster_walking(is_going)
 		
 		$Body.add_child(leg)
+	elif part == CustomTypes.BodyPart.ARM:
+		arm = monster_linker.get_family(family).get_random_arms()
+		
+		if is_going:
+			$Body/Arms.texture = arm.animated
+		else:
+			$Body/Arms.texture = arm.arm
 	else:
 		var linker = monster_linker.get_family(family)
 		var texture = linker.get_random(part)
@@ -72,6 +80,7 @@ func set_body_part(part: CustomTypes.BodyPart, family: CustomTypes.MonsterFamily
 func trigger_move():
 	get_tree().create_timer(time_before_start).timeout.connect(func():
 		is_going = true
+		$Body/Arms.texture = arm.animated
 		leg.set_monster_walking(true)
 	)
 
@@ -117,3 +126,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		body.kill_player()
 		is_going = false
 		leg.set_monster_walking(false)
+		$Body/Arms.texture = arm.arm

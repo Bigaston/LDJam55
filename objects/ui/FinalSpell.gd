@@ -9,6 +9,6 @@ func set_spell(spell: FinalSpell):
 	$RightText.text = spell.right_page_text
 	
 	$MonsterPreview/Head.texture = monster_linker.get_family(spell.head_family).get_random(CustomTypes.BodyPart.HEAD)
-	$MonsterPreview/Arms.texture = monster_linker.get_family(spell.arm_family).get_random(CustomTypes.BodyPart.ARM)
+	$MonsterPreview/Arms.texture = monster_linker.get_family(spell.arm_family).get_random_arms().arm
 	$MonsterPreview/Torso.texture = monster_linker.get_family(spell.torso_family).get_random(CustomTypes.BodyPart.TORSO)
 	$MonsterPreview/Legs.texture = monster_linker.get_family(spell.leg_family).get_random(CustomTypes.BodyPart.LEGS)

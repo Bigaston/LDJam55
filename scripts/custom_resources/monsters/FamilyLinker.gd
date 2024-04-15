@@ -10,7 +10,7 @@ class_name FamilyLinker
 @export_subgroup("Parts")
 @export var heads: Array[Texture2D] = []
 @export var torso: Array[Texture2D] = []
-@export var arms: Array[Texture2D] = []
+@export var arms: Array[MonsterArm] = []
 @export var legs: Array[Texture2D] = []
 
 @export_subgroup("Audio")
@@ -31,6 +31,9 @@ func get_random(part: CustomTypes.BodyPart) -> Texture2D:
 			return torso.pick_random()
 			
 	return PlaceholderTexture2D.new()
+	
+func get_random_arms() -> MonsterArm:
+	return arms.pick_random()
 	
 func get_audio(part: CustomTypes.BodyPart) -> AudioStream:
 	match part:

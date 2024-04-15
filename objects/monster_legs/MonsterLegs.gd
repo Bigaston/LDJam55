@@ -1,4 +1,4 @@
-extends Node3D
+extends Sprite3D
 class_name MonsterLegs
 
 var monster_walking = false

@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bocaatiuyhe5j"]
+[gd_scene load_steps=9 format=3 uid="uid://bocaatiuyhe5j"]
 
+[ext_resource type="Texture2D" uid="uid://d13lgjgmeaa6n" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle_LeftUp.png" id="1_f16tk"]
 [ext_resource type="Texture2D" uid="uid://bfu7v8bh7o5dm" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle.png" id="1_r1y43"]
 [ext_resource type="Script" path="res://objects/monster_legs/harpie_leg.gd" id="2_4jg80"]
 [ext_resource type="AudioStream" uid="uid://csscnepbyflij" path="res://resources/audio/audio streams/legs/L_B.tres" id="2_owuau"]
+[ext_resource type="Texture2D" uid="uid://dy40x2gvjxrtv" path="res://resources/textures/monsters/Harpie/BansheeLegs_muscle_RightUp.png" id="3_l32mk"]
 [ext_resource type="AudioStream" uid="uid://bc8ie3pfxu4vo" path="res://resources/audio/audio streams/legs/L_B-Feather.tres" id="4_yc73r"]
 
 [sub_resource type="Animation" id="Animation_40u23"]
@@ -42,6 +44,18 @@ tracks/1/keys = {
 "method": &"play"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_f16tk"), ExtResource("3_l32mk")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a01ew"]
 _data = {
@@ -51,8 +65,9 @@ _data = {
 [node name="HarpieLeg" type="Sprite3D"]
 pixel_size = 0.0018
 billboard = 2
-texture = ExtResource("1_r1y43")
+texture = ExtResource("1_f16tk")
 script = ExtResource("2_4jg80")
+basic_texture = ExtResource("1_r1y43")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
