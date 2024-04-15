@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyhyjumh8uwmb"
-path="res://.godot/imported/harpie.png-2cbcf5c12490ee6d57b395bf4d36b4c8.ctex"
+uid="uid://c5i4vrxnd724e"
+path="res://.godot/imported/Picto_arrow1.png-7289920533e99a5be6c6e75588643224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/ui/icons/harpie.png"
-dest_files=["res://.godot/imported/harpie.png-2cbcf5c12490ee6d57b395bf4d36b4c8.ctex"]
+source_file="res://resources/ui/icons/Picto_arrow1.png"
+dest_files=["res://.godot/imported/Picto_arrow1.png-7289920533e99a5be6c6e75588643224.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1gmrgnfvhidv"
-path="res://.godot/imported/spectre.png-73210d9d9d52b68f39229646c9b98f19.ctex"
+uid="uid://6afnarokvnyt"
+path="res://.godot/imported/Picto_attention.png-2d97409645459556c3f543673e0ef38d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/ui/icons/spectre.png"
-dest_files=["res://.godot/imported/spectre.png-73210d9d9d52b68f39229646c9b98f19.ctex"]
+source_file="res://resources/ui/icons/Picto_attention.png"
+dest_files=["res://.godot/imported/Picto_attention.png-2d97409645459556c3f543673e0ef38d.ctex"]
 
 [params]
 

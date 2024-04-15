@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b6o3mvyol3hbo"]
+[gd_scene load_steps=14 format=3 uid="uid://b6o3mvyol3hbo"]
 
 [ext_resource type="Script" path="res://objects/ui/BasicSpell.gd" id="1_6sajc"]
 [ext_resource type="Resource" uid="uid://006fwh1qrrer" path="res://resources/content/PartResourceLinker.tres" id="2_0den8"]
@@ -8,22 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://ctr3mckvq0f8p" path="res://resources/ui/icons/Picto_head.png" id="5_2no74"]
 [ext_resource type="LabelSettings" uid="uid://c6lcdjj02k82c" path="res://resources/themes/StrangeText.tres" id="5_beanb"]
 [ext_resource type="Texture2D" uid="uid://b0at6ae2npibm" path="res://resources/ui/icons/Picto_ogre.png" id="6_trwhb"]
+[ext_resource type="Texture2D" uid="uid://6afnarokvnyt" path="res://resources/ui/icons/Picto_attention.png" id="7_64887"]
 [ext_resource type="Texture2D" uid="uid://c322u0uxx5po1" path="res://resources/ui/icons/Picto_harpy.png" id="7_t4l7h"]
+[ext_resource type="Texture2D" uid="uid://qlyfmoal7ajw" path="res://resources/ui/icons/Picto_arrow2.png" id="8_6q07x"]
 
 [sub_resource type="Gradient" id="Gradient_mir0b"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_eryo0"]
 gradient = SubResource("Gradient_mir0b")
-
-[sub_resource type="Gradient" id="Gradient_8o0aa"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_myton"]
-gradient = SubResource("Gradient_8o0aa")
-
-[sub_resource type="Gradient" id="Gradient_82ad8"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_kj6gc"]
-gradient = SubResource("Gradient_82ad8")
 
 [node name="BasicSpell" type="Control"]
 layout_mode = 3
@@ -118,13 +110,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 48.0
-offset_top = -627.0
-offset_right = 120.0
-offset_bottom = -560.0
+offset_left = 175.0
+offset_top = -642.0
+offset_right = 267.0
+offset_bottom = -556.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("GradientTexture1D_myton")
+texture = ExtResource("7_64887")
 expand_mode = 1
 
 [node name="Condition" type="Control" parent="."]
@@ -166,8 +158,9 @@ offset_left = 210.0
 offset_top = -501.0
 offset_right = 269.0
 offset_bottom = -445.0
-texture = SubResource("GradientTexture1D_kj6gc")
+texture = ExtResource("8_6q07x")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="BadResultPart" type="TextureRect" parent="Condition"]
 layout_mode = 0
