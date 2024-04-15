@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c68seuu055u1q"]
+[gd_scene load_steps=35 format=3 uid="uid://c68seuu055u1q"]
 
 [ext_resource type="Script" path="res://scenes/game/level.gd" id="1_81kyg"]
 [ext_resource type="PackedScene" uid="uid://dig1yvww3j8q6" path="res://objects/terrain.tscn" id="1_p3bju"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dodkpy17ylwib" path="res://objects/Monster.tscn" id="6_royi3"]
 [ext_resource type="PackedScene" uid="uid://ge5vudlmrbfh" path="res://objects/Player.tscn" id="7_2wh5t"]
 [ext_resource type="Texture2D" uid="uid://cv6136nwumejg" path="res://resources/textures/particles/partic1.png" id="7_4nlya"]
+[ext_resource type="Texture2D" uid="uid://ersry5518ddm" path="res://resources/textures/decals/pentacle2.png" id="7_rcwp8"]
 [ext_resource type="AudioStream" uid="uid://ceka4rdr3kj7x" path="res://resources/audio/sources/music/MUS_Drums.wav" id="10_0172s"]
 [ext_resource type="AudioStream" uid="uid://diwjscrs01tcm" path="res://resources/audio/sources/music/MUS_Piano_high.wav" id="11_cniij"]
 [ext_resource type="AudioStream" uid="uid://d4mn5medmngrr" path="res://resources/audio/sources/music/MUS_Piano_low.wav" id="12_vsunl"]
@@ -388,16 +389,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
 [node name="PlayerSpawn" type="Node3D" parent="StartRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
+[node name="Decal" type="Decal" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.963162, 5.09635)
+size = Vector3(4, 2, 4)
+texture_albedo = ExtResource("7_rcwp8")
+emission_energy = 50.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1e-05
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StartRoom"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.64378, 5.37831)
+light_color = Color(1, 0, 0, 1)
+light_energy = 10.0
+spot_range = 13.14
+spot_angle = 33.206
+
 [node name="Intro" type="Node3D" parent="." node_paths=PackedStringArray("monster_spawn", "player_spawn")]
 script = ExtResource("5_1ci52")
 monster_scene = ExtResource("6_royi3")
 monster_spawn = NodePath("../StartRoom/MonsterSpawn")
 player_scene = ExtResource("7_2wh5t")
 player_spawn = NodePath("../StartRoom/PlayerSpawn")
-skip_intro = true
 
 [node name="Camera3D" type="Camera3D" parent="Intro"]
-transform = Transform3D(-1, 2.20956e-07, 2.52554e-06, 0, 0.996195, -0.0871558, -2.53518e-06, -0.0871558, -0.996195, 0, 1.5, 1.3)
+transform = Transform3D(-1, -3.52828e-07, 2.51051e-06, 0, 0.990268, 0.139173, -2.53518e-06, 0.139173, -0.990268, 0, 1.5, 1.7)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Intro"]
 libraries = {
