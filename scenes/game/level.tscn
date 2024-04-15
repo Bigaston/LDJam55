@@ -474,7 +474,7 @@ grow_vertical = 0
 theme_override_fonts/normal_font = ExtResource("5_fp4o2")
 theme_override_font_sizes/normal_font_size = 62
 bbcode_enabled = true
-text = "Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to summon your deamon!"
+text = "Press [img]res://resources/ui/inputs/keyboard_space.png[/img] to summon your daemon!"
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Intro"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0239636, 5)
