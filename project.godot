@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="LDJam55"
+config/name="Daemon Limbs"
+config/description="Your summoning went terribly wrong! Run from the creature you've summoned and try to send it back to where it came from!"
 config/tags=PackedStringArray("gamejam")
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
